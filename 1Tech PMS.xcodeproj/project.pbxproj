@@ -9,23 +9,51 @@
 /* Begin PBXBuildFile section */
 		DB0080FE2A74B43700212FD4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0080FD2A74B43700212FD4 /* AppDelegate.swift */; };
 		DB0081002A74B43700212FD4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0080FF2A74B43700212FD4 /* SceneDelegate.swift */; };
-		DB0081022A74B43700212FD4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0081012A74B43700212FD4 /* ViewController.swift */; };
 		DB0081052A74B43700212FD4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB0081032A74B43700212FD4 /* Main.storyboard */; };
 		DB0081082A74B43700212FD4 /* _Tech_PMS.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DB0081062A74B43700212FD4 /* _Tech_PMS.xcdatamodeld */; };
 		DB00810A2A74B43800212FD4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB0081092A74B43800212FD4 /* Assets.xcassets */; };
 		DB00810D2A74B43800212FD4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB00810B2A74B43800212FD4 /* LaunchScreen.storyboard */; };
+		DB0081152A74B4D500212FD4 /* SplashVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0081142A74B4D500212FD4 /* SplashVC.swift */; };
+		DB0081222A74B70B00212FD4 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0081172A74B70A00212FD4 /* Constants.swift */; };
+		DB0081232A74B70B00212FD4 /* ToastHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0081192A74B70A00212FD4 /* ToastHelper.swift */; };
+		DB0081242A74B70B00212FD4 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB00811B2A74B70B00212FD4 /* UIView.swift */; };
+		DB0081252A74B70B00212FD4 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB00811C2A74B70B00212FD4 /* UIColor.swift */; };
+		DB0081262A74B70B00212FD4 /* UITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB00811D2A74B70B00212FD4 /* UITextField.swift */; };
+		DB0081272A74B70B00212FD4 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB00811E2A74B70B00212FD4 /* String.swift */; };
+		DB0081282A74B70B00212FD4 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB00811F2A74B70B00212FD4 /* UIViewController.swift */; };
+		DB0081292A74B70B00212FD4 /* DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0081202A74B70B00212FD4 /* DateFormatter.swift */; };
+		DB00812A2A74B70B00212FD4 /* UIFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0081212A74B70B00212FD4 /* UIFont.swift */; };
+		DB00812D2A74B73A00212FD4 /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = DB00812C2A74B73A00212FD4 /* IQKeyboardManagerSwift */; };
+		DB0081302A74B75500212FD4 /* NotificationBannerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = DB00812F2A74B75500212FD4 /* NotificationBannerSwift */; };
+		DB0081342A74B77600212FD4 /* BaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0081322A74B77600212FD4 /* BaseVC.swift */; };
+		DB0081352A74B77600212FD4 /* BaseAuthVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0081332A74B77600212FD4 /* BaseAuthVC.swift */; };
+		DB00813C2A74B85400212FD4 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB00813B2A74B85400212FD4 /* Colors.xcassets */; };
+		DB00813E2A74BA5300212FD4 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB00813D2A74BA5300212FD4 /* LoginVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		DB0080FA2A74B43700212FD4 /* 1Tech PMS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "1Tech PMS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB0080FD2A74B43700212FD4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DB0080FF2A74B43700212FD4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		DB0081012A74B43700212FD4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		DB0081042A74B43700212FD4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DB0081072A74B43700212FD4 /* _Tech_PMS.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = _Tech_PMS.xcdatamodel; sourceTree = "<group>"; };
 		DB0081092A74B43800212FD4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DB00810C2A74B43800212FD4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DB00810E2A74B43800212FD4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DB0081142A74B4D500212FD4 /* SplashVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashVC.swift; sourceTree = "<group>"; };
+		DB0081172A74B70A00212FD4 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		DB0081192A74B70A00212FD4 /* ToastHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToastHelper.swift; sourceTree = "<group>"; };
+		DB00811B2A74B70B00212FD4 /* UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
+		DB00811C2A74B70B00212FD4 /* UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
+		DB00811D2A74B70B00212FD4 /* UITextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITextField.swift; sourceTree = "<group>"; };
+		DB00811E2A74B70B00212FD4 /* String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		DB00811F2A74B70B00212FD4 /* UIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
+		DB0081202A74B70B00212FD4 /* DateFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateFormatter.swift; sourceTree = "<group>"; };
+		DB0081212A74B70B00212FD4 /* UIFont.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIFont.swift; sourceTree = "<group>"; };
+		DB0081322A74B77600212FD4 /* BaseVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseVC.swift; sourceTree = "<group>"; };
+		DB0081332A74B77600212FD4 /* BaseAuthVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseAuthVC.swift; sourceTree = "<group>"; };
+		DB00813B2A74B85400212FD4 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		DB00813D2A74BA5300212FD4 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +61,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB00812D2A74B73A00212FD4 /* IQKeyboardManagerSwift in Frameworks */,
+				DB0081302A74B75500212FD4 /* NotificationBannerSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,16 +88,101 @@
 		DB0080FC2A74B43700212FD4 /* 1Tech PMS */ = {
 			isa = PBXGroup;
 			children = (
-				DB0080FD2A74B43700212FD4 /* AppDelegate.swift */,
-				DB0080FF2A74B43700212FD4 /* SceneDelegate.swift */,
-				DB0081012A74B43700212FD4 /* ViewController.swift */,
-				DB0081032A74B43700212FD4 /* Main.storyboard */,
-				DB0081092A74B43800212FD4 /* Assets.xcassets */,
-				DB00810B2A74B43800212FD4 /* LaunchScreen.storyboard */,
+				DB0081362A74B78000212FD4 /* AppDelegate */,
+				DB0081372A74B78B00212FD4 /* VC */,
+				DB0081392A74B7A000212FD4 /* Storyboard */,
+				DB00813A2A74B83C00212FD4 /* Resoures */,
+				DB0081162A74B70A00212FD4 /* Helpers */,
 				DB00810E2A74B43800212FD4 /* Info.plist */,
 				DB0081062A74B43700212FD4 /* _Tech_PMS.xcdatamodeld */,
 			);
 			path = "1Tech PMS";
+			sourceTree = "<group>";
+		};
+		DB0081162A74B70A00212FD4 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				DB0081172A74B70A00212FD4 /* Constants.swift */,
+				DB0081182A74B70A00212FD4 /* ViewHelpers */,
+				DB00811A2A74B70B00212FD4 /* Extensions */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		DB0081182A74B70A00212FD4 /* ViewHelpers */ = {
+			isa = PBXGroup;
+			children = (
+				DB0081192A74B70A00212FD4 /* ToastHelper.swift */,
+			);
+			path = ViewHelpers;
+			sourceTree = "<group>";
+		};
+		DB00811A2A74B70B00212FD4 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				DB00811B2A74B70B00212FD4 /* UIView.swift */,
+				DB00811C2A74B70B00212FD4 /* UIColor.swift */,
+				DB00811D2A74B70B00212FD4 /* UITextField.swift */,
+				DB00811E2A74B70B00212FD4 /* String.swift */,
+				DB00811F2A74B70B00212FD4 /* UIViewController.swift */,
+				DB0081202A74B70B00212FD4 /* DateFormatter.swift */,
+				DB0081212A74B70B00212FD4 /* UIFont.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		DB0081312A74B77600212FD4 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				DB0081322A74B77600212FD4 /* BaseVC.swift */,
+				DB0081332A74B77600212FD4 /* BaseAuthVC.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		DB0081362A74B78000212FD4 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				DB0080FD2A74B43700212FD4 /* AppDelegate.swift */,
+				DB0080FF2A74B43700212FD4 /* SceneDelegate.swift */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		DB0081372A74B78B00212FD4 /* VC */ = {
+			isa = PBXGroup;
+			children = (
+				DB0081312A74B77600212FD4 /* Base */,
+				DB0081382A74B79700212FD4 /* Auth */,
+			);
+			path = VC;
+			sourceTree = "<group>";
+		};
+		DB0081382A74B79700212FD4 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				DB0081142A74B4D500212FD4 /* SplashVC.swift */,
+				DB00813D2A74BA5300212FD4 /* LoginVC.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		DB0081392A74B7A000212FD4 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				DB0081032A74B43700212FD4 /* Main.storyboard */,
+				DB00810B2A74B43800212FD4 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		DB00813A2A74B83C00212FD4 /* Resoures */ = {
+			isa = PBXGroup;
+			children = (
+				DB0081092A74B43800212FD4 /* Assets.xcassets */,
+				DB00813B2A74B85400212FD4 /* Colors.xcassets */,
+			);
+			path = Resoures;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -86,6 +201,10 @@
 			dependencies = (
 			);
 			name = "1Tech PMS";
+			packageProductDependencies = (
+				DB00812C2A74B73A00212FD4 /* IQKeyboardManagerSwift */,
+				DB00812F2A74B75500212FD4 /* NotificationBannerSwift */,
+			);
 			productName = "1Tech PMS";
 			productReference = DB0080FA2A74B43700212FD4 /* 1Tech PMS.app */;
 			productType = "com.apple.product-type.application";
@@ -114,6 +233,10 @@
 				Base,
 			);
 			mainGroup = DB0080F12A74B43700212FD4;
+			packageReferences = (
+				DB00812B2A74B73A00212FD4 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
+				DB00812E2A74B75500212FD4 /* XCRemoteSwiftPackageReference "NotificationBanner" */,
+			);
 			productRefGroup = DB0080FB2A74B43700212FD4 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -129,6 +252,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DB00810D2A74B43800212FD4 /* LaunchScreen.storyboard in Resources */,
+				DB00813C2A74B85400212FD4 /* Colors.xcassets in Resources */,
 				DB00810A2A74B43800212FD4 /* Assets.xcassets in Resources */,
 				DB0081052A74B43700212FD4 /* Main.storyboard in Resources */,
 			);
@@ -141,10 +265,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB0081242A74B70B00212FD4 /* UIView.swift in Sources */,
+				DB0081352A74B77600212FD4 /* BaseAuthVC.swift in Sources */,
+				DB0081272A74B70B00212FD4 /* String.swift in Sources */,
+				DB0081282A74B70B00212FD4 /* UIViewController.swift in Sources */,
+				DB00813E2A74BA5300212FD4 /* LoginVC.swift in Sources */,
+				DB0081262A74B70B00212FD4 /* UITextField.swift in Sources */,
+				DB0081342A74B77600212FD4 /* BaseVC.swift in Sources */,
+				DB0081292A74B70B00212FD4 /* DateFormatter.swift in Sources */,
 				DB0081082A74B43700212FD4 /* _Tech_PMS.xcdatamodeld in Sources */,
-				DB0081022A74B43700212FD4 /* ViewController.swift in Sources */,
+				DB0081152A74B4D500212FD4 /* SplashVC.swift in Sources */,
+				DB0081232A74B70B00212FD4 /* ToastHelper.swift in Sources */,
+				DB0081252A74B70B00212FD4 /* UIColor.swift in Sources */,
+				DB00812A2A74B70B00212FD4 /* UIFont.swift in Sources */,
 				DB0080FE2A74B43700212FD4 /* AppDelegate.swift in Sources */,
 				DB0081002A74B43700212FD4 /* SceneDelegate.swift in Sources */,
+				DB0081222A74B70B00212FD4 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,8 +433,10 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
+				INFOPLIST_KEY_UIStatusBarStyle = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -325,8 +463,10 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
+				INFOPLIST_KEY_UIStatusBarStyle = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -362,6 +502,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		DB00812B2A74B73A00212FD4 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/hackiftekhar/IQKeyboardManager.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.0.0;
+			};
+		};
+		DB00812E2A74B75500212FD4 /* XCRemoteSwiftPackageReference "NotificationBanner" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Daltron/NotificationBanner";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		DB00812C2A74B73A00212FD4 /* IQKeyboardManagerSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DB00812B2A74B73A00212FD4 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */;
+			productName = IQKeyboardManagerSwift;
+		};
+		DB00812F2A74B75500212FD4 /* NotificationBannerSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DB00812E2A74B75500212FD4 /* XCRemoteSwiftPackageReference "NotificationBanner" */;
+			productName = NotificationBannerSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		DB0081062A74B43700212FD4 /* _Tech_PMS.xcdatamodeld */ = {
