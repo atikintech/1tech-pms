@@ -34,20 +34,23 @@ extension UIColor {
         return nil
     }
     
-    class func primary() -> UIColor {
-        return UIColor(named: "QPrimary")!
+    class func primary(dark: Bool = false) -> UIColor {
+        if dark {
+            return UIColor(named: "DarkPrimary")!
+        }
+        return UIColor(named: "Primary")!
     }
 
     class func accent() -> UIColor {
-        return UIColor(named: "QAccent")!
+        return UIColor(named: "Accent")!
     }
 
-    class func greyBackground() -> UIColor {
-        return UIColor(named: "QGreyBackground")!
-    }
-    
+//    class func greyBackground() -> UIColor {
+//        return UIColor(named: "QGreyBackground")!
+//    }
+//    
     class func navBarBackground() -> UIColor {
-        return UIColor(named: "QNavBarBackground")!
+        return UIColor(named: "NavBarBackground")!
     }
     class func borderColor() -> UIColor {
         return UIColor(hexString: "#EBE9E9FF")!

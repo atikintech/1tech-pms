@@ -12,7 +12,7 @@ extension UIView {
     
     func rounded(radius: CGFloat = 0, border: CGFloat = 0, borderColor: UIColor = .white) {
         let layer = self.layer
-        layer.cornerRadius = radius == 0 ? self.bounds.width/2 : radius
+        layer.cornerRadius = radius == 0 ? self.bounds.height/2 : radius
         if border > 0 {
             layer.borderColor = borderColor.cgColor
             layer.borderWidth = border

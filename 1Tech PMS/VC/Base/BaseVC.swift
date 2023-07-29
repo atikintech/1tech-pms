@@ -15,7 +15,7 @@ class BaseVC: UIViewController {
     
     private lazy var userProfileBtn: UIBarButtonItem = {
         let btnIcon = UIButton(frame: CGRect(x: 0, y: 0, width: 40, height: 40))
-        btnIcon.backgroundColor = .greyBackground()
+//        btnIcon.backgroundColor = .greyBackground()
         btnIcon.rounded()
         
         let btnTitle = UIButton(frame: .zero)
@@ -31,11 +31,11 @@ class BaseVC: UIViewController {
     }()
     
     override func viewDidLoad() {
-        self.view.backgroundColor = .greyBackground()
+//        self.view.backgroundColor = .greyBackground()
     }
     
     override func viewWillLayoutSubviews() {
-        setupNavBar()
+//        setupNavBar()
     }
     
     //MARK: NavigationBar Setup

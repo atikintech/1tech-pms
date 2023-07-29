@@ -31,9 +31,82 @@
                     <view key="view" contentMode="scaleToFill" id="TiM-6T-KXe">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VCq-Qu-EgS">
+                                <rect key="frame" x="16" y="302" width="382" height="306.5"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="c09-iI-hiZ">
+                                        <rect key="frame" x="16" y="32" width="350" height="242.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Proceed with your login" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2a3-mc-KmG">
+                                                <rect key="frame" x="0.0" y="0.0" width="350" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bRe-jj-nMf">
+                                                <rect key="frame" x="0.0" y="44.5" width="350" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="zO7-bg-OuH"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" textContentType="username"/>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Omh-YK-dOg">
+                                                <rect key="frame" x="0.0" y="118.5" width="350" height="50"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
+                                            </textField>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rgF-gS-5Fq">
+                                                <rect key="frame" x="0.0" y="192.5" width="350" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="IxE-xo-uEf"/>
+                                                </constraints>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="LOGIN"/>
+                                                <connections>
+                                                    <action selector="loginClicked" destination="E7B-wz-wyc" eventType="touchUpInside" id="4LM-sU-2qG"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="Omh-YK-dOg" firstAttribute="height" secondItem="bRe-jj-nMf" secondAttribute="height" id="kzo-XZ-3f6"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="c09-iI-hiZ" secondAttribute="trailing" constant="16" id="R3b-az-TZ9"/>
+                                    <constraint firstItem="c09-iI-hiZ" firstAttribute="top" secondItem="VCq-Qu-EgS" secondAttribute="top" constant="32" id="XXH-PS-eML"/>
+                                    <constraint firstItem="c09-iI-hiZ" firstAttribute="leading" secondItem="VCq-Qu-EgS" secondAttribute="leading" constant="16" id="ohe-I3-Pjj"/>
+                                    <constraint firstAttribute="bottom" secondItem="c09-iI-hiZ" secondAttribute="bottom" constant="32" id="wCa-iS-gIX"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UoN-on-8pX">
+                                <rect key="frame" x="135" y="828" width="144" height="34"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Forgot Password?"/>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="Ouz-LL-3K3"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="VCq-Qu-EgS" firstAttribute="centerY" secondItem="Ouz-LL-3K3" secondAttribute="centerY" id="7Fw-Lj-4nw"/>
+                            <constraint firstItem="VCq-Qu-EgS" firstAttribute="leading" secondItem="Ouz-LL-3K3" secondAttribute="leading" constant="16" id="D1J-jh-c6o"/>
+                            <constraint firstItem="Ouz-LL-3K3" firstAttribute="bottom" secondItem="UoN-on-8pX" secondAttribute="bottom" id="Efu-cP-ryP"/>
+                            <constraint firstItem="UoN-on-8pX" firstAttribute="centerX" secondItem="Ouz-LL-3K3" secondAttribute="centerX" id="W9q-5l-ofF"/>
+                            <constraint firstItem="Ouz-LL-3K3" firstAttribute="trailing" secondItem="VCq-Qu-EgS" secondAttribute="trailing" constant="16" id="lEv-RF-31I"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="containerView" destination="VCq-Qu-EgS" id="Ydv-kG-uE9"/>
+                        <outlet property="forgotPasswordBtn" destination="UoN-on-8pX" id="pF7-qX-gYi"/>
+                        <outlet property="headingTitle" destination="2a3-mc-KmG" id="ImB-y5-T7H"/>
+                        <outlet property="loginBtn" destination="rgF-gS-5Fq" id="Trm-wj-JZc"/>
+                        <outlet property="passwordTf" destination="Omh-YK-dOg" id="79z-2N-PbW"/>
+                        <outlet property="usernameTf" destination="bRe-jj-nMf" id="8W9-X7-Vtz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lnA-fh-XOM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

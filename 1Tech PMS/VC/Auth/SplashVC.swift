@@ -17,10 +17,7 @@ class SplashVC: UIViewController {
         super.viewDidLoad()
         showNextView()
     }
-    
-    override func viewWillAppear(_ animated: Bool) {
-    }
-    
+
     override func viewDidLayoutSubviews() {
         setup()
     }

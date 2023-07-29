@@ -12,13 +12,13 @@ class BaseAuthVC : UIViewController {
     var bgImageView: UIImageView?
     
     override func viewDidLoad() {
-        if bgImageView == nil {
-            bgImageView = UIImageView(frame: CGRect(x: 0, y: 0, width: self.view.bounds.width, height: self.view.bounds.height))
-            bgImageView?.image = UIImage(named: "background")
-            bgImageView?.contentMode = .scaleAspectFill
-            self.view.addSubview(bgImageView!)
-        }
-        setupNavBar()
+        //        if bgImageView == nil {
+        //            bgImageView = UIImageView(frame: CGRect(x: 0, y: 0, width: self.view.bounds.width, height: self.view.bounds.height))
+        //            bgImageView?.image = UIImage(named: "background")
+        //            bgImageView?.contentMode = .scaleAspectFill
+        //            self.view.addSubview(bgImageView!)
+        //        }
+        //        setupNavBar()
     }
     
     override func viewDidLayoutSubviews() {
@@ -34,15 +34,15 @@ class BaseAuthVC : UIViewController {
     //MARK: NavigationBar Setup
     private func setupNavBar() {
         
-//        if let navVC = self.navigationController {
-//            var leftBarItems = [UIBarButtonItem]()
-//            //            if navVC.viewControllers.count > 1 && !self.navigationItem.hidesBackButton {
-//            //                leftBarItems.append(UIBarButtonItem(image:  #imageLiteral(resourceName: "icons8-back"), style: .plain, target: self, action: #selector(goBack)))
-//            //            }
-//            self.navigationItem.leftBarButtonItems = leftBarItems
-//            //Setup Title Font
-//            setuptitleBarForNav()
-//        }
+        //        if let navVC = self.navigationController {
+        //            var leftBarItems = [UIBarButtonItem]()
+        //            //            if navVC.viewControllers.count > 1 && !self.navigationItem.hidesBackButton {
+        //            //                leftBarItems.append(UIBarButtonItem(image:  #imageLiteral(resourceName: "icons8-back"), style: .plain, target: self, action: #selector(goBack)))
+        //            //            }
+        //            self.navigationItem.leftBarButtonItems = leftBarItems
+        //            //Setup Title Font
+        //            setuptitleBarForNav()
+        //        }
     }
     
     private func setuptitleBarForNav() {
@@ -57,18 +57,18 @@ class BaseAuthVC : UIViewController {
 }
 
 extension BaseVC {
-        @objc func keyboardWillAppear(_ notification: Notification) {
-            let userInfo: NSDictionary = notification.userInfo! as NSDictionary
-            let keyboardSize = (userInfo.object(forKey: UIResponder.keyboardFrameEndUserInfoKey)! as AnyObject).cgRectValue.size
-            
-            UIView.animate(withDuration: 1.0, delay: 0.0, options: UIView.AnimationOptions(), animations: {
-                self.view.frame.origin.y = -keyboardSize.height
-            })
-        }
+    @objc func keyboardWillAppear(_ notification: Notification) {
+        let userInfo: NSDictionary = notification.userInfo! as NSDictionary
+        let keyboardSize = (userInfo.object(forKey: UIResponder.keyboardFrameEndUserInfoKey)! as AnyObject).cgRectValue.size
         
-        @objc func keyboardWillDisappear(_ notification: Notification) {
-            UIView.animate(withDuration: 1.0, delay: 0.0, options: UIView.AnimationOptions(), animations: {
-                self.view.frame.origin.y = 0
-            })
-        }
+        UIView.animate(withDuration: 1.0, delay: 0.0, options: UIView.AnimationOptions(), animations: {
+            self.view.frame.origin.y = -keyboardSize.height
+        })
+    }
+    
+    @objc func keyboardWillDisappear(_ notification: Notification) {
+        UIView.animate(withDuration: 1.0, delay: 0.0, options: UIView.AnimationOptions(), animations: {
+            self.view.frame.origin.y = 0
+        })
+    }
 }
