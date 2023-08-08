@@ -46,12 +46,12 @@ class SplashVC: UIViewController {
     func showNextView() {
         Timer.scheduledTimer(withTimeInterval: 2.0, repeats: false) { _ in
             //If user is not logged in show log in screen
-            if true {
+            if !UserDefaults.standard.bool(forKey: "isLogged") {
                 self.showLoginVC()
             }
             //If user is logged in then show a particular view
             else {
-                
+                self.showAdminVC()
             }
         }
         
@@ -62,4 +62,8 @@ class SplashVC: UIViewController {
         self.navigationController?.pushViewController(loginVC, animated: false)
     }
     
+    func showAdminVC() {
+        let homeVC = AdminHomeVC.loadVC()
+        self.navigationController?.pushViewController(homeVC, animated: false)
+    }
 }

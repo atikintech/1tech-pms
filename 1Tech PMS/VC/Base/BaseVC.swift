@@ -13,47 +13,56 @@ class BaseVC: UIViewController {
         UIBarButtonItem(image: UIImage(named: "back_btn"), style: .plain, target: self, action: #selector(goBack))
     }()
     
-    private lazy var userProfileBtn: UIBarButtonItem = {
-        let btnIcon = UIButton(frame: CGRect(x: 0, y: 0, width: 40, height: 40))
-//        btnIcon.backgroundColor = .greyBackground()
+    private lazy var sideMenuBtn: UIBarButtonItem = {
+        let barBtn = UIBarButtonItem(image: UIImage(named: "side_menu")!.withRenderingMode(.alwaysOriginal), style: .plain, target: self, action: nil)
+        return barBtn
+    }()
+    
+    private lazy var rightBtnItem: UIBarButtonItem = {
+        let btnIcon = UIButton(frame: CGRect(x: 0, y: 0, width: 35, height: 35))
+        btnIcon.backgroundColor = .primary()
         btnIcon.rounded()
-        
-        let btnTitle = UIButton(frame: .zero)
-        btnTitle.setTitle("Hello Bhavesh", for: .normal)
-        btnTitle.addTarget(self, action: #selector(goBack), for: .touchUpInside)
-        btnTitle.titleLabel?.font = .primary(size: .extraSmall)
-        btnTitle.setTitleColor(.soothingBlue(), for: .normal)
-        
-        let stackView = UIStackView(arrangedSubviews: [btnIcon, btnTitle])
-        stackView.axis = .horizontal
-        stackView.spacing = 4
-        return UIBarButtonItem(customView: stackView)
+        btnIcon.setTitle("BG", for: .normal)
+        return UIBarButtonItem(customView: btnIcon)
+    }()
+    
+    private lazy var appearance: UINavigationBarAppearance = {
+        let appearance = UINavigationBarAppearance()
+        appearance.backgroundColor = .navBarBackground()
+        appearance.titleTextAttributes = [.foregroundColor: UIColor.white]
+        appearance.largeTitleTextAttributes = [.foregroundColor: UIColor.white]
+        return appearance
     }()
     
     override func viewDidLoad() {
-//        self.view.backgroundColor = .greyBackground()
+        self.view.backgroundColor = .primary(light: true)
     }
     
     override func viewWillLayoutSubviews() {
-//        setupNavBar()
+        setupNavBar()
     }
     
     //MARK: NavigationBar Setup
     private func setupNavBar() {
-        if let navVC = self.navigationController {
+        if let _ = self.navigationController {
+            self.navigationController?.navigationBar.tintColor = .white
             self.navigationController?.navigationBar.barTintColor = .navBarBackground()
             self.navigationController?.navigationBar.backgroundColor = .navBarBackground()
+            navigationController?.navigationBar.standardAppearance = appearance
             self.navigationItem.hidesBackButton = true
-            var leftBarItems = [UIBarButtonItem]()
-            if navVC.viewControllers.count > 1 {
-                leftBarItems.append(backBtnItem)
-            }
-            else {
-                leftBarItems.append(userProfileBtn)
-            }
-            self.navigationItem.leftBarButtonItems = leftBarItems
-            //Setup Title Font
-            setupTitleView()
+            
+            //            var leftBarItems = [UIBarButtonItem]()
+            //            if navVC.viewControllers.count > 1 {
+            //                leftBarItems.append(backBtnItem)
+            //            }
+            //            else {
+            //                leftBarItems.append(sideMenuBtn)
+            //            }
+            
+            self.navigationItem.leftBarButtonItem = sideMenuBtn
+            self.navigationItem.rightBarButtonItem = rightBtnItem
+            self.navigationItem.title = self.title
+            
         }
     }
     
@@ -69,20 +78,38 @@ class BaseVC: UIViewController {
     
 }
 
-//extension BaseAuthVC {
-//        @objc func keyboardWillAppear(_ notification: Notification) {
-//            let userInfo: NSDictionary = notification.userInfo! as NSDictionary
-//            let keyboardSize = (userInfo.object(forKey: UIResponder.keyboardFrameEndUserInfoKey)! as AnyObject).cgRectValue.size
+extension BaseVC {
+    @objc func keyboardWillAppear(_ notification: Notification) {
+        let userInfo: NSDictionary = notification.userInfo! as NSDictionary
+        let keyboardSize = (userInfo.object(forKey: UIResponder.keyboardFrameEndUserInfoKey)! as AnyObject).cgRectValue.size
+        
+        UIView.animate(withDuration: 1.0, delay: 0.0, options: UIView.AnimationOptions(), animations: {
+            self.view.frame.origin.y = -keyboardSize.height
+        })
+    }
+    
+    @objc func keyboardWillDisappear(_ notification: Notification) {
+        UIView.animate(withDuration: 1.0, delay: 0.0, options: UIView.AnimationOptions(), animations: {
+            self.view.frame.origin.y = 0
+        })
+    }
+}
+
+
 //
-//            UIView.animate(withDuration: 1.0, delay: 0.0, options: UIView.AnimationOptions(), animations: {
-//                self.view.frame.origin.y = -keyboardSize.height
-//            })
-//        }
+//private lazy var userProfileBtn: UIBarButtonItem = {
+//    let btnIcon = UIButton(frame: CGRect(x: 0, y: 0, width: 40, height: 40))
+////        btnIcon.backgroundColor = .greyBackground()
+//    btnIcon.rounded()
 //
-//        @objc func keyboardWillDisappear(_ notification: Notification) {
-//            UIView.animate(withDuration: 1.0, delay: 0.0, options: UIView.AnimationOptions(), animations: {
-//                self.view.frame.origin.y = 0
-//            })
-//        }
-//}
+//    let btnTitle = UIButton(frame: .zero)
+//    btnTitle.setTitle("Hello Bhavesh", for: .normal)
+//    btnTitle.addTarget(self, action: #selector(goBack), for: .touchUpInside)
+//    btnTitle.titleLabel?.font = .primary(size: .extraSmall)
+//    btnTitle.setTitleColor(.soothingBlue(), for: .normal)
 //
+//    let stackView = UIStackView(arrangedSubviews: [btnIcon, btnTitle])
+//    stackView.axis = .horizontal
+//    stackView.spacing = 4
+//    return UIBarButtonItem(customView: stackView)
+//}()

@@ -34,9 +34,12 @@ extension UIColor {
         return nil
     }
     
-    class func primary(dark: Bool = false) -> UIColor {
+    class func primary(dark: Bool = false, light: Bool = false) -> UIColor {
         if dark {
             return UIColor(named: "DarkPrimary")!
+        }
+        else if light {
+            return UIColor(named: "LightPrimary")!
         }
         return UIColor(named: "Primary")!
     }
@@ -45,22 +48,20 @@ extension UIColor {
         return UIColor(named: "Accent")!
     }
 
-//    class func greyBackground() -> UIColor {
-//        return UIColor(named: "QGreyBackground")!
-//    }
-//    
     class func navBarBackground() -> UIColor {
-        return UIColor(named: "NavBarBackground")!
+        return UIColor(named: "Accent")!
     }
+    
     class func borderColor() -> UIColor {
         return UIColor(hexString: "#EBE9E9FF")!
     }
     
-    class func soothingBlue(alpha: CGFloat = 1.0) -> UIColor {
-        return UIColor(red: 55.0/255.0, green: 117.0/255.0, blue: 187.0/255.0, alpha: alpha)
+    class func textColor() -> UIColor {
+        return .accent()
     }
     
-    class func subTitleColor() -> UIColor {
-        return UIColor(hexString: "#615F5FFF")!
+    class func secondaryTextColor() -> UIColor {
+        return UIColor(hexString: "#434343ff")!
     }
+
 }

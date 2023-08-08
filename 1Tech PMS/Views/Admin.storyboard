@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--ClientsVC-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="ClientsVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y6W-OH-hqX" customClass="ClientsVC" customModule="_Tech_PMS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="ztn-ly-HE1">
+                                <rect key="frame" x="0.0" y="91" width="393" height="727"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="Y6W-OH-hqX" id="XK3-3o-7UU"/>
+                                    <outlet property="delegate" destination="Y6W-OH-hqX" id="KML-ah-Wzx"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="ztn-ly-HE1" secondAttribute="trailing" id="MfI-3V-S5Q"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="ztn-ly-HE1" secondAttribute="bottom" id="jk0-wq-q50"/>
+                            <constraint firstItem="ztn-ly-HE1" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="qaT-N5-4Rz"/>
+                            <constraint firstItem="ztn-ly-HE1" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="32" id="xE7-u9-YdT"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="clientsTv" destination="ztn-ly-HE1" id="u41-MY-9Aw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-15" y="4"/>
+        </scene>
+        <!--Client InfoVC-->
+        <scene sceneID="Gyz-Uc-bWD">
+            <objects>
+                <viewController storyboardIdentifier="ClientInfoVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="qdD-bU-7hs" customClass="ClientInfoVC" customModule="_Tech_PMS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xsd-VH-JfK">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ZL5-XL-mxg">
+                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7G3-Hc-8Ob">
+                                <rect key="frame" x="16" y="159" width="361" height="643"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="TuZ-dl-aE2">
+                                        <rect key="frame" x="16" y="0.0" width="329" height="643"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="05F-FZ-8U2" customClass="HeadingTextField" customModule="_Tech_PMS" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="329" height="78"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="placeHolderColor">
+                                                        <color key="value" name="Accent"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="fadsfsdfa" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yEe-Xr-8gH" customClass="HeadingTextField" customModule="_Tech_PMS" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="94" width="329" height="78.333333333333314"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="fadsfsdfa" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NmE-x6-Box" customClass="HeadingTextField" customModule="_Tech_PMS" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="188.33333333333331" width="329" height="78"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="fadsfsdfa" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jI4-Rd-9Jd" customClass="HeadingTextField" customModule="_Tech_PMS" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="282.33333333333331" width="329" height="78.333333333333314"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="fadsfsdfa" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Y1S-Uq-KOx" customClass="HeadingTextField" customModule="_Tech_PMS" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="376.66666666666663" width="329" height="78"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="fadsfsdfa" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xPQ-tB-KO3" customClass="HeadingTextField" customModule="_Tech_PMS" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="470.66666666666663" width="329" height="78.333333333333371"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="fadsfsdfa" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ha6-EY-mfo" customClass="HeadingTextField" customModule="_Tech_PMS" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="565" width="329" height="78"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="TuZ-dl-aE2" secondAttribute="trailing" constant="16" id="AAb-3g-OoY"/>
+                                    <constraint firstItem="TuZ-dl-aE2" firstAttribute="leading" secondItem="7G3-Hc-8Ob" secondAttribute="leading" constant="16" id="Acu-5x-W9h"/>
+                                    <constraint firstItem="TuZ-dl-aE2" firstAttribute="top" secondItem="7G3-Hc-8Ob" secondAttribute="top" id="Fqg-v7-15H"/>
+                                    <constraint firstAttribute="bottom" secondItem="TuZ-dl-aE2" secondAttribute="bottom" id="uLd-uf-iqw"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="C0v-bm-ZRl"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="7G3-Hc-8Ob" firstAttribute="top" secondItem="C0v-bm-ZRl" secondAttribute="top" constant="100" id="21I-VR-xIA"/>
+                            <constraint firstItem="ZL5-XL-mxg" firstAttribute="leading" secondItem="C0v-bm-ZRl" secondAttribute="leading" id="2AC-14-nht"/>
+                            <constraint firstItem="C0v-bm-ZRl" firstAttribute="trailing" secondItem="ZL5-XL-mxg" secondAttribute="trailing" id="5bA-Kh-LUE"/>
+                            <constraint firstItem="C0v-bm-ZRl" firstAttribute="bottom" secondItem="7G3-Hc-8Ob" secondAttribute="bottom" constant="16" id="6ol-gW-9Mf"/>
+                            <constraint firstItem="C0v-bm-ZRl" firstAttribute="bottom" secondItem="ZL5-XL-mxg" secondAttribute="bottom" id="87k-Y1-jcV"/>
+                            <constraint firstItem="ZL5-XL-mxg" firstAttribute="top" secondItem="C0v-bm-ZRl" secondAttribute="top" id="ejM-IL-tzX"/>
+                            <constraint firstItem="C0v-bm-ZRl" firstAttribute="trailing" secondItem="7G3-Hc-8Ob" secondAttribute="trailing" constant="16" id="geJ-ER-7pI"/>
+                            <constraint firstItem="7G3-Hc-8Ob" firstAttribute="leading" secondItem="C0v-bm-ZRl" secondAttribute="leading" constant="16" id="t77-7z-MoA"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="containerView" destination="7G3-Hc-8Ob" id="p3v-y7-Had"/>
+                        <outlet property="nameTf" destination="05F-FZ-8U2" id="UhS-Gb-XNh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fcB-uq-r75" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="683" y="20"/>
+        </scene>
+    </scenes>
+    <designables>
+        <designable name="05F-FZ-8U2">
+            <size key="intrinsicContentSize" width="4" height="18.666666666666668"/>
+        </designable>
+        <designable name="Ha6-EY-mfo">
+            <size key="intrinsicContentSize" width="4" height="18.666666666666668"/>
+        </designable>
+        <designable name="NmE-x6-Box">
+            <size key="intrinsicContentSize" width="4" height="18.666666666666668"/>
+        </designable>
+        <designable name="Y1S-Uq-KOx">
+            <size key="intrinsicContentSize" width="4" height="18.666666666666668"/>
+        </designable>
+        <designable name="jI4-Rd-9Jd">
+            <size key="intrinsicContentSize" width="4" height="18.666666666666668"/>
+        </designable>
+        <designable name="xPQ-tB-KO3">
+            <size key="intrinsicContentSize" width="4" height="18.666666666666668"/>
+        </designable>
+        <designable name="yEe-Xr-8gH">
+            <size key="intrinsicContentSize" width="4" height="18.666666666666668"/>
+        </designable>
+    </designables>
+    <resources>
+        <namedColor name="Accent">
+            <color red="0.082000002264976501" green="0.097999997437000275" blue="0.32499998807907104" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

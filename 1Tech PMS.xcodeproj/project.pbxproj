@@ -31,6 +31,15 @@
 		DB00813E2A74BA5300212FD4 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB00813D2A74BA5300212FD4 /* LoginVC.swift */; };
 		DB0081402A74D9C900212FD4 /* AdminHomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB00813F2A74D9C900212FD4 /* AdminHomeVC.swift */; };
 		DB0081432A74D9E400212FD4 /* SideMenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0081422A74D9E400212FD4 /* SideMenuVC.swift */; };
+		DB2823F12A80DF0E0016324D /* ClientsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2823F02A80DF0E0016324D /* ClientsVC.swift */; };
+		DB2823F32A80DFF90016324D /* Admin.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB2823F22A80DFF90016324D /* Admin.storyboard */; };
+		DB2823F72A80E28F0016324D /* ClientsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2823F52A80E28F0016324D /* ClientsCell.swift */; };
+		DB2823F82A80E28F0016324D /* ClientsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB2823F62A80E28F0016324D /* ClientsCell.xib */; };
+		DB2823FB2A80E7770016324D /* ClientInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2823FA2A80E7770016324D /* ClientInfoVC.swift */; };
+		DB2823FD2A80EC060016324D /* HeadingTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2823FC2A80EC060016324D /* HeadingTextField.swift */; };
+		DB3825292A80C656008D9EB4 /* AdminHomeCollCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3825272A80C656008D9EB4 /* AdminHomeCollCell.swift */; };
+		DB38252A2A80C656008D9EB4 /* AdminHomeCollCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB3825282A80C656008D9EB4 /* AdminHomeCollCell.xib */; };
+		DB38252D2A80D055008D9EB4 /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB38252C2A80D055008D9EB4 /* UIImage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +67,15 @@
 		DB00813D2A74BA5300212FD4 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		DB00813F2A74D9C900212FD4 /* AdminHomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminHomeVC.swift; sourceTree = "<group>"; };
 		DB0081422A74D9E400212FD4 /* SideMenuVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuVC.swift; sourceTree = "<group>"; };
+		DB2823F02A80DF0E0016324D /* ClientsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientsVC.swift; sourceTree = "<group>"; };
+		DB2823F22A80DFF90016324D /* Admin.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Admin.storyboard; sourceTree = "<group>"; };
+		DB2823F52A80E28F0016324D /* ClientsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientsCell.swift; sourceTree = "<group>"; };
+		DB2823F62A80E28F0016324D /* ClientsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ClientsCell.xib; sourceTree = "<group>"; };
+		DB2823FA2A80E7770016324D /* ClientInfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientInfoVC.swift; sourceTree = "<group>"; };
+		DB2823FC2A80EC060016324D /* HeadingTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeadingTextField.swift; sourceTree = "<group>"; };
+		DB3825272A80C656008D9EB4 /* AdminHomeCollCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminHomeCollCell.swift; sourceTree = "<group>"; };
+		DB3825282A80C656008D9EB4 /* AdminHomeCollCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AdminHomeCollCell.xib; sourceTree = "<group>"; };
+		DB38252C2A80D055008D9EB4 /* UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,7 +112,7 @@
 			children = (
 				DB0081362A74B78000212FD4 /* AppDelegate */,
 				DB0081372A74B78B00212FD4 /* VC */,
-				DB0081392A74B7A000212FD4 /* Storyboard */,
+				DB0081392A74B7A000212FD4 /* Views */,
 				DB00813A2A74B83C00212FD4 /* Resources */,
 				DB0081162A74B70A00212FD4 /* Helpers */,
 				DB00810E2A74B43800212FD4 /* Info.plist */,
@@ -131,6 +149,7 @@
 				DB00811F2A74B70B00212FD4 /* UIViewController.swift */,
 				DB0081202A74B70B00212FD4 /* DateFormatter.swift */,
 				DB0081212A74B70B00212FD4 /* UIFont.swift */,
+				DB38252C2A80D055008D9EB4 /* UIImage.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -172,13 +191,15 @@
 			path = Auth;
 			sourceTree = "<group>";
 		};
-		DB0081392A74B7A000212FD4 /* Storyboard */ = {
+		DB0081392A74B7A000212FD4 /* Views */ = {
 			isa = PBXGroup;
 			children = (
 				DB0081032A74B43700212FD4 /* Main.storyboard */,
+				DB2823F22A80DFF90016324D /* Admin.storyboard */,
 				DB00810B2A74B43800212FD4 /* LaunchScreen.storyboard */,
+				DB2823FC2A80EC060016324D /* HeadingTextField.swift */,
 			);
-			path = Storyboard;
+			path = Views;
 			sourceTree = "<group>";
 		};
 		DB00813A2A74B83C00212FD4 /* Resources */ = {
@@ -194,9 +215,39 @@
 			isa = PBXGroup;
 			children = (
 				DB00813F2A74D9C900212FD4 /* AdminHomeVC.swift */,
+				DB2823F42A80E0580016324D /* Clients */,
+				DB38252B2A80C65D008D9EB4 /* Cell */,
 				DB0081422A74D9E400212FD4 /* SideMenuVC.swift */,
 			);
 			path = Admin;
+			sourceTree = "<group>";
+		};
+		DB2823F42A80E0580016324D /* Clients */ = {
+			isa = PBXGroup;
+			children = (
+				DB2823F02A80DF0E0016324D /* ClientsVC.swift */,
+				DB2823FA2A80E7770016324D /* ClientInfoVC.swift */,
+				DB2823F92A80E2940016324D /* Cell */,
+			);
+			path = Clients;
+			sourceTree = "<group>";
+		};
+		DB2823F92A80E2940016324D /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				DB2823F52A80E28F0016324D /* ClientsCell.swift */,
+				DB2823F62A80E28F0016324D /* ClientsCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		DB38252B2A80C65D008D9EB4 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				DB3825272A80C656008D9EB4 /* AdminHomeCollCell.swift */,
+				DB3825282A80C656008D9EB4 /* AdminHomeCollCell.xib */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -267,7 +318,10 @@
 			files = (
 				DB00810D2A74B43800212FD4 /* LaunchScreen.storyboard in Resources */,
 				DB00813C2A74B85400212FD4 /* Colors.xcassets in Resources */,
+				DB2823F82A80E28F0016324D /* ClientsCell.xib in Resources */,
 				DB00810A2A74B43800212FD4 /* Assets.xcassets in Resources */,
+				DB38252A2A80C656008D9EB4 /* AdminHomeCollCell.xib in Resources */,
+				DB2823F32A80DFF90016324D /* Admin.storyboard in Resources */,
 				DB0081052A74B43700212FD4 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -280,16 +334,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				DB0081242A74B70B00212FD4 /* UIView.swift in Sources */,
+				DB2823F12A80DF0E0016324D /* ClientsVC.swift in Sources */,
+				DB2823FD2A80EC060016324D /* HeadingTextField.swift in Sources */,
+				DB38252D2A80D055008D9EB4 /* UIImage.swift in Sources */,
 				DB0081352A74B77600212FD4 /* BaseAuthVC.swift in Sources */,
+				DB3825292A80C656008D9EB4 /* AdminHomeCollCell.swift in Sources */,
 				DB0081272A74B70B00212FD4 /* String.swift in Sources */,
 				DB0081282A74B70B00212FD4 /* UIViewController.swift in Sources */,
 				DB00813E2A74BA5300212FD4 /* LoginVC.swift in Sources */,
 				DB0081262A74B70B00212FD4 /* UITextField.swift in Sources */,
 				DB0081402A74D9C900212FD4 /* AdminHomeVC.swift in Sources */,
 				DB0081342A74B77600212FD4 /* BaseVC.swift in Sources */,
+				DB2823FB2A80E7770016324D /* ClientInfoVC.swift in Sources */,
 				DB0081292A74B70B00212FD4 /* DateFormatter.swift in Sources */,
 				DB0081082A74B43700212FD4 /* _Tech_PMS.xcdatamodeld in Sources */,
 				DB0081152A74B4D500212FD4 /* SplashVC.swift in Sources */,
+				DB2823F72A80E28F0016324D /* ClientsCell.swift in Sources */,
 				DB0081232A74B70B00212FD4 /* ToastHelper.swift in Sources */,
 				DB0081252A74B70B00212FD4 /* UIColor.swift in Sources */,
 				DB00812A2A74B70B00212FD4 /* UIFont.swift in Sources */,

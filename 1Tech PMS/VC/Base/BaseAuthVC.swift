@@ -56,7 +56,7 @@ class BaseAuthVC : UIViewController {
     }
 }
 
-extension BaseVC {
+extension BaseAuthVC {
     @objc func keyboardWillAppear(_ notification: Notification) {
         let userInfo: NSDictionary = notification.userInfo! as NSDictionary
         let keyboardSize = (userInfo.object(forKey: UIResponder.keyboardFrameEndUserInfoKey)! as AnyObject).cgRectValue.size
