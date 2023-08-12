@@ -102,19 +102,23 @@ class LoginVC: BaseAuthVC {
     @IBAction func loginClicked() {
         if isValidated {
             ToastHelper.toast("Success", presenter: self, type: .success)
+            UserDefaults.standard.set(true, forKey: "isLogged")
             if usernameTf.text! == "admin" {
                 showAdminHome()
+            }
+            else {
+                showMembersHome()
             }
         }
     }
     
     func showAdminHome() {
-        UserDefaults.standard.set(true, forKey: "isLogged")
         let admin = AdminHomeVC.loadVC()
         self.navigationController?.pushViewController(admin, animated: true)
     }
     
     func showMembersHome() {
-        
+        let admin = MembersHomeVC.loadVC()
+        self.navigationController?.pushViewController(admin, animated: true)
     }
 }
