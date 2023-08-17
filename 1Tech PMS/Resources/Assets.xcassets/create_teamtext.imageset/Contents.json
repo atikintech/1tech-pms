@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "create team banner image.png",
+      "filename" : "Create_New_team_member.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "create team banner image@2x.png",
+      "filename" : "Create_New_team_member@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "create team banner image@3x.png",
+      "filename" : "Create_New_team_member@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }
