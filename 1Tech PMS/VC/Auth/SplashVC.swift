@@ -51,7 +51,8 @@ class SplashVC: UIViewController {
             }
             //If user is logged in then show a particular view
             else {
-                self.showAdminVC()
+//                self.showAdminVC()
+                self.showMembersVC()
             }
         }
         
@@ -66,4 +67,14 @@ class SplashVC: UIViewController {
         let homeVC = AdminHomeVC.loadVC()
         self.navigationController?.pushViewController(homeVC, animated: false)
     }
+    
+    func showMembersVC() {
+        let createVC = TeamMemberVC.loadVC("Members")
+//        createVC.pageType = createPageType.createMember.rawValue
+//        createVC.pageType = createPageType.editMember.rawValue
+//        createVC.pageType = createPageType.inviteMember.rawValue
+//        createVC.pageType = createPageType.createTeam.rawValue
+        self.navigationController?.pushViewController(createVC, animated: false)
+    }
+    
 }

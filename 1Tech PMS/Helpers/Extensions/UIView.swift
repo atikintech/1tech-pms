@@ -88,7 +88,7 @@ extension UIView {
     }
     
     func roundView() {
-        self.layer.cornerRadius = self.frame.size.width/2
+        self.layer.cornerRadius = self.frame.size.height/2
         self.clipsToBounds = true
     }
     
