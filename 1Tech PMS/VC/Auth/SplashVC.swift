@@ -69,7 +69,7 @@ class SplashVC: UIViewController {
     }
     
     func showMembersVC() {
-        let createVC = TeamMemberVC.loadVC("Members")
+        let createVC = MembersHomeVC.loadVC("Members")
 //        createVC.pageType = createPageType.createMember.rawValue
 //        createVC.pageType = createPageType.editMember.rawValue
 //        createVC.pageType = createPageType.inviteMember.rawValue

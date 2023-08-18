@@ -84,5 +84,30 @@ class CreateVC: UIViewController {
         vewEmail.isHidden = isEmail
         vewProject.isHidden = isProject
     }
-
+    
+    
+    @IBAction func btnAction(_ sender: UIButton) {
+        self.navigationController?.popViewController(animated: true)
+        
+        switch sender.tag {
+        case 1:
+//            let createVC = TeamMemberVC.loadVC("Members")
+//            createVC.modalPresentationStyle = .overFullScreen
+//            self.navigationController?.present(createVC, animated: false)
+            self.dismiss(animated: true)
+            
+        case 2:
+//            let createVC = TeamMemberVC.loadVC("Members")
+//            createVC.modalPresentationStyle = .overFullScreen
+//            self.navigationController?.present(createVC, animated: false)
+            self.dismiss(animated: true)
+            
+        case 3:
+            self.dismiss(animated: true)
+            
+        default:
+            self.dismiss(animated: true)
+        }
+    }
+    
 }

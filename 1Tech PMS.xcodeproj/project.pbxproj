@@ -8,11 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		3A29CCB12A8B948000CCD188 /* CreateVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A29CCB02A8B948000CCD188 /* CreateVC.swift */; };
+		3A4564142A8F7E140048F2CF /* CreateTeamVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4564132A8F7E140048F2CF /* CreateTeamVC.swift */; };
 		3A7ED3CD2A8BA72700D3E472 /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A7ED3CC2A8BA72700D3E472 /* Enums.swift */; };
 		3A7ED3D22A8BB96E00D3E472 /* MemberCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A7ED3D02A8BB96E00D3E472 /* MemberCell.swift */; };
 		3A7ED3D32A8BB96E00D3E472 /* MemberCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A7ED3D12A8BB96E00D3E472 /* MemberCell.xib */; };
 		3A7ED3D52A8BF9BE00D3E472 /* TeamMemberVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A7ED3D42A8BF9BE00D3E472 /* TeamMemberVC.swift */; };
 		3A7ED3D72A8BFA7500D3E472 /* ModelTeamMember.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A7ED3D62A8BFA7500D3E472 /* ModelTeamMember.swift */; };
+		3A7ED3DC2A8F164600D3E472 /* MembersHomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A7ED3DA2A8F164600D3E472 /* MembersHomeCell.swift */; };
+		3A7ED3DD2A8F164600D3E472 /* MembersHomeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A7ED3DB2A8F164600D3E472 /* MembersHomeCell.xib */; };
+		3A7ED3E02A8F1E5400D3E472 /* MemberHomeHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A7ED3DE2A8F1E5400D3E472 /* MemberHomeHeaderCell.swift */; };
+		3A7ED3E12A8F1E5400D3E472 /* MemberHomeHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A7ED3DF2A8F1E5400D3E472 /* MemberHomeHeaderCell.xib */; };
+		3A7ED3E52A8F1FA700D3E472 /* ModelMemberHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A7ED3E42A8F1FA700D3E472 /* ModelMemberHome.swift */; };
+		3A7ED3E72A8F30D600D3E472 /* AlertControllerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A7ED3E62A8F30D600D3E472 /* AlertControllerVC.swift */; };
 		DB0080FE2A74B43700212FD4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0080FD2A74B43700212FD4 /* AppDelegate.swift */; };
 		DB0081002A74B43700212FD4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0080FF2A74B43700212FD4 /* SceneDelegate.swift */; };
 		DB0081052A74B43700212FD4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB0081032A74B43700212FD4 /* Main.storyboard */; };
@@ -52,11 +59,18 @@
 
 /* Begin PBXFileReference section */
 		3A29CCB02A8B948000CCD188 /* CreateVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateVC.swift; sourceTree = "<group>"; };
+		3A4564132A8F7E140048F2CF /* CreateTeamVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateTeamVC.swift; sourceTree = "<group>"; };
 		3A7ED3CC2A8BA72700D3E472 /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
 		3A7ED3D02A8BB96E00D3E472 /* MemberCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberCell.swift; sourceTree = "<group>"; };
 		3A7ED3D12A8BB96E00D3E472 /* MemberCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MemberCell.xib; sourceTree = "<group>"; };
 		3A7ED3D42A8BF9BE00D3E472 /* TeamMemberVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamMemberVC.swift; sourceTree = "<group>"; };
 		3A7ED3D62A8BFA7500D3E472 /* ModelTeamMember.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelTeamMember.swift; sourceTree = "<group>"; };
+		3A7ED3DA2A8F164600D3E472 /* MembersHomeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MembersHomeCell.swift; sourceTree = "<group>"; };
+		3A7ED3DB2A8F164600D3E472 /* MembersHomeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MembersHomeCell.xib; sourceTree = "<group>"; };
+		3A7ED3DE2A8F1E5400D3E472 /* MemberHomeHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberHomeHeaderCell.swift; sourceTree = "<group>"; };
+		3A7ED3DF2A8F1E5400D3E472 /* MemberHomeHeaderCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MemberHomeHeaderCell.xib; sourceTree = "<group>"; };
+		3A7ED3E42A8F1FA700D3E472 /* ModelMemberHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelMemberHome.swift; sourceTree = "<group>"; };
+		3A7ED3E62A8F30D600D3E472 /* AlertControllerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertControllerVC.swift; sourceTree = "<group>"; };
 		DB0080FA2A74B43700212FD4 /* 1Tech PMS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "1Tech PMS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB0080FD2A74B43700212FD4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DB0080FF2A74B43700212FD4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -122,6 +136,27 @@
 			children = (
 				3A7ED3D02A8BB96E00D3E472 /* MemberCell.swift */,
 				3A7ED3D12A8BB96E00D3E472 /* MemberCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		3A7ED3D82A8F15EC00D3E472 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				DB6E1EDE2A876E720070D80E /* MembersHomeVC.swift */,
+				3A7ED3D92A8F160800D3E472 /* Cell */,
+				3A7ED3E42A8F1FA700D3E472 /* ModelMemberHome.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		3A7ED3D92A8F160800D3E472 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				3A7ED3DA2A8F164600D3E472 /* MembersHomeCell.swift */,
+				3A7ED3DB2A8F164600D3E472 /* MembersHomeCell.xib */,
+				3A7ED3DE2A8F1E5400D3E472 /* MemberHomeHeaderCell.swift */,
+				3A7ED3DF2A8F1E5400D3E472 /* MemberHomeHeaderCell.xib */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -222,6 +257,7 @@
 		DB0081382A74B79700212FD4 /* Auth */ = {
 			isa = PBXGroup;
 			children = (
+				3A7ED3E62A8F30D600D3E472 /* AlertControllerVC.swift */,
 				DB0081142A74B4D500212FD4 /* SplashVC.swift */,
 				DB00813D2A74BA5300212FD4 /* LoginVC.swift */,
 			);
@@ -290,9 +326,10 @@
 		DB6E1EDD2A876E030070D80E /* Members */ = {
 			isa = PBXGroup;
 			children = (
+				3A7ED3D82A8F15EC00D3E472 /* Home */,
 				3A7ED3CE2A8BB8F200D3E472 /* TeamMember */,
-				DB6E1EDE2A876E720070D80E /* MembersHomeVC.swift */,
 				3A29CCB02A8B948000CCD188 /* CreateVC.swift */,
+				3A4564132A8F7E140048F2CF /* CreateTeamVC.swift */,
 			);
 			path = Members;
 			sourceTree = "<group>";
@@ -375,9 +412,11 @@
 				3A7ED3D32A8BB96E00D3E472 /* MemberCell.xib in Resources */,
 				DB00810D2A74B43800212FD4 /* LaunchScreen.storyboard in Resources */,
 				DB00813C2A74B85400212FD4 /* Colors.xcassets in Resources */,
+				3A7ED3E12A8F1E5400D3E472 /* MemberHomeHeaderCell.xib in Resources */,
 				DB2823F82A80E28F0016324D /* ClientsCell.xib in Resources */,
 				DB00810A2A74B43800212FD4 /* Assets.xcassets in Resources */,
 				DB6E1EDC2A876DFB0070D80E /* Members.storyboard in Resources */,
+				3A7ED3DD2A8F164600D3E472 /* MembersHomeCell.xib in Resources */,
 				DB38252A2A80C656008D9EB4 /* AdminHomeCollCell.xib in Resources */,
 				DB2823F32A80DFF90016324D /* Admin.storyboard in Resources */,
 				DB0081052A74B43700212FD4 /* Main.storyboard in Resources */,
@@ -394,6 +433,7 @@
 				3A7ED3D72A8BFA7500D3E472 /* ModelTeamMember.swift in Sources */,
 				DB0081242A74B70B00212FD4 /* UIView.swift in Sources */,
 				DB2823F12A80DF0E0016324D /* ClientsVC.swift in Sources */,
+				3A7ED3E72A8F30D600D3E472 /* AlertControllerVC.swift in Sources */,
 				DB2823FD2A80EC060016324D /* HeadingTextField.swift in Sources */,
 				DB38252D2A80D055008D9EB4 /* UIImage.swift in Sources */,
 				DB0081352A74B77600212FD4 /* BaseAuthVC.swift in Sources */,
@@ -408,9 +448,12 @@
 				3A7ED3D52A8BF9BE00D3E472 /* TeamMemberVC.swift in Sources */,
 				DB0081342A74B77600212FD4 /* BaseVC.swift in Sources */,
 				DB2823FB2A80E7770016324D /* ClientInfoVC.swift in Sources */,
+				3A4564142A8F7E140048F2CF /* CreateTeamVC.swift in Sources */,
 				DB0081292A74B70B00212FD4 /* DateFormatter.swift in Sources */,
+				3A7ED3DC2A8F164600D3E472 /* MembersHomeCell.swift in Sources */,
 				DB0081082A74B43700212FD4 /* _Tech_PMS.xcdatamodeld in Sources */,
 				3A7ED3CD2A8BA72700D3E472 /* Enums.swift in Sources */,
+				3A7ED3E52A8F1FA700D3E472 /* ModelMemberHome.swift in Sources */,
 				DB0081152A74B4D500212FD4 /* SplashVC.swift in Sources */,
 				DB2823F72A80E28F0016324D /* ClientsCell.swift in Sources */,
 				DB0081232A74B70B00212FD4 /* ToastHelper.swift in Sources */,
@@ -421,6 +464,7 @@
 				DB0080FE2A74B43700212FD4 /* AppDelegate.swift in Sources */,
 				DB0081002A74B43700212FD4 /* SceneDelegate.swift in Sources */,
 				DB0081222A74B70B00212FD4 /* Constants.swift in Sources */,
+				3A7ED3E02A8F1E5400D3E472 /* MemberHomeHeaderCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -567,7 +611,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = G22ST526BD;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "1Tech PMS/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -599,7 +643,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = G22ST526BD;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "1Tech PMS/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

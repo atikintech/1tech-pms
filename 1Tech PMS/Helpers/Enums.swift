@@ -15,3 +15,26 @@ enum createPageType: String {
     case createTeam
     
 }
+
+enum btnMembersHome: Int {
+    case goto = 1
+    case projectManagement = 2
+    case recruitment = 3
+    case salesPipeline = 4
+}
+
+enum alertTypes: String{
+    case change
+    case delete
+    case yes
+}
+
+enum btnAlerts: Int {
+    
+    case cancel = 1
+    case change = 2
+    case delete = 3
+    case yes = 4
+    case no = 5
+    
+}
