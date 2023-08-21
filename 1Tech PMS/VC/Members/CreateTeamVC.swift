@@ -20,7 +20,7 @@ class CreateTeamVC: UIViewController {
         alertVC.alertTitle = "TEAM STATUS"
         alertVC.message = "change status of the team?"
         alertVC.alert = alertTypes.yes.rawValue
-        alertVC.imgtype = imgName.teamStaus
+        alertVC.imgtype = ImgName.teamStaus
         alertVC.modalPresentationStyle = .overFullScreen
         self.present(alertVC, animated: false)
     }

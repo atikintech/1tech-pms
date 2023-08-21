@@ -25,6 +25,7 @@ class CreateVC: UIViewController {
     @IBOutlet weak var vewName: UIView!
     @IBOutlet weak var vewEmail: UIView!
     @IBOutlet weak var vewProject: UIView!
+    @IBOutlet weak var vewBtns: UIView!
     
     @IBOutlet weak var btnCancel: UIButton!
     @IBOutlet weak var btnInvite: UIButton!
@@ -87,7 +88,6 @@ class CreateVC: UIViewController {
     
     
     @IBAction func btnAction(_ sender: UIButton) {
-        self.navigationController?.popViewController(animated: true)
         
         switch sender.tag {
         case 1:

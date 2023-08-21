@@ -35,7 +35,7 @@ class AlertControllerVC: UIViewController {
     func updateUI() {
         lblTitle.text = alertTitle
         lblMessage.attributedText = NSMutableAttributedString().regular("Are you sure you want to ", 14).bold("\(message)", 16)
-        imgAlert.image = imgtype//imgName.teamStaus
+        imgAlert.image = imgtype//ImgName.teamStaus
     }
     
     func updateBtn(alertType: String) {

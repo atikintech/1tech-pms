@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		3A29CCB12A8B948000CCD188 /* CreateVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A29CCB02A8B948000CCD188 /* CreateVC.swift */; };
+		3A2BE5DD2A927E2F00303014 /* BasicInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2BE5DC2A927E2F00303014 /* BasicInfoVC.swift */; };
+		3A2BE5DF2A92845400303014 /* ContactDataVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2BE5DE2A92845400303014 /* ContactDataVC.swift */; };
+		3A2BE5E42A92874100303014 /* CreateClientTemplateCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2BE5E22A92874100303014 /* CreateClientTemplateCell.swift */; };
+		3A2BE5E52A92874100303014 /* CreateClientTemplateCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A2BE5E32A92874100303014 /* CreateClientTemplateCell.xib */; };
 		3A4564142A8F7E140048F2CF /* CreateTeamVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4564132A8F7E140048F2CF /* CreateTeamVC.swift */; };
 		3A7ED3CD2A8BA72700D3E472 /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A7ED3CC2A8BA72700D3E472 /* Enums.swift */; };
 		3A7ED3D22A8BB96E00D3E472 /* MemberCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A7ED3D02A8BB96E00D3E472 /* MemberCell.swift */; };
@@ -20,6 +24,8 @@
 		3A7ED3E12A8F1E5400D3E472 /* MemberHomeHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A7ED3DF2A8F1E5400D3E472 /* MemberHomeHeaderCell.xib */; };
 		3A7ED3E52A8F1FA700D3E472 /* ModelMemberHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A7ED3E42A8F1FA700D3E472 /* ModelMemberHome.swift */; };
 		3A7ED3E72A8F30D600D3E472 /* AlertControllerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A7ED3E62A8F30D600D3E472 /* AlertControllerVC.swift */; };
+		3ABB30FF2A9139FD008531EC /* CreateClientVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ABB30FE2A9139FD008531EC /* CreateClientVC.swift */; };
+		3ACFA8B42A910612009A6467 /* ClientInformationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ACFA8B32A910612009A6467 /* ClientInformationVC.swift */; };
 		DB0080FE2A74B43700212FD4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0080FD2A74B43700212FD4 /* AppDelegate.swift */; };
 		DB0081002A74B43700212FD4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0080FF2A74B43700212FD4 /* SceneDelegate.swift */; };
 		DB0081052A74B43700212FD4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB0081032A74B43700212FD4 /* Main.storyboard */; };
@@ -59,7 +65,13 @@
 
 /* Begin PBXFileReference section */
 		3A29CCB02A8B948000CCD188 /* CreateVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateVC.swift; sourceTree = "<group>"; };
+		3A2BE5DC2A927E2F00303014 /* BasicInfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicInfoVC.swift; sourceTree = "<group>"; };
+		3A2BE5DE2A92845400303014 /* ContactDataVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactDataVC.swift; sourceTree = "<group>"; };
+		3A2BE5E22A92874100303014 /* CreateClientTemplateCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateClientTemplateCell.swift; sourceTree = "<group>"; };
+		3A2BE5E32A92874100303014 /* CreateClientTemplateCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreateClientTemplateCell.xib; sourceTree = "<group>"; };
 		3A4564132A8F7E140048F2CF /* CreateTeamVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateTeamVC.swift; sourceTree = "<group>"; };
+		3A4564162A90F70F0048F2CF /* SideMenuTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SideMenuTVC.xib; sourceTree = "<group>"; };
+		3A4564172A90F70F0048F2CF /* SideMenuTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuTVC.swift; sourceTree = "<group>"; };
 		3A7ED3CC2A8BA72700D3E472 /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
 		3A7ED3D02A8BB96E00D3E472 /* MemberCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberCell.swift; sourceTree = "<group>"; };
 		3A7ED3D12A8BB96E00D3E472 /* MemberCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MemberCell.xib; sourceTree = "<group>"; };
@@ -71,6 +83,8 @@
 		3A7ED3DF2A8F1E5400D3E472 /* MemberHomeHeaderCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MemberHomeHeaderCell.xib; sourceTree = "<group>"; };
 		3A7ED3E42A8F1FA700D3E472 /* ModelMemberHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelMemberHome.swift; sourceTree = "<group>"; };
 		3A7ED3E62A8F30D600D3E472 /* AlertControllerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertControllerVC.swift; sourceTree = "<group>"; };
+		3ABB30FE2A9139FD008531EC /* CreateClientVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateClientVC.swift; sourceTree = "<group>"; };
+		3ACFA8B32A910612009A6467 /* ClientInformationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientInformationVC.swift; sourceTree = "<group>"; };
 		DB0080FA2A74B43700212FD4 /* 1Tech PMS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "1Tech PMS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB0080FD2A74B43700212FD4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DB0080FF2A74B43700212FD4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -121,6 +135,35 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3A2BE5E02A9286CC00303014 /* CreateClient */ = {
+			isa = PBXGroup;
+			children = (
+				3A2BE5E12A92870200303014 /* cell */,
+				3ABB30FE2A9139FD008531EC /* CreateClientVC.swift */,
+				3A2BE5DC2A927E2F00303014 /* BasicInfoVC.swift */,
+				3A2BE5DE2A92845400303014 /* ContactDataVC.swift */,
+			);
+			path = CreateClient;
+			sourceTree = "<group>";
+		};
+		3A2BE5E12A92870200303014 /* cell */ = {
+			isa = PBXGroup;
+			children = (
+				3A2BE5E22A92874100303014 /* CreateClientTemplateCell.swift */,
+				3A2BE5E32A92874100303014 /* CreateClientTemplateCell.xib */,
+			);
+			path = cell;
+			sourceTree = "<group>";
+		};
+		3A4564152A90F70F0048F2CF /* SideMenuCell */ = {
+			isa = PBXGroup;
+			children = (
+				3A4564162A90F70F0048F2CF /* SideMenuTVC.xib */,
+				3A4564172A90F70F0048F2CF /* SideMenuTVC.swift */,
+			);
+			path = SideMenuCell;
+			sourceTree = "<group>";
+		};
 		3A7ED3CE2A8BB8F200D3E472 /* TeamMember */ = {
 			isa = PBXGroup;
 			children = (
@@ -326,10 +369,13 @@
 		DB6E1EDD2A876E030070D80E /* Members */ = {
 			isa = PBXGroup;
 			children = (
+				3A2BE5E02A9286CC00303014 /* CreateClient */,
 				3A7ED3D82A8F15EC00D3E472 /* Home */,
 				3A7ED3CE2A8BB8F200D3E472 /* TeamMember */,
+				3A4564152A90F70F0048F2CF /* SideMenuCell */,
 				3A29CCB02A8B948000CCD188 /* CreateVC.swift */,
 				3A4564132A8F7E140048F2CF /* CreateTeamVC.swift */,
+				3ACFA8B32A910612009A6467 /* ClientInformationVC.swift */,
 			);
 			path = Members;
 			sourceTree = "<group>";
@@ -417,6 +463,7 @@
 				DB00810A2A74B43800212FD4 /* Assets.xcassets in Resources */,
 				DB6E1EDC2A876DFB0070D80E /* Members.storyboard in Resources */,
 				3A7ED3DD2A8F164600D3E472 /* MembersHomeCell.xib in Resources */,
+				3A2BE5E52A92874100303014 /* CreateClientTemplateCell.xib in Resources */,
 				DB38252A2A80C656008D9EB4 /* AdminHomeCollCell.xib in Resources */,
 				DB2823F32A80DFF90016324D /* Admin.storyboard in Resources */,
 				DB0081052A74B43700212FD4 /* Main.storyboard in Resources */,
@@ -433,6 +480,7 @@
 				3A7ED3D72A8BFA7500D3E472 /* ModelTeamMember.swift in Sources */,
 				DB0081242A74B70B00212FD4 /* UIView.swift in Sources */,
 				DB2823F12A80DF0E0016324D /* ClientsVC.swift in Sources */,
+				3ABB30FF2A9139FD008531EC /* CreateClientVC.swift in Sources */,
 				3A7ED3E72A8F30D600D3E472 /* AlertControllerVC.swift in Sources */,
 				DB2823FD2A80EC060016324D /* HeadingTextField.swift in Sources */,
 				DB38252D2A80D055008D9EB4 /* UIImage.swift in Sources */,
@@ -447,19 +495,23 @@
 				DB0081402A74D9C900212FD4 /* AdminHomeVC.swift in Sources */,
 				3A7ED3D52A8BF9BE00D3E472 /* TeamMemberVC.swift in Sources */,
 				DB0081342A74B77600212FD4 /* BaseVC.swift in Sources */,
+				3A2BE5DF2A92845400303014 /* ContactDataVC.swift in Sources */,
 				DB2823FB2A80E7770016324D /* ClientInfoVC.swift in Sources */,
 				3A4564142A8F7E140048F2CF /* CreateTeamVC.swift in Sources */,
 				DB0081292A74B70B00212FD4 /* DateFormatter.swift in Sources */,
 				3A7ED3DC2A8F164600D3E472 /* MembersHomeCell.swift in Sources */,
 				DB0081082A74B43700212FD4 /* _Tech_PMS.xcdatamodeld in Sources */,
+				3A2BE5E42A92874100303014 /* CreateClientTemplateCell.swift in Sources */,
 				3A7ED3CD2A8BA72700D3E472 /* Enums.swift in Sources */,
 				3A7ED3E52A8F1FA700D3E472 /* ModelMemberHome.swift in Sources */,
+				3A2BE5DD2A927E2F00303014 /* BasicInfoVC.swift in Sources */,
 				DB0081152A74B4D500212FD4 /* SplashVC.swift in Sources */,
 				DB2823F72A80E28F0016324D /* ClientsCell.swift in Sources */,
 				DB0081232A74B70B00212FD4 /* ToastHelper.swift in Sources */,
 				DB0081252A74B70B00212FD4 /* UIColor.swift in Sources */,
 				DB6E1EDF2A876E720070D80E /* MembersHomeVC.swift in Sources */,
 				DB00812A2A74B70B00212FD4 /* UIFont.swift in Sources */,
+				3ACFA8B42A910612009A6467 /* ClientInformationVC.swift in Sources */,
 				DB0081432A74D9E400212FD4 /* SideMenuVC.swift in Sources */,
 				DB0080FE2A74B43700212FD4 /* AppDelegate.swift in Sources */,
 				DB0081002A74B43700212FD4 /* SceneDelegate.swift in Sources */,

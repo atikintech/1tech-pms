@@ -38,3 +38,11 @@ enum btnAlerts: Int {
     case no = 5
     
 }
+
+enum btnCreataClients: Int {
+    
+    case basic = 1
+    case contact = 2
+    case template = 3
+    
+}

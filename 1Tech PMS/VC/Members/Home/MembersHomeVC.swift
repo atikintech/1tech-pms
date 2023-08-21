@@ -29,7 +29,7 @@ class MembersHomeVC: UIViewController {
 //            alertVC.alertTitle = "TEAM STATUS"
 //            alertVC.message = "change status of the team?"
 //            alertVC.alert = alertTypes.yes.rawValue
-//            alertVC.imgtype = imgName.teamStaus
+//            alertVC.imgtype = ImgName.teamStaus
 //            alertVC.modalPresentationStyle = .overFullScreen
 //            self.present(alertVC, animated: false)
             
@@ -112,6 +112,14 @@ extension MembersHomeVC: UITableViewDelegate, UITableViewDataSource {
                 createVC.modalPresentationStyle = .overFullScreen
                 self.navigationController?.present(createVC, animated: false)
             }
+        } else if indexPath.section == 1 {
+            let createVC = ClientInformationVC.loadVC("Members")
+            createVC.modalPresentationStyle = .overFullScreen
+            self.navigationController?.present(createVC, animated: false)
+        } else {
+            let createVC = CreateClientVC.loadVC("Members")
+            createVC.modalPresentationStyle = .overFullScreen
+            self.navigationController?.present(createVC, animated: false)
         }
     }
     

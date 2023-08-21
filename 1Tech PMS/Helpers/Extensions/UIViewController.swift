@@ -19,4 +19,11 @@ extension UIViewController {
             tableView.register(nib, forCellReuseIdentifier: cell)
         }
     }
+    
+    func registerCollectionCell(cellArr: [String], collectionView: UICollectionView) {
+        for cell in cellArr {
+            let nib = UINib(nibName: cell, bundle: nil)
+            collectionView.register(nib, forCellWithReuseIdentifier: cell)
+        }
+    }
 }
