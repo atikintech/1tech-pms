@@ -116,10 +116,20 @@ extension MembersHomeVC: UITableViewDelegate, UITableViewDataSource {
             let createVC = ClientInformationVC.loadVC("Members")
             createVC.modalPresentationStyle = .overFullScreen
             self.navigationController?.present(createVC, animated: false)
-        } else {
-            let createVC = CreateClientVC.loadVC("Members")
-            createVC.modalPresentationStyle = .overFullScreen
-            self.navigationController?.present(createVC, animated: false)
+        } else if indexPath.section == 2 {
+            if indexPath.row == 0 {
+                let createVC = CreateClientVC.loadVC("Members")
+                createVC.modalPresentationStyle = .overFullScreen
+                self.navigationController?.present(createVC, animated: false)
+            } else if indexPath.row == 1{
+                let createNotesVC = CreateNotesVC.loadVC("Task")
+                createNotesVC.modalPresentationStyle = .overFullScreen
+                self.navigationController?.present(createNotesVC, animated: false)
+            } else {
+                let taskVC = ManageTaskVC.loadVC("Task")
+                taskVC.modalPresentationStyle = .overFullScreen
+                self.navigationController?.present(taskVC, animated: false)
+            }
         }
     }
     

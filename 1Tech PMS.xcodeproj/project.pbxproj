@@ -12,6 +12,19 @@
 		3A2BE5DF2A92845400303014 /* ContactDataVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2BE5DE2A92845400303014 /* ContactDataVC.swift */; };
 		3A2BE5E42A92874100303014 /* CreateClientTemplateCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2BE5E22A92874100303014 /* CreateClientTemplateCell.swift */; };
 		3A2BE5E52A92874100303014 /* CreateClientTemplateCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A2BE5E32A92874100303014 /* CreateClientTemplateCell.xib */; };
+		3A2BE5E72A92E6E700303014 /* Task.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A2BE5E62A92E6E700303014 /* Task.storyboard */; };
+		3A2BE5EA2A92F22C00303014 /* CreateNotesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2BE5E92A92F22C00303014 /* CreateNotesVC.swift */; };
+		3A2BE5EE2A92F47000303014 /* CreateNotesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2BE5EC2A92F47000303014 /* CreateNotesCell.swift */; };
+		3A2BE5EF2A92F47000303014 /* CreateNotesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A2BE5ED2A92F47000303014 /* CreateNotesCell.xib */; };
+		3A2BE5F32A97561800303014 /* TaskTitleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2BE5F12A97561800303014 /* TaskTitleCell.swift */; };
+		3A2BE5F42A97561800303014 /* TaskTitleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A2BE5F22A97561800303014 /* TaskTitleCell.xib */; };
+		3A2BE5F72A975AF000303014 /* TaskTodoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2BE5F52A975AF000303014 /* TaskTodoCell.swift */; };
+		3A2BE5F82A975AF000303014 /* TaskTodoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A2BE5F62A975AF000303014 /* TaskTodoCell.xib */; };
+		3A2BE5FB2A975D4C00303014 /* TaskAttachmentsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2BE5F92A975D4C00303014 /* TaskAttachmentsCell.swift */; };
+		3A2BE5FC2A975D4C00303014 /* TaskAttachmentsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A2BE5FA2A975D4C00303014 /* TaskAttachmentsCell.xib */; };
+		3A2BE5FE2A97622000303014 /* ManageTaskVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2BE5FD2A97622000303014 /* ManageTaskVC.swift */; };
+		3A2BE6012A9774ED00303014 /* TasksCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2BE5FF2A9774ED00303014 /* TasksCell.swift */; };
+		3A2BE6022A9774ED00303014 /* TasksCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A2BE6002A9774ED00303014 /* TasksCell.xib */; };
 		3A4564142A8F7E140048F2CF /* CreateTeamVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4564132A8F7E140048F2CF /* CreateTeamVC.swift */; };
 		3A7ED3CD2A8BA72700D3E472 /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A7ED3CC2A8BA72700D3E472 /* Enums.swift */; };
 		3A7ED3D22A8BB96E00D3E472 /* MemberCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A7ED3D02A8BB96E00D3E472 /* MemberCell.swift */; };
@@ -69,6 +82,19 @@
 		3A2BE5DE2A92845400303014 /* ContactDataVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactDataVC.swift; sourceTree = "<group>"; };
 		3A2BE5E22A92874100303014 /* CreateClientTemplateCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateClientTemplateCell.swift; sourceTree = "<group>"; };
 		3A2BE5E32A92874100303014 /* CreateClientTemplateCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreateClientTemplateCell.xib; sourceTree = "<group>"; };
+		3A2BE5E62A92E6E700303014 /* Task.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Task.storyboard; sourceTree = "<group>"; };
+		3A2BE5E92A92F22C00303014 /* CreateNotesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNotesVC.swift; sourceTree = "<group>"; };
+		3A2BE5EC2A92F47000303014 /* CreateNotesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNotesCell.swift; sourceTree = "<group>"; };
+		3A2BE5ED2A92F47000303014 /* CreateNotesCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreateNotesCell.xib; sourceTree = "<group>"; };
+		3A2BE5F12A97561800303014 /* TaskTitleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskTitleCell.swift; sourceTree = "<group>"; };
+		3A2BE5F22A97561800303014 /* TaskTitleCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TaskTitleCell.xib; sourceTree = "<group>"; };
+		3A2BE5F52A975AF000303014 /* TaskTodoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskTodoCell.swift; sourceTree = "<group>"; };
+		3A2BE5F62A975AF000303014 /* TaskTodoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TaskTodoCell.xib; sourceTree = "<group>"; };
+		3A2BE5F92A975D4C00303014 /* TaskAttachmentsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskAttachmentsCell.swift; sourceTree = "<group>"; };
+		3A2BE5FA2A975D4C00303014 /* TaskAttachmentsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TaskAttachmentsCell.xib; sourceTree = "<group>"; };
+		3A2BE5FD2A97622000303014 /* ManageTaskVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageTaskVC.swift; sourceTree = "<group>"; };
+		3A2BE5FF2A9774ED00303014 /* TasksCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksCell.swift; sourceTree = "<group>"; };
+		3A2BE6002A9774ED00303014 /* TasksCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TasksCell.xib; sourceTree = "<group>"; };
 		3A4564132A8F7E140048F2CF /* CreateTeamVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateTeamVC.swift; sourceTree = "<group>"; };
 		3A4564162A90F70F0048F2CF /* SideMenuTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SideMenuTVC.xib; sourceTree = "<group>"; };
 		3A4564172A90F70F0048F2CF /* SideMenuTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuTVC.swift; sourceTree = "<group>"; };
@@ -153,6 +179,41 @@
 				3A2BE5E32A92874100303014 /* CreateClientTemplateCell.xib */,
 			);
 			path = cell;
+			sourceTree = "<group>";
+		};
+		3A2BE5E82A92F19C00303014 /* Task */ = {
+			isa = PBXGroup;
+			children = (
+				3A2BE5F02A9755AE00303014 /* TaskCell */,
+				3A2BE5EB2A92F44200303014 /* NotesCell */,
+				3A2BE5E92A92F22C00303014 /* CreateNotesVC.swift */,
+				3A2BE5FD2A97622000303014 /* ManageTaskVC.swift */,
+			);
+			path = Task;
+			sourceTree = "<group>";
+		};
+		3A2BE5EB2A92F44200303014 /* NotesCell */ = {
+			isa = PBXGroup;
+			children = (
+				3A2BE5EC2A92F47000303014 /* CreateNotesCell.swift */,
+				3A2BE5ED2A92F47000303014 /* CreateNotesCell.xib */,
+			);
+			path = NotesCell;
+			sourceTree = "<group>";
+		};
+		3A2BE5F02A9755AE00303014 /* TaskCell */ = {
+			isa = PBXGroup;
+			children = (
+				3A2BE5F12A97561800303014 /* TaskTitleCell.swift */,
+				3A2BE5F22A97561800303014 /* TaskTitleCell.xib */,
+				3A2BE5F52A975AF000303014 /* TaskTodoCell.swift */,
+				3A2BE5F62A975AF000303014 /* TaskTodoCell.xib */,
+				3A2BE5F92A975D4C00303014 /* TaskAttachmentsCell.swift */,
+				3A2BE5FA2A975D4C00303014 /* TaskAttachmentsCell.xib */,
+				3A2BE5FF2A9774ED00303014 /* TasksCell.swift */,
+				3A2BE6002A9774ED00303014 /* TasksCell.xib */,
+			);
+			path = TaskCell;
 			sourceTree = "<group>";
 		};
 		3A4564152A90F70F0048F2CF /* SideMenuCell */ = {
@@ -292,6 +353,7 @@
 				DB0081312A74B77600212FD4 /* Base */,
 				DB0081382A74B79700212FD4 /* Auth */,
 				DB0081412A74D9CC00212FD4 /* Admin */,
+				3A2BE5E82A92F19C00303014 /* Task */,
 				DB6E1EDD2A876E030070D80E /* Members */,
 			);
 			path = VC;
@@ -314,6 +376,7 @@
 				DB2823F22A80DFF90016324D /* Admin.storyboard */,
 				DB6E1EDB2A876DFB0070D80E /* Members.storyboard */,
 				DB00810B2A74B43800212FD4 /* LaunchScreen.storyboard */,
+				3A2BE5E62A92E6E700303014 /* Task.storyboard */,
 				DB2823FC2A80EC060016324D /* HeadingTextField.swift */,
 			);
 			path = Views;
@@ -457,14 +520,20 @@
 			files = (
 				3A7ED3D32A8BB96E00D3E472 /* MemberCell.xib in Resources */,
 				DB00810D2A74B43800212FD4 /* LaunchScreen.storyboard in Resources */,
+				3A2BE5F42A97561800303014 /* TaskTitleCell.xib in Resources */,
 				DB00813C2A74B85400212FD4 /* Colors.xcassets in Resources */,
+				3A2BE5E72A92E6E700303014 /* Task.storyboard in Resources */,
 				3A7ED3E12A8F1E5400D3E472 /* MemberHomeHeaderCell.xib in Resources */,
 				DB2823F82A80E28F0016324D /* ClientsCell.xib in Resources */,
 				DB00810A2A74B43800212FD4 /* Assets.xcassets in Resources */,
+				3A2BE6022A9774ED00303014 /* TasksCell.xib in Resources */,
 				DB6E1EDC2A876DFB0070D80E /* Members.storyboard in Resources */,
 				3A7ED3DD2A8F164600D3E472 /* MembersHomeCell.xib in Resources */,
+				3A2BE5F82A975AF000303014 /* TaskTodoCell.xib in Resources */,
+				3A2BE5EF2A92F47000303014 /* CreateNotesCell.xib in Resources */,
 				3A2BE5E52A92874100303014 /* CreateClientTemplateCell.xib in Resources */,
 				DB38252A2A80C656008D9EB4 /* AdminHomeCollCell.xib in Resources */,
+				3A2BE5FC2A975D4C00303014 /* TaskAttachmentsCell.xib in Resources */,
 				DB2823F32A80DFF90016324D /* Admin.storyboard in Resources */,
 				DB0081052A74B43700212FD4 /* Main.storyboard in Resources */,
 			);
@@ -487,16 +556,20 @@
 				DB0081352A74B77600212FD4 /* BaseAuthVC.swift in Sources */,
 				DB3825292A80C656008D9EB4 /* AdminHomeCollCell.swift in Sources */,
 				DB0081272A74B70B00212FD4 /* String.swift in Sources */,
+				3A2BE5F72A975AF000303014 /* TaskTodoCell.swift in Sources */,
 				DB0081282A74B70B00212FD4 /* UIViewController.swift in Sources */,
 				DB00813E2A74BA5300212FD4 /* LoginVC.swift in Sources */,
 				DB0081262A74B70B00212FD4 /* UITextField.swift in Sources */,
 				3A29CCB12A8B948000CCD188 /* CreateVC.swift in Sources */,
 				3A7ED3D22A8BB96E00D3E472 /* MemberCell.swift in Sources */,
+				3A2BE5FE2A97622000303014 /* ManageTaskVC.swift in Sources */,
 				DB0081402A74D9C900212FD4 /* AdminHomeVC.swift in Sources */,
 				3A7ED3D52A8BF9BE00D3E472 /* TeamMemberVC.swift in Sources */,
 				DB0081342A74B77600212FD4 /* BaseVC.swift in Sources */,
+				3A2BE5EA2A92F22C00303014 /* CreateNotesVC.swift in Sources */,
 				3A2BE5DF2A92845400303014 /* ContactDataVC.swift in Sources */,
 				DB2823FB2A80E7770016324D /* ClientInfoVC.swift in Sources */,
+				3A2BE5FB2A975D4C00303014 /* TaskAttachmentsCell.swift in Sources */,
 				3A4564142A8F7E140048F2CF /* CreateTeamVC.swift in Sources */,
 				DB0081292A74B70B00212FD4 /* DateFormatter.swift in Sources */,
 				3A7ED3DC2A8F164600D3E472 /* MembersHomeCell.swift in Sources */,
@@ -506,12 +579,15 @@
 				3A7ED3E52A8F1FA700D3E472 /* ModelMemberHome.swift in Sources */,
 				3A2BE5DD2A927E2F00303014 /* BasicInfoVC.swift in Sources */,
 				DB0081152A74B4D500212FD4 /* SplashVC.swift in Sources */,
+				3A2BE6012A9774ED00303014 /* TasksCell.swift in Sources */,
 				DB2823F72A80E28F0016324D /* ClientsCell.swift in Sources */,
 				DB0081232A74B70B00212FD4 /* ToastHelper.swift in Sources */,
 				DB0081252A74B70B00212FD4 /* UIColor.swift in Sources */,
+				3A2BE5EE2A92F47000303014 /* CreateNotesCell.swift in Sources */,
 				DB6E1EDF2A876E720070D80E /* MembersHomeVC.swift in Sources */,
 				DB00812A2A74B70B00212FD4 /* UIFont.swift in Sources */,
 				3ACFA8B42A910612009A6467 /* ClientInformationVC.swift in Sources */,
+				3A2BE5F32A97561800303014 /* TaskTitleCell.swift in Sources */,
 				DB0081432A74D9E400212FD4 /* SideMenuVC.swift in Sources */,
 				DB0080FE2A74B43700212FD4 /* AppDelegate.swift in Sources */,
 				DB0081002A74B43700212FD4 /* SceneDelegate.swift in Sources */,

@@ -23,9 +23,7 @@ class CreateClientVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         updateBtnUI(isBasic: true, isContact: false, isTemplate: false)
-//        registerCollectionCell(cellArr: ["CreateClientTemplateCell"], collectionView: self.collectionView)
-        let cell = UINib(nibName: "CreateClientTemplateCell", bundle: nil)
-        self.collectionView.register(cell, forCellWithReuseIdentifier: "CreateClientTemplateCell")
+        registerCollectionCell(cellArr: ["CreateClientTemplateCell"], collectionView: self.collectionView)
 //        moveToScreen()
         // Do any additional setup after loading the view.
     }
@@ -73,7 +71,7 @@ class CreateClientVC: UIViewController {
             updateBtnUI(isBasic: false, isContact: false, isTemplate: true)
             
         default:
-            break
+            self.dismiss(animated: true)
         }
     }
     

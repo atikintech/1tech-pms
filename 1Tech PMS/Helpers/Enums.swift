@@ -46,3 +46,14 @@ enum btnCreataClients: Int {
     case template = 3
     
 }
+
+enum taskList: String {
+    case taskTitle = "Task Title"
+    case taskTodo = "To Do"
+    case taskAttachments = "Attachements"
+    case taskIssueType = "Issue Type"
+    case taskAssignee = "Assignee"
+    case taskReporter = "Reporter"
+    case taskPriority = "Priority"
+    case taskActivity = "Activity"
+}

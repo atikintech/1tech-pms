@@ -153,4 +153,14 @@ extension UIView {
         self.layer.shadowRadius = self.shadowRadius
     }
     
+    func createDottedLine(color: CGColor) {
+        var yourViewBorder = CAShapeLayer()
+        yourViewBorder.strokeColor = color
+        yourViewBorder.lineDashPattern = [2, 2]
+        yourViewBorder.frame = self.layer.bounds
+        yourViewBorder.fillColor = nil
+        yourViewBorder.path = UIBezierPath(rect: self.layer.bounds).cgPath
+        self.layer.addSublayer(yourViewBorder)
+    }
+    
 }
