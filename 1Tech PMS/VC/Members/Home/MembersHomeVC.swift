@@ -125,10 +125,14 @@ extension MembersHomeVC: UITableViewDelegate, UITableViewDataSource {
                 let createNotesVC = CreateNotesVC.loadVC("Task")
                 createNotesVC.modalPresentationStyle = .overFullScreen
                 self.navigationController?.present(createNotesVC, animated: false)
-            } else {
+            } else if indexPath.row == 2 {
                 let taskVC = ManageTaskVC.loadVC("Task")
                 taskVC.modalPresentationStyle = .overFullScreen
                 self.navigationController?.present(taskVC, animated: false)
+            } else {
+                let boardsVC = ManageBoardsVC.loadVC("Task")
+                boardsVC.modalPresentationStyle = .overFullScreen
+                self.navigationController?.present(boardsVC, animated: false)
             }
         }
     }
