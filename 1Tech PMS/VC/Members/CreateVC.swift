@@ -25,6 +25,7 @@ class CreateVC: UIViewController {
     @IBOutlet weak var vewName: UIView!
     @IBOutlet weak var vewEmail: UIView!
     @IBOutlet weak var vewProject: UIView!
+    @IBOutlet weak var vewBtns: UIView!
     
     @IBOutlet weak var btnCancel: UIButton!
     @IBOutlet weak var btnInvite: UIButton!
@@ -84,5 +85,29 @@ class CreateVC: UIViewController {
         vewEmail.isHidden = isEmail
         vewProject.isHidden = isProject
     }
-
+    
+    
+    @IBAction func btnAction(_ sender: UIButton) {
+        
+        switch sender.tag {
+        case 1:
+//            let createVC = TeamMemberVC.loadVC("Members")
+//            createVC.modalPresentationStyle = .overFullScreen
+//            self.navigationController?.present(createVC, animated: false)
+            self.dismiss(animated: true)
+            
+        case 2:
+//            let createVC = TeamMemberVC.loadVC("Members")
+//            createVC.modalPresentationStyle = .overFullScreen
+//            self.navigationController?.present(createVC, animated: false)
+            self.dismiss(animated: true)
+            
+        case 3:
+            self.dismiss(animated: true)
+            
+        default:
+            self.dismiss(animated: true)
+        }
+    }
+    
 }

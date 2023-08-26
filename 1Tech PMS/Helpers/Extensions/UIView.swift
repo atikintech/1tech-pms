@@ -98,4 +98,69 @@ extension UIView {
         mask.path = path.cgPath
         self.layer.mask = mask
     }
+    
+    @IBInspectable var isShadowEnabled: Bool {
+        get {
+            return false
+        }
+        set {
+            self.updateShadowView()
+        }
+    }
+    
+    @IBInspectable var shadowColor: UIColor {
+        get {
+            return UIColor.black
+        }
+        set {
+            self.updateShadowView()
+        }
+    }
+    
+    @IBInspectable var shadowOpacity: Float {
+        get {
+            return 0.5
+        }
+        set {
+            self.updateShadowView()
+        }
+    }
+    
+    @IBInspectable var shadowOffset: CGSize {
+        get {
+            return CGSize(width: 3, height: 3)
+        }
+        set {
+            self.updateShadowView()
+        }
+    }
+    
+    @IBInspectable var shadowRadius: CGFloat {
+        get {
+            return 10.0
+        }
+        set {
+            self.updateShadowView()
+        }
+    }
+    
+    func updateShadowView() {
+        self.layer.rasterizationScale = self.isShadowEnabled ? UIScreen.main.scale : 1
+        self.layer.masksToBounds = false
+        self.layer.shadowColor = self.shadowColor.cgColor
+        self.layer.shadowOpacity = self.shadowOpacity
+        self.layer.shadowOffset = self.shadowOffset
+        self.layer.shadowRadius = self.shadowRadius
+    }
+    
+    func createDottedLine(color: CGColor) {
+        var yourViewBorder = CAShapeLayer()
+        yourViewBorder.strokeColor = color
+        yourViewBorder.lineDashPattern = [2, 2]
+        yourViewBorder.frame = self.layer.bounds
+        yourViewBorder.fillColor = nil
+        yourViewBorder.path = UIBezierPath(rect: self.layer.bounds).cgPath
+        self.layer.addSublayer(yourViewBorder)
+    }
+    
 }

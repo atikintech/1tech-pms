@@ -19,9 +19,7 @@ class TeamMemberVC: UIViewController {
         vmTeamMember = VMTeamMember()
         
         // Register TableView Cell
-        let cell = UINib(nibName: "MemberCell", bundle: nil)
-        tableView.register(cell, forCellReuseIdentifier: "MemberCell")
-
+        registerCell(cellArr: ["MemberCell"], tableView: self.tableView)
         // Do any additional setup after loading the view.
     }
 
@@ -35,11 +33,16 @@ extension TeamMemberVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "MemberCell", for: indexPath) as! MemberCell
         cell.populateData(data: vmTeamMember?.teamMemberArr[indexPath.row] ?? ModelTeamMember(name: "", mail: "", designation: ""))
+        cell.btnFwd.addTarget(self, action: #selector(btnAct), for: .touchUpInside)
         return cell
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 100
+    }
+    
+    @objc func btnAct(){
+        self.dismiss(animated: true)
     }
     
 }
