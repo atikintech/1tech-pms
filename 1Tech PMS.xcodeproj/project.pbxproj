@@ -25,6 +25,9 @@
 		3A2BE5FE2A97622000303014 /* ManageTaskVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2BE5FD2A97622000303014 /* ManageTaskVC.swift */; };
 		3A2BE6012A9774ED00303014 /* TasksCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2BE5FF2A9774ED00303014 /* TasksCell.swift */; };
 		3A2BE6022A9774ED00303014 /* TasksCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A2BE6002A9774ED00303014 /* TasksCell.xib */; };
+		3A2BE6162A99F27300303014 /* BoardsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2BE6142A99F27300303014 /* BoardsCell.swift */; };
+		3A2BE6172A99F27300303014 /* BoardsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A2BE6152A99F27300303014 /* BoardsCell.xib */; };
+		3A2BE6192A99FB0400303014 /* ManageBoardsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2BE6182A99FB0400303014 /* ManageBoardsVC.swift */; };
 		3A4564142A8F7E140048F2CF /* CreateTeamVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4564132A8F7E140048F2CF /* CreateTeamVC.swift */; };
 		3A7ED3CD2A8BA72700D3E472 /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A7ED3CC2A8BA72700D3E472 /* Enums.swift */; };
 		3A7ED3D22A8BB96E00D3E472 /* MemberCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A7ED3D02A8BB96E00D3E472 /* MemberCell.swift */; };
@@ -95,6 +98,9 @@
 		3A2BE5FD2A97622000303014 /* ManageTaskVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageTaskVC.swift; sourceTree = "<group>"; };
 		3A2BE5FF2A9774ED00303014 /* TasksCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksCell.swift; sourceTree = "<group>"; };
 		3A2BE6002A9774ED00303014 /* TasksCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TasksCell.xib; sourceTree = "<group>"; };
+		3A2BE6142A99F27300303014 /* BoardsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardsCell.swift; sourceTree = "<group>"; };
+		3A2BE6152A99F27300303014 /* BoardsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BoardsCell.xib; sourceTree = "<group>"; };
+		3A2BE6182A99FB0400303014 /* ManageBoardsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageBoardsVC.swift; sourceTree = "<group>"; };
 		3A4564132A8F7E140048F2CF /* CreateTeamVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateTeamVC.swift; sourceTree = "<group>"; };
 		3A4564162A90F70F0048F2CF /* SideMenuTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SideMenuTVC.xib; sourceTree = "<group>"; };
 		3A4564172A90F70F0048F2CF /* SideMenuTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuTVC.swift; sourceTree = "<group>"; };
@@ -184,10 +190,12 @@
 		3A2BE5E82A92F19C00303014 /* Task */ = {
 			isa = PBXGroup;
 			children = (
+				3A2BE6132A99F25600303014 /* BoardsCell */,
 				3A2BE5F02A9755AE00303014 /* TaskCell */,
 				3A2BE5EB2A92F44200303014 /* NotesCell */,
 				3A2BE5E92A92F22C00303014 /* CreateNotesVC.swift */,
 				3A2BE5FD2A97622000303014 /* ManageTaskVC.swift */,
+				3A2BE6182A99FB0400303014 /* ManageBoardsVC.swift */,
 			);
 			path = Task;
 			sourceTree = "<group>";
@@ -214,6 +222,15 @@
 				3A2BE6002A9774ED00303014 /* TasksCell.xib */,
 			);
 			path = TaskCell;
+			sourceTree = "<group>";
+		};
+		3A2BE6132A99F25600303014 /* BoardsCell */ = {
+			isa = PBXGroup;
+			children = (
+				3A2BE6142A99F27300303014 /* BoardsCell.swift */,
+				3A2BE6152A99F27300303014 /* BoardsCell.xib */,
+			);
+			path = BoardsCell;
 			sourceTree = "<group>";
 		};
 		3A4564152A90F70F0048F2CF /* SideMenuCell */ = {
@@ -521,6 +538,7 @@
 				3A7ED3D32A8BB96E00D3E472 /* MemberCell.xib in Resources */,
 				DB00810D2A74B43800212FD4 /* LaunchScreen.storyboard in Resources */,
 				3A2BE5F42A97561800303014 /* TaskTitleCell.xib in Resources */,
+				3A2BE6172A99F27300303014 /* BoardsCell.xib in Resources */,
 				DB00813C2A74B85400212FD4 /* Colors.xcassets in Resources */,
 				3A2BE5E72A92E6E700303014 /* Task.storyboard in Resources */,
 				3A7ED3E12A8F1E5400D3E472 /* MemberHomeHeaderCell.xib in Resources */,
@@ -568,6 +586,7 @@
 				DB0081342A74B77600212FD4 /* BaseVC.swift in Sources */,
 				3A2BE5EA2A92F22C00303014 /* CreateNotesVC.swift in Sources */,
 				3A2BE5DF2A92845400303014 /* ContactDataVC.swift in Sources */,
+				3A2BE6162A99F27300303014 /* BoardsCell.swift in Sources */,
 				DB2823FB2A80E7770016324D /* ClientInfoVC.swift in Sources */,
 				3A2BE5FB2A975D4C00303014 /* TaskAttachmentsCell.swift in Sources */,
 				3A4564142A8F7E140048F2CF /* CreateTeamVC.swift in Sources */,
@@ -590,6 +609,7 @@
 				3A2BE5F32A97561800303014 /* TaskTitleCell.swift in Sources */,
 				DB0081432A74D9E400212FD4 /* SideMenuVC.swift in Sources */,
 				DB0080FE2A74B43700212FD4 /* AppDelegate.swift in Sources */,
+				3A2BE6192A99FB0400303014 /* ManageBoardsVC.swift in Sources */,
 				DB0081002A74B43700212FD4 /* SceneDelegate.swift in Sources */,
 				DB0081222A74B70B00212FD4 /* Constants.swift in Sources */,
 				3A7ED3E02A8F1E5400D3E472 /* MemberHomeHeaderCell.swift in Sources */,

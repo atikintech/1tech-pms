@@ -31,7 +31,8 @@ class VMMemberHome {
         ModelMemberHome(day: "This Month", dayIssueArr: [
             ModelIssue(issue: "Web App Module Document", issueComment: "CBQI-1 = TO DO", status: true),
             ModelIssue(issue: "What is requested", issueComment: "DEMO-1 = Viewed", status: true),
-            ModelIssue(issue: "What is requested 2", issueComment: "DEMO-2 = Viewed", status: true)
+            ModelIssue(issue: "What is requested 2", issueComment: "DEMO-2 = Viewed", status: true),
+            ModelIssue(issue: "What is requested 3", issueComment: "DEMO-3 = Viewed", status: true)
         ])
     ]
 }
