@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum createPageType: String {
+enum CreatePageType: String {
     
     case createMember
     case editMember

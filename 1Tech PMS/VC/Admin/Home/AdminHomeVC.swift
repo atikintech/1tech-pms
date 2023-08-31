@@ -22,21 +22,23 @@ class AdminHomeVC: BaseVC {
         var vc: UIViewController {
             switch self {
             case .clients:
-                return ClientsVC.loadVC("Admin")
+                return ClientsVC.loadVC()
             case .projects:
-                return ClientsVC.loadVC("Admin")
+                return ProjectsVC.loadVC()
             case .calendar:
-                return ClientsVC.loadVC("Admin")
+                return UIViewController()
             case .todos:
-                return ClientsVC.loadVC("Admin")
+                return UIViewController()
             case .notes:
-                return ClientsVC.loadVC("Admin")
+                let vc = CreateNotesVC.loadVC(role: .task)
+                vc.showAddNotes = true
+                return vc
             case .folder:
-                return ClientsVC.loadVC("Admin")
+                return UIViewController()
             case .alerts:
-                return ClientsVC.loadVC("Admin")
+                return UIViewController()
             case .team:
-                return ClientsVC.loadVC("Admin")
+                return TeamMemberVC.loadVC(role: .member)
             }
         }
     }

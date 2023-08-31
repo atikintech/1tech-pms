@@ -23,6 +23,15 @@ class BaseVC: UIViewController {
         btnIcon.backgroundColor = .primary()
         btnIcon.rounded()
         btnIcon.setTitle("BG", for: .normal)
+        btnIcon.addTarget(self, action: #selector(showProfileView), for: .touchUpInside)
+        return UIBarButtonItem(customView: btnIcon)
+    }()
+    
+    private lazy var addBtnItem: UIBarButtonItem = {
+        let btnIcon = UIButton(frame: CGRect(x: 0, y: 0, width: 35, height: 35))
+        btnIcon.backgroundColor = .clear
+        btnIcon.setTitle("+", for: .normal)
+        btnIcon.addTarget(self, action: #selector(addClientClicked), for: .touchUpInside)
         return UIBarButtonItem(customView: btnIcon)
     }()
     
@@ -33,6 +42,9 @@ class BaseVC: UIViewController {
         appearance.largeTitleTextAttributes = [.foregroundColor: UIColor.white]
         return appearance
     }()
+    
+    var hideSideMenu = false
+    var showAddBtn = false
     
     override func viewDidLoad() {
         self.view.backgroundColor = .primary(light: true)
@@ -58,9 +70,18 @@ class BaseVC: UIViewController {
             //            else {
             //                leftBarItems.append(sideMenuBtn)
             //            }
-            
-            self.navigationItem.leftBarButtonItem = sideMenuBtn
-            self.navigationItem.rightBarButtonItem = rightBtnItem
+            if !hideSideMenu {
+                self.navigationItem.leftBarButtonItem = sideMenuBtn
+            }
+            else {
+                self.navigationItem.hidesBackButton = false
+            }
+            if showAddBtn {
+                self.navigationItem.rightBarButtonItems = [rightBtnItem, addBtnItem]
+            }
+            else {
+                self.navigationItem.rightBarButtonItem = rightBtnItem
+            }
             self.navigationItem.title = self.title
             
         }
@@ -76,6 +97,15 @@ class BaseVC: UIViewController {
         self.navigationController?.popViewController(animated: true)
     }
     
+    @objc private func showProfileView() {
+        let vc = ProfileVC.loadVC(role: .notLoggedIn)
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    @objc func addClientClicked() {
+        let vc = CreateClientVC.loadVC(role: .member)
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
 }
 
 extension BaseVC {

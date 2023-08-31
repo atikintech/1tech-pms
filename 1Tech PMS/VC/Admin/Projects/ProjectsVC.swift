@@ -1,36 +1,30 @@
 //
-//  ClientsVC.swift
+//  ProjectsVC.swift
 //  1Tech PMS
 //
-//  Created by Bhavesh Gupta on 07/08/23.
+//  Created by Bhavesh Gupta on 31/08/23.
 //
 
 import UIKit
 
-class ClientsVC: BaseVC {
+class ProjectsVC: BaseVC {
 
     private let CLIENT_CELL = "ClientsCell"
-    @IBOutlet weak var clientsTv: UITableView!
+    @IBOutlet weak var projectsTv: UITableView!
     
     override func viewDidLoad() {
-        self.title = "CLIENTS"
-        self.showAddBtn = true
+        self.title = "PROJECTS"
         self.hideSideMenu = true
         super.viewDidLoad()
         setupView()
     }
     
     func setupView() {
-        clientsTv.register(UINib(nibName: CLIENT_CELL, bundle: nil), forCellReuseIdentifier: CLIENT_CELL)
+        projectsTv.register(UINib(nibName: CLIENT_CELL, bundle: nil), forCellReuseIdentifier: CLIENT_CELL)
     }
-    
-//    @objc func addClientClicked() {
-//        let vc = CreateClientVC.loadVC(role: .member)
-//        self.navigationController?.pushViewController(vc, animated: true)
-//    }
 }
 
-extension ClientsVC: UITableViewDelegate, UITableViewDataSource {
+extension ProjectsVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 5
     }
@@ -41,7 +35,7 @@ extension ClientsVC: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let vc = ClientInfoVC.loadVC(role: .member)
+        let vc = ManageBoardsVC.loadVC(role: .task)
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
@@ -49,3 +43,4 @@ extension ClientsVC: UITableViewDelegate, UITableViewDataSource {
         return 100
     }
 }
+

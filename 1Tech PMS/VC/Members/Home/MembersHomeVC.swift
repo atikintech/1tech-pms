@@ -7,18 +7,22 @@
 
 import UIKit
 
-class MembersHomeVC: UIViewController {
+class MembersHomeVC: BaseVC {
 
     @IBOutlet weak var tableView: UITableView!
-    
     var vmMemberHome: VMMemberHome?
     
     override func viewDidLoad() {
+        self.title = "HOME"
+        self.hideSideMenu = true
         super.viewDidLoad()
         vmMemberHome = VMMemberHome()
-        
         // Register TableView Cell
-        registerCell(cellArr: ["MembersHomeCell", "MemberHomeHeaderCell"], tableView: self.tableView)
+        registerCell(cells: ["MembersHomeCell", "MemberHomeHeaderCell"], tableView: self.tableView)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.isNavigationBarHidden = false
     }
     
     @IBAction func btnAction(_ sender: UIButton) {
@@ -33,29 +37,26 @@ class MembersHomeVC: UIViewController {
 //            alertVC.modalPresentationStyle = .overFullScreen
 //            self.present(alertVC, animated: false)
             
-            let createVC = CreateVC.loadVC("Members")
-            createVC.pageType = createPageType.createMember.rawValue
+            let createVC = CreateVC.loadVC(role: .member)
+            createVC.pageType = CreatePageType.createMember.rawValue
             createVC.modalPresentationStyle = .overFullScreen
             self.navigationController?.present(createVC, animated: false)
             print("goto")
             
         case btnMembersHome.projectManagement.rawValue :
-            let createVC = CreateVC.loadVC("Members")
-            createVC.pageType = createPageType.editMember.rawValue
-            createVC.modalPresentationStyle = .overFullScreen
-            self.navigationController?.present(createVC, animated: false)
-            print("projectManagement")
+            let projectsVC = ProjectsVC.loadVC(role: .admin)
+            self.navigationController?.present(projectsVC, animated: true)
             
         case btnMembersHome.recruitment.rawValue :
-            let createVC = CreateVC.loadVC("Members")
-            createVC.pageType = createPageType.inviteMember.rawValue
+            let createVC = CreateVC.loadVC(role: .member)
+            createVC.pageType = CreatePageType.inviteMember.rawValue
             createVC.modalPresentationStyle = .overFullScreen
             self.navigationController?.present(createVC, animated: false)
             print("recruitment")
             
         case btnMembersHome.salesPipeline.rawValue :
-            let createVC = CreateVC.loadVC("Members")
-            createVC.pageType = createPageType.createTeam.rawValue
+            let createVC = CreateVC.loadVC(role: .member)
+            createVC.pageType = CreatePageType.createTeam.rawValue
             createVC.modalPresentationStyle = .overFullScreen
             self.navigationController?.present(createVC, animated: false)
             
@@ -102,39 +103,39 @@ extension MembersHomeVC: UITableViewDelegate, UITableViewDataSource {
     
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if indexPath.section == 0 {
-            if indexPath.row == 0 {
-                let createVC = TeamMemberVC.loadVC("Members")
-                createVC.modalPresentationStyle = .overFullScreen
-                self.navigationController?.present(createVC, animated: false)
-            }else {
-                let createVC = CreateTeamVC.loadVC("Members")
-                createVC.modalPresentationStyle = .overFullScreen
-                self.navigationController?.present(createVC, animated: false)
-            }
-        } else if indexPath.section == 1 {
-            let createVC = ClientInformationVC.loadVC("Members")
-            createVC.modalPresentationStyle = .overFullScreen
-            self.navigationController?.present(createVC, animated: false)
-        } else if indexPath.section == 2 {
-            if indexPath.row == 0 {
-                let createVC = CreateClientVC.loadVC("Members")
-                createVC.modalPresentationStyle = .overFullScreen
-                self.navigationController?.present(createVC, animated: false)
-            } else if indexPath.row == 1{
-                let createNotesVC = CreateNotesVC.loadVC("Task")
-                createNotesVC.modalPresentationStyle = .overFullScreen
-                self.navigationController?.present(createNotesVC, animated: false)
-            } else if indexPath.row == 2 {
-                let taskVC = ManageTaskVC.loadVC("Task")
-                taskVC.modalPresentationStyle = .overFullScreen
-                self.navigationController?.present(taskVC, animated: false)
-            } else {
-                let boardsVC = ManageBoardsVC.loadVC("Task")
-                boardsVC.modalPresentationStyle = .overFullScreen
-                self.navigationController?.present(boardsVC, animated: false)
-            }
-        }
+//        if indexPath.section == 0 {
+//            if indexPath.row == 0 {
+//                let createVC = TeamMemberVC.loadVC(role: .member)
+//                createVC.modalPresentationStyle = .overFullScreen
+//                self.navigationController?.present(createVC, animated: false)
+//            } else {
+//                let createVC = CreateTeamVC.loadVC(role: .member)
+//                createVC.modalPresentationStyle = .overFullScreen
+//                self.navigationController?.present(createVC, animated: false)
+//            }
+//        } else if indexPath.section == 1 {
+//            let createVC = ClientInfoVC.loadVC(role: .member)
+//            createVC.modalPresentationStyle = .overFullScreen
+//            self.navigationController?.present(createVC, animated: false)
+//        } else if indexPath.section == 2 {
+//            if indexPath.row == 0 {
+//                let createVC = CreateClientVC.loadVC(role: .member)
+//                createVC.modalPresentationStyle = .overFullScreen
+//                self.navigationController?.present(createVC, animated: false)
+//            } else if indexPath.row == 1{
+//                let createNotesVC = CreateNotesVC.loadVC(role: .task)
+//                createNotesVC.modalPresentationStyle = .overFullScreen
+//                self.navigationController?.present(createNotesVC, animated: false)
+//            } else if indexPath.row == 2 {
+//                let taskVC = ManageTaskVC.loadVC(role: .task)
+//                taskVC.modalPresentationStyle = .overFullScreen
+//                self.navigationController?.present(taskVC, animated: false)
+//            } else {
+                let boardsVC = ManageBoardsVC.loadVC(role: .task)
+//                boardsVC.modalPresentationStyle = .overFullScreen
+                self.navigationController?.pushViewController(boardsVC, animated: true)
+//            }
+//        }
     }
     
 }

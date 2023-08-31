@@ -15,17 +15,25 @@ class CreateNotesVC: UIViewController {
     
     
     var isRowSelected : Int = -1
+    var showAddNotes: Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        registerCell(cellArr: ["CreateNotesCell"], tableView: self.tableView)
+        registerCell(cells: ["CreateNotesCell"], tableView: self.tableView)
         vewDottedBorder.createDottedLine(color: UIColor.black.cgColor)
-        vewAddNotes.isHidden = true
+        vewAddNotes.isHidden = !showAddNotes
+        tableView.isHidden = showAddNotes
         // Do any additional setup after loading the view.
     }
 
     @IBAction func btnAction(_ sender: Any) {
         vewAddNotes.isHidden = true
+        tableView.isHidden = false
+    }
+    
+    @IBAction func addNotesClicked(_ sender: Any) {
+        vewAddNotes.isHidden = false
+        tableView.isHidden = true
     }
 }
 
@@ -64,11 +72,9 @@ extension CreateNotesVC: UITableViewDelegate, UITableViewDataSource{
     }
     
     @objc func btnDeleteAct() {
-//        let deleteVc = AlertControllerVC.loadVC("Members")
-        
-        let deleteVc = AlertControllerVC.loadVC()
+        let deleteVc = AlertControllerVC.loadVC(role: .notLoggedIn)
         deleteVc.alertTitle = "DELETE NOTE"
-        deleteVc.message = "delete this note?"
+        deleteVc.message = "Delete this note?"
         deleteVc.alert = alertTypes.delete.rawValue
         deleteVc.imgtype = ImgName.delete
         deleteVc.modalPresentationStyle = .overFullScreen

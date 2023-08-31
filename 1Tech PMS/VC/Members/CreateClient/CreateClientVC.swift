@@ -23,7 +23,7 @@ class CreateClientVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         updateBtnUI(isBasic: true, isContact: false, isTemplate: false)
-        registerCollectionCell(cellArr: ["CreateClientTemplateCell"], collectionView: self.collectionView)
+        registerCollectionCell(cells: ["CreateClientTemplateCell"], collectionView: self.collectionView)
 //        moveToScreen()
         // Do any additional setup after loading the view.
     }

@@ -15,7 +15,7 @@ class ManageBoardsVC: UIViewController {
         super.viewDidLoad()
         
         
-        registerCell(cellArr: ["BoardsCell"], tableView: self.tableView)
+        registerCell(cells: ["BoardsCell"], tableView: self.tableView)
         // Do any additional setup after loading the view.
     }
     

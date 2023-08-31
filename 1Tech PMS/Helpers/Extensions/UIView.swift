@@ -154,13 +154,13 @@ extension UIView {
     }
     
     func createDottedLine(color: CGColor) {
-        var yourViewBorder = CAShapeLayer()
-        yourViewBorder.strokeColor = color
-        yourViewBorder.lineDashPattern = [2, 2]
-        yourViewBorder.frame = self.layer.bounds
-        yourViewBorder.fillColor = nil
-        yourViewBorder.path = UIBezierPath(rect: self.layer.bounds).cgPath
-        self.layer.addSublayer(yourViewBorder)
+        let shapeLayer = CAShapeLayer()
+        shapeLayer.strokeColor = color
+        shapeLayer.lineDashPattern = [2, 2]
+        shapeLayer.frame = self.layer.bounds
+        shapeLayer.fillColor = nil
+        shapeLayer.path = UIBezierPath(rect: self.layer.bounds).cgPath
+        self.layer.addSublayer(shapeLayer)
     }
     
 }

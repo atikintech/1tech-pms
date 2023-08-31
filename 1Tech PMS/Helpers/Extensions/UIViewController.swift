@@ -8,20 +8,20 @@
 import UIKit
 
 extension UIViewController {
-    class func loadVC(_ name:String = "Main") -> Self {
-        let storyBoard: UIStoryboard = UIStoryboard(name: name, bundle: nil)
+    class func loadVC(role: Role = .admin) -> Self {
+        let storyBoard: UIStoryboard = UIStoryboard(name: role.rawValue, bundle: nil)
         return storyBoard.instantiateViewController(withIdentifier: String(describing: self)) as! Self
     }
     
-    func registerCell(cellArr: [String], tableView: UITableView) {
-        for cell in cellArr {
+    func registerCell(cells: [String], tableView: UITableView) {
+        for cell in cells {
             let nib = UINib(nibName: cell, bundle: nil)
             tableView.register(nib, forCellReuseIdentifier: cell)
         }
     }
     
-    func registerCollectionCell(cellArr: [String], collectionView: UICollectionView) {
-        for cell in cellArr {
+    func registerCollectionCell(cells: [String], collectionView: UICollectionView) {
+        for cell in cells {
             let nib = UINib(nibName: cell, bundle: nil)
             collectionView.register(nib, forCellWithReuseIdentifier: cell)
         }

@@ -34,12 +34,15 @@ extension UIColor {
         return nil
     }
     
-    class func primary(dark: Bool = false, light: Bool = false) -> UIColor {
+    class func primary(dark: Bool = false, light: Bool = false, medium: Bool = false) -> UIColor {
         if dark {
             return UIColor(named: "DarkPrimary")!
         }
         else if light {
             return UIColor(named: "LightPrimary")!
+        }
+        else if medium {
+            return UIColor(named: "MediumPrimary")!
         }
         return UIColor(named: "Primary")!
     }

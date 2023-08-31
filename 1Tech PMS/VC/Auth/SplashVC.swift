@@ -17,7 +17,7 @@ class SplashVC: UIViewController {
         super.viewDidLoad()
         showNextView()
     }
-
+    
     override func viewDidLayoutSubviews() {
         setup()
     }
@@ -45,35 +45,35 @@ class SplashVC: UIViewController {
     //MARK: Navigation
     func showNextView() {
         Timer.scheduledTimer(withTimeInterval: 2.0, repeats: false) { _ in
-            //If user is not logged in show log in screen
-            if !UserDefaults.standard.bool(forKey: "isLogged") {
-                self.showLoginVC()
-            }
-            //If user is logged in then show a particular view
-            else {
-//                self.showAdminVC()
+            if UserDefaults.standard.bool(forKey: "isMemberLogged") {
                 self.showMembersVC()
+            }
+            else if UserDefaults.standard.bool(forKey: "isAdminLogged") {
+                self.showAdminVC()
+            }
+            else {
+                self.showLoginVC()
             }
         }
         
     }
     
     func showLoginVC() {
-        let loginVC = LoginVC.loadVC()
+        let loginVC = LoginVC.loadVC(role: .notLoggedIn)
         self.navigationController?.pushViewController(loginVC, animated: false)
     }
     
     func showAdminVC() {
-        let homeVC = AdminHomeVC.loadVC()
+        let homeVC = AdminHomeVC.loadVC(role: .notLoggedIn)
         self.navigationController?.pushViewController(homeVC, animated: false)
     }
     
     func showMembersVC() {
-        let createVC = MembersHomeVC.loadVC("Members")
-//        createVC.pageType = createPageType.createMember.rawValue
-//        createVC.pageType = createPageType.editMember.rawValue
-//        createVC.pageType = createPageType.inviteMember.rawValue
-//        createVC.pageType = createPageType.createTeam.rawValue
+        let createVC = MembersHomeVC.loadVC(role: .member)
+        //        createVC.pageType = createPageType.createMember.rawValue
+        //        createVC.pageType = createPageType.editMember.rawValue
+        //        createVC.pageType = createPageType.inviteMember.rawValue
+        //        createVC.pageType = createPageType.createTeam.rawValue
         self.navigationController?.pushViewController(createVC, animated: false)
     }
     
