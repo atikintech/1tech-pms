@@ -79,6 +79,7 @@
 		DB6E1EDF2A876E720070D80E /* MembersHomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB6E1EDE2A876E720070D80E /* MembersHomeVC.swift */; };
 		DBEC145D2AA0483A00F2F28F /* Role.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBEC145C2AA0483A00F2F28F /* Role.swift */; };
 		DBEC14602AA06C3100F2F28F /* ProjectsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBEC145F2AA06C3000F2F28F /* ProjectsVC.swift */; };
+		DBEC14622AA079BC00F2F28F /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBEC14612AA079BC00F2F28F /* ProfileVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -156,6 +157,7 @@
 		DB6E1EDE2A876E720070D80E /* MembersHomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MembersHomeVC.swift; sourceTree = "<group>"; };
 		DBEC145C2AA0483A00F2F28F /* Role.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Role.swift; sourceTree = "<group>"; };
 		DBEC145F2AA06C3000F2F28F /* ProjectsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsVC.swift; sourceTree = "<group>"; };
+		DBEC14612AA079BC00F2F28F /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -388,6 +390,7 @@
 			children = (
 				DB0081142A74B4D500212FD4 /* SplashVC.swift */,
 				DB00813D2A74BA5300212FD4 /* LoginVC.swift */,
+				DBEC14612AA079BC00F2F28F /* ProfileVC.swift */,
 			);
 			path = Auth;
 			sourceTree = "<group>";
@@ -594,6 +597,7 @@
 				3A7ED3E72A8F30D600D3E472 /* AlertControllerVC.swift in Sources */,
 				DB2823FD2A80EC060016324D /* HeadingTextField.swift in Sources */,
 				DB38252D2A80D055008D9EB4 /* UIImage.swift in Sources */,
+				DBEC14622AA079BC00F2F28F /* ProfileVC.swift in Sources */,
 				DB0081352A74B77600212FD4 /* BaseAuthVC.swift in Sources */,
 				DB3825292A80C656008D9EB4 /* AdminHomeCollCell.swift in Sources */,
 				DB0081272A74B70B00212FD4 /* String.swift in Sources */,

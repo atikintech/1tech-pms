@@ -21,6 +21,11 @@ class ClientsVC: BaseVC {
     func setupView() {
         clientsTv.register(UINib(nibName: CLIENT_CELL, bundle: nil), forCellReuseIdentifier: CLIENT_CELL)
     }
+    
+    @IBAction func addClientClicked() {
+        let vc = CreateClientVC.loadVC(role: .member)
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
 }
 
 extension ClientsVC: UITableViewDelegate, UITableViewDataSource {

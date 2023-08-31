@@ -4,6 +4,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -77,8 +78,89 @@
             </objects>
             <point key="canvasLocation" x="724" y="4"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="hsU-Oz-Fut">
+            <objects>
+                <viewController id="Ryp-zW-FoP" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ey0-pV-Up8">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="empty_team" translatesAutoresizingMaskIntoConstraints="NO" id="YEG-5K-yoB">
+                                <rect key="frame" x="30" y="244" width="333" height="142.33333333333337"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="YEG-5K-yoB" secondAttribute="height" multiplier="316:135" id="Eat-H6-3kD"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You don't have any projects" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="Ede-tC-qGN">
+                                <rect key="frame" x="67.333333333333343" y="416.33333333333331" width="258.66666666666663" height="24"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create New Project" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="t1s-ZE-Hmn">
+                                <rect key="frame" x="126.33333333333333" y="450.33333333333331" width="140.66666666666669" height="20"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="textColor" name="SubTitle"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gC0-r0-AXB">
+                                <rect key="frame" x="156.66666666666666" y="550.33333333333337" width="80" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="RGK-Nd-fxI"/>
+                                    <constraint firstAttribute="width" secondItem="gC0-r0-AXB" secondAttribute="height" multiplier="1:1" id="dCF-8I-hAC"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="plus_icons">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnAction:" destination="Ryp-zW-FoP" eventType="touchUpInside" id="4Cc-9y-FdY"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CREATE NEW PROJECT" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ArU-Sh-023">
+                                <rect key="frame" x="95.666666666666671" y="646.33333333333337" width="201.66666666666663" height="21"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <color key="textColor" name="Accent"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Un3-hx-elc"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="YEG-5K-yoB" firstAttribute="top" secondItem="Un3-hx-elc" secondAttribute="top" constant="185" id="3Dk-yW-pFE"/>
+                            <constraint firstItem="Ede-tC-qGN" firstAttribute="centerX" secondItem="YEG-5K-yoB" secondAttribute="centerX" id="8yY-W0-Hg3"/>
+                            <constraint firstItem="Ede-tC-qGN" firstAttribute="top" secondItem="YEG-5K-yoB" secondAttribute="bottom" constant="30" id="BB8-Uc-js6"/>
+                            <constraint firstItem="Un3-hx-elc" firstAttribute="trailing" secondItem="YEG-5K-yoB" secondAttribute="trailing" constant="30" id="CVm-C0-JKg"/>
+                            <constraint firstItem="YEG-5K-yoB" firstAttribute="leading" secondItem="Un3-hx-elc" secondAttribute="leading" constant="30" id="DGz-qe-VWj"/>
+                            <constraint firstItem="Un3-hx-elc" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="t1s-ZE-Hmn" secondAttribute="trailing" constant="10" id="H2r-cG-mw6"/>
+                            <constraint firstItem="t1s-ZE-Hmn" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Un3-hx-elc" secondAttribute="leading" constant="10" id="Hzo-vn-Qfa"/>
+                            <constraint firstItem="Ede-tC-qGN" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Un3-hx-elc" secondAttribute="leading" constant="10" id="JHp-JF-qtM"/>
+                            <constraint firstItem="ArU-Sh-023" firstAttribute="top" secondItem="gC0-r0-AXB" secondAttribute="bottom" constant="16" id="KXP-Ox-bNn"/>
+                            <constraint firstItem="ArU-Sh-023" firstAttribute="centerX" secondItem="gC0-r0-AXB" secondAttribute="centerX" id="PrA-fT-xnv"/>
+                            <constraint firstItem="YEG-5K-yoB" firstAttribute="centerX" secondItem="Ey0-pV-Up8" secondAttribute="centerX" id="Tmc-tC-ixl"/>
+                            <constraint firstItem="gC0-r0-AXB" firstAttribute="top" secondItem="t1s-ZE-Hmn" secondAttribute="bottom" constant="80" id="UB6-q2-Mng"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Ede-tC-qGN" secondAttribute="trailing" constant="10" id="XXb-MK-Kqe"/>
+                            <constraint firstItem="gC0-r0-AXB" firstAttribute="centerX" secondItem="t1s-ZE-Hmn" secondAttribute="centerX" id="diI-QH-48h"/>
+                            <constraint firstItem="t1s-ZE-Hmn" firstAttribute="top" secondItem="Ede-tC-qGN" secondAttribute="bottom" constant="10" id="j0m-V3-bAF"/>
+                            <constraint firstItem="t1s-ZE-Hmn" firstAttribute="centerX" secondItem="Ede-tC-qGN" secondAttribute="centerX" id="vfA-Rj-CPG"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hWp-vm-6s0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1457" y="4"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="empty_team" width="316" height="135"/>
+        <image name="plus_icons" width="78" height="78"/>
+        <namedColor name="Accent">
+            <color red="0.082000002264976501" green="0.097999997437000275" blue="0.32499998807907104" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="SubTitle">
+            <color red="0.32899999618530273" green="0.32400000095367432" blue="0.4779999852180481" alpha="0.33000001311302185" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

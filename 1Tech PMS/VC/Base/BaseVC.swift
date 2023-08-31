@@ -23,6 +23,7 @@ class BaseVC: UIViewController {
         btnIcon.backgroundColor = .primary()
         btnIcon.rounded()
         btnIcon.setTitle("BG", for: .normal)
+        btnIcon.addTarget(self, action: #selector(showProfileView), for: .touchUpInside)
         return UIBarButtonItem(customView: btnIcon)
     }()
     
@@ -33,6 +34,8 @@ class BaseVC: UIViewController {
         appearance.largeTitleTextAttributes = [.foregroundColor: UIColor.white]
         return appearance
     }()
+    
+    var hideSideMenu = false
     
     override func viewDidLoad() {
         self.view.backgroundColor = .primary(light: true)
@@ -58,8 +61,9 @@ class BaseVC: UIViewController {
             //            else {
             //                leftBarItems.append(sideMenuBtn)
             //            }
-            
-            self.navigationItem.leftBarButtonItem = sideMenuBtn
+            if !hideSideMenu {
+                self.navigationItem.leftBarButtonItem = sideMenuBtn
+            }
             self.navigationItem.rightBarButtonItem = rightBtnItem
             self.navigationItem.title = self.title
             
@@ -76,6 +80,10 @@ class BaseVC: UIViewController {
         self.navigationController?.popViewController(animated: true)
     }
     
+    @objc private func showProfileView() {
+        let vc = ProfileVC.loadVC(role: .notLoggedIn)
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
 }
 
 extension BaseVC {

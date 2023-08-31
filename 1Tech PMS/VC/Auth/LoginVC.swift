@@ -120,7 +120,7 @@ class LoginVC: BaseAuthVC {
     }
     
     func showMembersHome() {
-        let admin = CreateVC.loadVC(role: .member)
+        let admin = MembersHomeVC.loadVC(role: .member)
         self.navigationController?.pushViewController(admin, animated: true)
     }
 }
