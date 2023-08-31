@@ -14,6 +14,8 @@ class ClientsVC: BaseVC {
     
     override func viewDidLoad() {
         self.title = "CLIENTS"
+        self.showAddBtn = true
+        self.hideSideMenu = true
         super.viewDidLoad()
         setupView()
     }
@@ -22,10 +24,10 @@ class ClientsVC: BaseVC {
         clientsTv.register(UINib(nibName: CLIENT_CELL, bundle: nil), forCellReuseIdentifier: CLIENT_CELL)
     }
     
-    @IBAction func addClientClicked() {
-        let vc = CreateClientVC.loadVC(role: .member)
-        self.navigationController?.pushViewController(vc, animated: true)
-    }
+//    @objc func addClientClicked() {
+//        let vc = CreateClientVC.loadVC(role: .member)
+//        self.navigationController?.pushViewController(vc, animated: true)
+//    }
 }
 
 extension ClientsVC: UITableViewDelegate, UITableViewDataSource {

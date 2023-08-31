@@ -27,6 +27,14 @@ class BaseVC: UIViewController {
         return UIBarButtonItem(customView: btnIcon)
     }()
     
+    private lazy var addBtnItem: UIBarButtonItem = {
+        let btnIcon = UIButton(frame: CGRect(x: 0, y: 0, width: 35, height: 35))
+        btnIcon.backgroundColor = .clear
+        btnIcon.setTitle("+", for: .normal)
+        btnIcon.addTarget(self, action: #selector(addClientClicked), for: .touchUpInside)
+        return UIBarButtonItem(customView: btnIcon)
+    }()
+    
     private lazy var appearance: UINavigationBarAppearance = {
         let appearance = UINavigationBarAppearance()
         appearance.backgroundColor = .navBarBackground()
@@ -36,6 +44,7 @@ class BaseVC: UIViewController {
     }()
     
     var hideSideMenu = false
+    var showAddBtn = false
     
     override func viewDidLoad() {
         self.view.backgroundColor = .primary(light: true)
@@ -64,7 +73,15 @@ class BaseVC: UIViewController {
             if !hideSideMenu {
                 self.navigationItem.leftBarButtonItem = sideMenuBtn
             }
-            self.navigationItem.rightBarButtonItem = rightBtnItem
+            else {
+                self.navigationItem.hidesBackButton = false
+            }
+            if showAddBtn {
+                self.navigationItem.rightBarButtonItems = [rightBtnItem, addBtnItem]
+            }
+            else {
+                self.navigationItem.rightBarButtonItem = rightBtnItem
+            }
             self.navigationItem.title = self.title
             
         }
@@ -82,6 +99,11 @@ class BaseVC: UIViewController {
     
     @objc private func showProfileView() {
         let vc = ProfileVC.loadVC(role: .notLoggedIn)
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    @objc func addClientClicked() {
+        let vc = CreateClientVC.loadVC(role: .member)
         self.navigationController?.pushViewController(vc, animated: true)
     }
 }

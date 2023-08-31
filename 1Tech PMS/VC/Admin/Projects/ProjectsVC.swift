@@ -14,6 +14,7 @@ class ProjectsVC: BaseVC {
     
     override func viewDidLoad() {
         self.title = "PROJECTS"
+        self.hideSideMenu = true
         super.viewDidLoad()
         setupView()
     }
