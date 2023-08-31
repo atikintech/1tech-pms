@@ -29,7 +29,7 @@ class ManageTaskVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        registerCell(cellArr: [reuseIdentifierTaskTitle, reuseIdentifierTaskTodo, reuseIdentifierTaskAttachments, reuseIdentifierTasks], tableView: self.manageTableview)
+        registerCell(cells: [reuseIdentifierTaskTitle, reuseIdentifierTaskTodo, reuseIdentifierTaskAttachments, reuseIdentifierTasks], tableView: self.manageTableview)
         // Do any additional setup after loading the view.
     }
 

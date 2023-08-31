@@ -19,7 +19,7 @@ class TeamMemberVC: UIViewController {
         vmTeamMember = VMTeamMember()
         
         // Register TableView Cell
-        registerCell(cellArr: ["MemberCell"], tableView: self.tableView)
+        registerCell(cells: ["MemberCell"], tableView: self.tableView)
         // Do any additional setup after loading the view.
     }
 

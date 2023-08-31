@@ -43,21 +43,21 @@ class CreateVC: UIViewController {
     }
     
     func customizeView() {
-        if pageType == createPageType.createMember.rawValue {
+        if pageType == CreatePageType.createMember.rawValue {
             btnHideShow(isInvite: true, isCancel: true, isSave: false)
             imgDropdown.isHidden = true
             lblTitle.text = "Create Team Member"
             lblProject.text = "Designation"
             imgTitle.image = UIImage(named: "create_teammembers")
             txtFldProject.placeholder = ""
-        } else if pageType == createPageType.editMember.rawValue {
+        } else if pageType == CreatePageType.editMember.rawValue {
             btnHideShow(isInvite: true, isCancel: false, isSave: false)
             imgDropdown.isHidden = true
             lblTitle.text = "Edit Team Member"
             lblProject.text = "Designation"
             imgTitle.image = UIImage(named: "edit_teammembers")
             txtFldProject.placeholder = ""
-        } else if pageType == createPageType.inviteMember.rawValue {
+        } else if pageType == CreatePageType.inviteMember.rawValue {
             btnHideShow(isInvite: false, isCancel: true, isSave: true)
             vewHideShow(isName: true, isEmail: false , isProject: false)
             layoutTopLblEmail.constant = 20
@@ -65,7 +65,7 @@ class CreateVC: UIViewController {
             lblTitle.text = "Invite Member"
             imgTitle.image = UIImage(named: "edit_teammembers")
             txtFldProject.placeholder = ""
-        } else if pageType == createPageType.createTeam.rawValue {
+        } else if pageType == CreatePageType.createTeam.rawValue {
             btnHideShow(isInvite: true, isCancel: true, isSave: false)
             vewHideShow(isName: false, isEmail: true, isProject: true)
             lblTitle.text = "Create Team"

@@ -23,15 +23,15 @@ class ClientInfoVC: UIViewController {
     }
     
     func setupView() {
-        containerView.rounded(radius: 20)
-        containerView.layer.shadowColor = UIColor.gray.cgColor
-        containerView.layer.shadowRadius = 20
+//        containerView.rounded(radius: 20)
+//        containerView.layer.shadowColor = UIColor.gray.cgColor
+//        containerView.layer.shadowRadius = 20
     }
     
     func setupTf() {
-        nameTf.placeHolderColor = .accent()
-        nameTf.textColor = .secondaryTextColor()
-        nameTf.font = .primary(size: .medium)
-        nameTf.labelPlaceholderTitle.font = .primary(size: .medium, style: .semibold)
+//        nameTf.placeHolderColor = .accent()
+//        nameTf.textColor = .secondaryTextColor()
+//        nameTf.font = .primary(size: .medium)
+//        nameTf.labelPlaceholderTitle.font = .primary(size: .medium, style: .semibold)
     }
 }
