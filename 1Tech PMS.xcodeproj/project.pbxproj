@@ -359,6 +359,7 @@
 				DB0081322A74B77600212FD4 /* BaseVC.swift */,
 				DB0081332A74B77600212FD4 /* BaseAuthVC.swift */,
 				3A7ED3E62A8F30D600D3E472 /* AlertControllerVC.swift */,
+				DB0081422A74D9E400212FD4 /* SideMenuVC.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -378,7 +379,6 @@
 				DB0081312A74B77600212FD4 /* Base */,
 				DB0081382A74B79700212FD4 /* Auth */,
 				DB0081412A74D9CC00212FD4 /* Admin */,
-				DB0081422A74D9E400212FD4 /* SideMenuVC.swift */,
 				3A2BE5E82A92F19C00303014 /* Task */,
 				DB6E1EDD2A876E030070D80E /* Members */,
 			);
