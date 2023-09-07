@@ -44,7 +44,7 @@ class MembersHomeVC: BaseVC {
             
         case btnMembersHome.projectManagement.rawValue :
             let projectsVC = ProjectsVC.loadVC(role: .admin)
-            self.navigationController?.present(projectsVC, animated: true)
+            self.navigationController?.pushViewController(projectsVC, animated: true)
             
         case btnMembersHome.recruitment.rawValue :
             let createVC = CreateVC.loadVC(role: .member)

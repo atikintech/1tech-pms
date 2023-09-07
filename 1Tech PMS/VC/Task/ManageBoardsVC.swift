@@ -10,15 +10,31 @@ import UIKit
 class ManageBoardsVC: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var popOverView: UIView!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
+        popOverView.isHidden = true
         registerCell(cells: ["BoardsCell"], tableView: self.tableView)
         // Do any additional setup after loading the view.
     }
     
+    @IBAction func optionsBtnClicked() {
+        popOverView.isHidden = !popOverView.isHidden
+    }
+    
+    @IBAction func addBtnClicked() {
+        popOverView.isHidden = !popOverView.isHidden
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        popOverView.isHidden = true
+    }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        popOverView.isHidden = true
+    }
 }
 
 extension ManageBoardsVC: UITableViewDelegate, UITableViewDataSource {

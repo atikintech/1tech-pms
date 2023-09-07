@@ -428,7 +428,7 @@ Click Select File</string>
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="NHz-5H-VjA">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="NHz-5H-VjA">
                                 <rect key="frame" x="20" y="79" width="353" height="719"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <userDefinedRuntimeAttributes>
@@ -562,6 +562,9 @@ Click Select File</string>
                                         <state key="normal">
                                             <imageReference key="image" image="plus" catalog="system" symbolScale="small"/>
                                         </state>
+                                        <connections>
+                                            <action selector="addBtnClicked" destination="OJj-Xf-F4E" eventType="touchUpInside" id="GEU-Eq-gdJ"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v9n-u0-qU5">
                                         <rect key="frame" x="323" y="14.666666666666657" width="20" height="30"/>
@@ -571,6 +574,9 @@ Click Select File</string>
                                         </constraints>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" image="kebabMenu_icon"/>
+                                        <connections>
+                                            <action selector="optionsBtnClicked" destination="OJj-Xf-F4E" eventType="touchUpInside" id="e5v-Ca-f1d"/>
+                                        </connections>
                                     </button>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hov-NS-UHO">
                                         <rect key="frame" x="20" y="49.333333333333343" width="313" height="1"/>
@@ -607,9 +613,57 @@ Click Select File</string>
                                             <outlet property="delegate" destination="OJj-Xf-F4E" id="AOX-z6-vq7"/>
                                         </connections>
                                     </tableView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="10Y-6X-cah">
+                                        <rect key="frame" x="203" y="51" width="120" height="94"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="lmr-bt-tfr">
+                                                <rect key="frame" x="4" y="8" width="112" height="78"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mm5-3m-DcS">
+                                                        <rect key="frame" x="0.0" y="0.0" width="112" height="26"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                        <state key="normal" title="Rename Column">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LSO-aM-9UG">
+                                                        <rect key="frame" x="0.0" y="26" width="112" height="26"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                        <state key="normal" title="Move Column Right">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fIH-Rk-bHT">
+                                                        <rect key="frame" x="0.0" y="52" width="112" height="26"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                        <state key="normal" title="Delete Column">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" name="Primary"/>
+                                        <constraints>
+                                            <constraint firstItem="lmr-bt-tfr" firstAttribute="top" secondItem="10Y-6X-cah" secondAttribute="top" constant="8" id="DXz-3n-Ldw"/>
+                                            <constraint firstItem="lmr-bt-tfr" firstAttribute="leading" secondItem="10Y-6X-cah" secondAttribute="leading" constant="4" id="IaC-kH-Iwp"/>
+                                            <constraint firstAttribute="trailing" secondItem="lmr-bt-tfr" secondAttribute="trailing" constant="4" id="KhX-6T-cBj"/>
+                                            <constraint firstAttribute="width" constant="120" id="QnF-t2-Lnc"/>
+                                            <constraint firstAttribute="bottom" secondItem="lmr-bt-tfr" secondAttribute="bottom" constant="8" id="Xpu-Sf-O6Y"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
+                                    <constraint firstItem="10Y-6X-cah" firstAttribute="trailing" secondItem="k8K-SL-Pjb" secondAttribute="trailing" id="5DZ-6k-Hik"/>
                                     <constraint firstItem="v9n-u0-qU5" firstAttribute="centerY" secondItem="aQM-jH-OFc" secondAttribute="centerY" id="ABB-uk-LfF"/>
                                     <constraint firstItem="aQM-jH-OFc" firstAttribute="top" secondItem="I2s-Wq-yI2" secondAttribute="top" constant="20" id="Fg0-C7-r6S"/>
                                     <constraint firstItem="zUn-Tp-rTM" firstAttribute="centerY" secondItem="I2s-Wq-yI2" secondAttribute="centerY" id="IkA-mQ-Psw"/>
@@ -629,6 +683,7 @@ Click Select File</string>
                                     <constraint firstItem="k8K-SL-Pjb" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="aQM-jH-OFc" secondAttribute="trailing" constant="10" id="hTB-3E-2IQ"/>
                                     <constraint firstItem="0Xj-6P-scD" firstAttribute="leading" secondItem="zUn-Tp-rTM" secondAttribute="trailing" constant="5" id="igj-sg-5oo"/>
                                     <constraint firstAttribute="trailing" secondItem="v9n-u0-qU5" secondAttribute="trailing" constant="10" id="k4r-UV-GaZ"/>
+                                    <constraint firstItem="10Y-6X-cah" firstAttribute="top" secondItem="k8K-SL-Pjb" secondAttribute="bottom" constant="6.3333333333333428" id="kuI-nT-AdT"/>
                                     <constraint firstItem="hy3-ql-eMg" firstAttribute="leading" secondItem="0Xj-6P-scD" secondAttribute="trailing" constant="5" id="pyS-7q-hKg"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
@@ -650,12 +705,13 @@ Click Select File</string>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="popOverView" destination="10Y-6X-cah" id="9Qw-Zd-wSO"/>
                         <outlet property="tableView" destination="0Xj-6P-scD" id="u0U-lz-5iX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sgx-xD-Dea" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1785" y="-25"/>
+            <point key="canvasLocation" x="1783.9694656488548" y="-25.35211267605634"/>
         </scene>
     </scenes>
     <resources>
