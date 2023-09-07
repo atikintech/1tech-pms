@@ -873,7 +873,7 @@
                     </view>
                     <size key="freeformSize" width="300" height="846"/>
                     <connections>
-                        <outlet property="tableView" destination="aLn-Bi-cf7" id="vSF-L4-Zam"/>
+                        <outlet property="sideMenuTableView" destination="aLn-Bi-cf7" id="vSF-L4-Zam"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ef6-1K-24m" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

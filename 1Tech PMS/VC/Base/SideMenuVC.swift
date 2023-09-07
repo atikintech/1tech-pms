@@ -62,7 +62,7 @@ class SideMenuVC: UIViewController {
     typealias Menus = [Menu]
     
     //MARK: IBOutlets
-    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var sideMenuTableView: UITableView!
     
     //MARK: Other Declarations
     var menus: Menus = Menu.menus
@@ -71,7 +71,7 @@ class SideMenuVC: UIViewController {
     //MARK: View Setup
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.backgroundColor = .accent()
+        sideMenuTableView.backgroundColor = .accent()
     }
 }
 
