@@ -14,7 +14,6 @@ class MembersHomeVC: BaseVC {
     
     override func viewDidLoad() {
         self.title = "HOME"
-        self.hideSideMenu = true
         super.viewDidLoad()
         vmMemberHome = VMMemberHome()
         // Register TableView Cell
@@ -103,6 +102,8 @@ extension MembersHomeVC: UITableViewDelegate, UITableViewDataSource {
     
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let vc = ManageTaskVC.loadVC(role: .task)
+        self.navigationController?.pushViewController(vc, animated: true)
 //        if indexPath.section == 0 {
 //            if indexPath.row == 0 {
 //                let createVC = TeamMemberVC.loadVC(role: .member)
@@ -131,9 +132,9 @@ extension MembersHomeVC: UITableViewDelegate, UITableViewDataSource {
 //                taskVC.modalPresentationStyle = .overFullScreen
 //                self.navigationController?.present(taskVC, animated: false)
 //            } else {
-                let boardsVC = ManageBoardsVC.loadVC(role: .task)
+//                let boardsVC = ManageBoardsVC.loadVC(role: .task)
 //                boardsVC.modalPresentationStyle = .overFullScreen
-                self.navigationController?.pushViewController(boardsVC, animated: true)
+//                self.navigationController?.pushViewController(boardsVC, animated: true)
 //            }
 //        }
     }

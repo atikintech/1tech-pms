@@ -46,12 +46,12 @@ class BaseVC: UIViewController {
     private var sideMenuVC: SideMenuVC!
     private var sideMenuShadowView: UIView!
     private let paddingForRotation: CGFloat = 0
-    private var isExpanded: Bool = false
-    private var draggingIsEnabled: Bool = false
+    private var isExpanded = false
+    private var draggingIsEnabled = false
     private var panBaseLocation: CGFloat = 0.0
     // Expand/Collapse the side menu by changing trailing's constant
     private var sideMenuTrailingConstraint: NSLayoutConstraint!
-    private var revealSideMenuOnTop: Bool = true
+    private var revealSideMenuOnTop = true
     private lazy var sideMenuRevealWidth: CGFloat = view.bounds.width
     
     var hideSideMenu = false
@@ -255,6 +255,7 @@ extension BaseVC: SideMenuVCDelegate {
                 vc.view.trailingAnchor.constraint(equalTo: self.view.trailingAnchor)
             ])
         }
+        revealSideMenu()
         if !self.revealSideMenuOnTop {
             if isExpanded {
                 vc.view.frame.origin.x = self.sideMenuRevealWidth

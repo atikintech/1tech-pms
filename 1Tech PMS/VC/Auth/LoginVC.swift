@@ -60,6 +60,10 @@ class LoginVC: BaseAuthVC {
         setup()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.isNavigationBarHidden = true
+    }
+    
     override func viewDidAppear(_ animated: Bool) {
         usernameTf.customiseWithImage(named: "user_profile_icon")
         passwordTf.customiseWithImage(named: "password_icon")
@@ -105,9 +109,11 @@ class LoginVC: BaseAuthVC {
             
             if usernameTf.text! == "admin" {
                 UserDefaults.standard.set(true, forKey: "isAdminLogged")
+                UserDefaults.standard.set(false, forKey: "isMemberLogged")
                 showAdminHome()
             }
             else {
+                UserDefaults.standard.set(false, forKey: "isAdminLogged")
                 UserDefaults.standard.set(true, forKey: "isMemberLogged")
                 showMembersHome()
             }
@@ -120,7 +126,7 @@ class LoginVC: BaseAuthVC {
     }
     
     func showMembersHome() {
-        let admin = MembersHomeVC.loadVC(role: .member)
+        let admin = MembersHomeVC.loadVC(role: .notLoggedIn)
         self.navigationController?.pushViewController(admin, animated: true)
     }
 }

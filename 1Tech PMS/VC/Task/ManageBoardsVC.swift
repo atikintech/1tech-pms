@@ -35,5 +35,8 @@ extension ManageBoardsVC: UITableViewDelegate, UITableViewDataSource {
         return 90
     }
     
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let vc = ManageTaskVC.loadVC(role: .task)
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
 }
