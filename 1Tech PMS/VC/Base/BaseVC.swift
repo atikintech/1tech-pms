@@ -244,7 +244,7 @@ extension BaseVC: SideMenuVCDelegate {
             }
         }
         vc.view.tag = 99
-        view.insertSubview(vc.view, at: self.revealSideMenuOnTop ? 0 : 1)
+        view.insertSubview(vc.view, at: 1)
         addChild(vc)
         DispatchQueue.main.async {
             vc.view.translatesAutoresizingMaskIntoConstraints = false
