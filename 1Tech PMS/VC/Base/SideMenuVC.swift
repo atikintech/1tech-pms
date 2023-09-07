@@ -27,10 +27,25 @@ class SideMenuVC: UIViewController {
         var vc: UIViewController? {
             switch self {
             case .home:
-                return AdminHomeVC.loadVC(role: .notLoggedIn)
+                if isAdmin {
+                    return AdminHomeVC.loadVC(role: .notLoggedIn)
+                }
+                return MembersHomeVC.loadVC(role: .notLoggedIn)
+            case .clients:
+                return ClientsVC.loadVC()
+            case .projects:
+                return ProjectsVC.loadVC()
+            case .members:
+                return MembersHomeVC.loadVC(role: .notLoggedIn)
+            case .profile:
+                return ProfileVC.loadVC(role: .notLoggedIn)
             default:
                 return nil
             }
+        }
+        
+        private var isAdmin: Bool {
+            UserDefaults.standard.bool(forKey: "isAdminLogged")
         }
     }
     
@@ -47,7 +62,7 @@ class SideMenuVC: UIViewController {
     typealias Menus = [Menu]
     
     //MARK: IBOutlets
-    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var sideMenuTableView: UITableView!
     
     //MARK: Other Declarations
     var menus: Menus = Menu.menus
@@ -56,7 +71,7 @@ class SideMenuVC: UIViewController {
     //MARK: View Setup
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.backgroundColor = .accent()
+        sideMenuTableView.backgroundColor = .accent()
     }
 }
 
@@ -78,7 +93,15 @@ extension SideMenuVC: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let menu = menus[indexPath.row]
-        delegate?.showVC(vc: menu.vc!)
+        if let vc = menu.vc {
+            delegate?.showVC(vc: vc)
+            return
+        }
+        else if menu.name.lowercased() == "logout" {
+            UserDefaults.standard.set(false, forKey: "isAdminLogged")
+            UserDefaults.standard.set(false, forKey: "isMemberLogged")
+            self.navigationController?.setViewControllers([LoginVC.loadVC(role: .notLoggedIn)], animated: true)
+        }
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
