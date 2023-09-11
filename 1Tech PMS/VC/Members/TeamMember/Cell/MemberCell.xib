@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -10,7 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MemberCell" id="KGk-i7-Jjw" customClass="MemberCell" customModule="_Tech_PMS" customModuleProvider="target">
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="MemberCell" id="KGk-i7-Jjw" customClass="MemberCell" customModule="_Tech_PMS" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="320" height="80"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
@@ -67,6 +68,10 @@
                         <state key="normal" title="Button"/>
                         <buttonConfiguration key="configuration" style="plain" image="chevron.right" catalog="system"/>
                     </button>
+                    <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="unchecked_icon" translatesAutoresizingMaskIntoConstraints="NO" id="gvX-sb-lgd">
+                        <rect key="frame" x="28" y="33" width="14" height="14"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </imageView>
                 </subviews>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
@@ -74,14 +79,18 @@
                     <constraint firstItem="xbk-GG-R6d" firstAttribute="centerY" secondItem="VYl-23-BrE" secondAttribute="centerY" id="5df-c4-cMI"/>
                     <constraint firstAttribute="trailing" secondItem="xbk-GG-R6d" secondAttribute="trailing" constant="10" id="7Sw-P4-gX7"/>
                     <constraint firstItem="ZW3-cZ-qep" firstAttribute="leading" secondItem="IIW-Nw-vDu" secondAttribute="leading" id="GUD-qh-VLh"/>
+                    <constraint firstItem="gvX-sb-lgd" firstAttribute="bottom" secondItem="VYl-23-BrE" secondAttribute="bottom" constant="-8" id="HL6-7b-Dw2"/>
                     <constraint firstItem="xbk-GG-R6d" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="IIW-Nw-vDu" secondAttribute="trailing" constant="10" id="LQo-fl-ncj"/>
                     <constraint firstItem="VYl-23-BrE" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="UoI-ge-yo6"/>
                     <constraint firstItem="xbk-GG-R6d" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6KA-lN-Fyh" secondAttribute="trailing" constant="10" id="V4R-vI-YTW"/>
                     <constraint firstItem="IIW-Nw-vDu" firstAttribute="centerY" secondItem="VYl-23-BrE" secondAttribute="centerY" id="cl6-1h-ewf"/>
+                    <constraint firstItem="gvX-sb-lgd" firstAttribute="top" secondItem="VYl-23-BrE" secondAttribute="top" constant="8" id="fHH-Bp-Qta"/>
                     <constraint firstItem="IIW-Nw-vDu" firstAttribute="top" secondItem="6KA-lN-Fyh" secondAttribute="bottom" constant="3" id="hxQ-o5-bWp"/>
                     <constraint firstItem="IIW-Nw-vDu" firstAttribute="leading" secondItem="6KA-lN-Fyh" secondAttribute="leading" id="iXk-Xi-p7r"/>
                     <constraint firstItem="6KA-lN-Fyh" firstAttribute="leading" secondItem="VYl-23-BrE" secondAttribute="trailing" constant="18" id="kKA-R3-pDr"/>
                     <constraint firstItem="VYl-23-BrE" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="lqh-jr-HLY"/>
+                    <constraint firstItem="gvX-sb-lgd" firstAttribute="leading" secondItem="VYl-23-BrE" secondAttribute="leading" constant="8" id="r4f-L5-d1r"/>
+                    <constraint firstItem="gvX-sb-lgd" firstAttribute="trailing" secondItem="VYl-23-BrE" secondAttribute="trailing" constant="-8" id="y9c-gK-VSn"/>
                     <constraint firstItem="xbk-GG-R6d" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="ZW3-cZ-qep" secondAttribute="trailing" constant="10" id="yH1-0Y-SJ4"/>
                 </constraints>
             </tableViewCellContentView>
@@ -89,16 +98,19 @@
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <connections>
                 <outlet property="btnFwd" destination="xbk-GG-R6d" id="L3c-oW-9Qk"/>
+                <outlet property="initialsView" destination="VYl-23-BrE" id="gog-xB-cYc"/>
                 <outlet property="lblDesignation" destination="ZW3-cZ-qep" id="JFd-4y-8Iz"/>
                 <outlet property="lblInitial" destination="hFo-iD-XPy" id="9pa-Cx-tqo"/>
                 <outlet property="lblMail" destination="IIW-Nw-vDu" id="KWE-Dh-8Qg"/>
                 <outlet property="lblName" destination="6KA-lN-Fyh" id="9K3-fN-qsm"/>
+                <outlet property="statusImg" destination="gvX-sb-lgd" id="seh-tY-bjH"/>
             </connections>
-            <point key="canvasLocation" x="99" y="-12"/>
+            <point key="canvasLocation" x="97.70992366412213" y="-12.67605633802817"/>
         </tableViewCell>
     </objects>
     <resources>
         <image name="chevron.right" catalog="system" width="97" height="128"/>
+        <image name="unchecked_icon" width="18" height="18"/>
         <namedColor name="Primary">
             <color red="0.71799999475479126" green="0.10599999874830246" blue="0.90200001001358032" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

@@ -14,7 +14,8 @@ class MemberCell: UITableViewCell {
     @IBOutlet weak var lblName: UILabel!
     @IBOutlet weak var lblMail: UILabel!
     @IBOutlet weak var lblDesignation: UILabel!
-    
+    @IBOutlet weak var initialsView: UIView!
+    @IBOutlet weak var statusImg: UIImageView!
     @IBOutlet weak var btnFwd: UIButton!
     
     override func awakeFromNib() {
@@ -24,15 +25,18 @@ class MemberCell: UITableViewCell {
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
+        self.statusImg.image = selected ? UIImage(named: "checked_icon")! :  UIImage(named: "unchecked_icon")!
         // Configure the view for the selected state
     }
     
-    func populateData(data: ModelTeamMember) {
+    func populateData(data: ModelTeamMember, showSelected: Bool = false) {
         lblName.text = data.name
         lblMail.text = data.mail
         lblDesignation.text = data.designation
         lblInitial.text = getInitals(fullName: data.name)
+        
+        initialsView.isHidden = showSelected
+        statusImg.isHidden = !showSelected
     }
     
     func getInitals(fullName : String) -> String {

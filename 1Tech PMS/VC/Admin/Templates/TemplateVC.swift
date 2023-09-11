@@ -1,18 +1,17 @@
 //
-//  ClientInformationVC.swift
+//  TemplateVC.swift
 //  1Tech PMS
 //
-//  Created by tejas chaudhari on 19/08/23.
+//  Created by Bhavesh Gupta on 11/09/23.
 //
 
 import UIKit
 
-class ClientInformationVC: UIViewController {
+class TemplateVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
-
 }

@@ -29,6 +29,8 @@ class ManageTaskVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = "TEAM MANAGEMENT"
+        manageTableview.rounded(radius: 10.0)
         registerCell(cells: [reuseIdentifierTaskTitle, reuseIdentifierTaskTodo, reuseIdentifierTaskAttachments, reuseIdentifierTasks], tableView: self.manageTableview)
         // Do any additional setup after loading the view.
     }
