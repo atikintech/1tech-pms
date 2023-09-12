@@ -106,14 +106,15 @@ class BaseVC: UIViewController {
         self.sideMenuShadowView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         self.sideMenuShadowView.backgroundColor = .black
         self.sideMenuShadowView.alpha = 0.0
+        
         let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(TapGestureRecognizer))
         tapGestureRecognizer.numberOfTapsRequired = 1
         tapGestureRecognizer.delegate = self
         self.sideMenuShadowView.addGestureRecognizer(tapGestureRecognizer)
+        
         if self.revealSideMenuOnTop {
             view.insertSubview(self.sideMenuShadowView, at: 1)
         }
-
         // Side Menu
         self.sideMenuVC = SideMenuVC.loadVC(role: .member)
         self.sideMenuVC.delegate = self

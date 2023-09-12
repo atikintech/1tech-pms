@@ -531,114 +531,126 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZGg-Vz-yaX">
-                                <rect key="frame" x="0.0" y="48" width="414" height="340"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S4J-5y-Hbp">
+                                <rect key="frame" x="0.0" y="48" width="414" height="814"/>
                                 <subviews>
-                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eMD-AX-da2">
-                                        <rect key="frame" x="20" y="50" width="374" height="50"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZGg-Vz-yaX">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="340"/>
+                                        <subviews>
+                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eMD-AX-da2">
+                                                <rect key="frame" x="20" y="50" width="374" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="kFi-Gj-qbm"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
+                                                <inset key="titleEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="Goto" image="goto_icon">
+                                                    <color key="titleColor" name="Accent"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="btnAction:" destination="alJ-YV-a5m" eventType="touchUpInside" id="p3d-Oa-D0j"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bUt-6J-K3H">
+                                                <rect key="frame" x="20" y="120" width="374" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="QM5-f8-jNp"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
+                                                <inset key="titleEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="Project Management" image="project_management">
+                                                    <color key="titleColor" name="Accent"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="btnAction:" destination="alJ-YV-a5m" eventType="touchUpInside" id="n2s-TK-Ggc"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BAf-6n-dJW">
+                                                <rect key="frame" x="20" y="190" width="374" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="OVv-yu-Vcg"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
+                                                <inset key="titleEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="Recruitment" image="Recruitment">
+                                                    <color key="titleColor" name="Accent"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="btnAction:" destination="alJ-YV-a5m" eventType="touchUpInside" id="ajU-bD-Yp7"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8bW-rW-CIE">
+                                                <rect key="frame" x="20" y="260" width="374" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="yER-yw-iTs"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
+                                                <inset key="titleEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="Sales Pipeline" image="sales_pipeline">
+                                                    <color key="titleColor" name="Accent"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="btnAction:" destination="alJ-YV-a5m" eventType="touchUpInside" id="Ore-RU-DfY"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" name="MediumPrimary"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="50" id="kFi-Gj-qbm"/>
+                                            <constraint firstItem="BAf-6n-dJW" firstAttribute="leading" secondItem="bUt-6J-K3H" secondAttribute="leading" id="1NE-XA-cjH"/>
+                                            <constraint firstItem="8bW-rW-CIE" firstAttribute="trailing" secondItem="BAf-6n-dJW" secondAttribute="trailing" id="Doe-2t-MU2"/>
+                                            <constraint firstItem="eMD-AX-da2" firstAttribute="top" secondItem="ZGg-Vz-yaX" secondAttribute="top" constant="50" id="ERS-WF-UMX"/>
+                                            <constraint firstItem="8bW-rW-CIE" firstAttribute="top" secondItem="BAf-6n-dJW" secondAttribute="bottom" constant="20" id="PNv-Yh-P9l"/>
+                                            <constraint firstItem="BAf-6n-dJW" firstAttribute="trailing" secondItem="bUt-6J-K3H" secondAttribute="trailing" id="QEZ-a6-F4F"/>
+                                            <constraint firstItem="eMD-AX-da2" firstAttribute="leading" secondItem="ZGg-Vz-yaX" secondAttribute="leading" constant="20" id="ZQS-Om-55p"/>
+                                            <constraint firstItem="bUt-6J-K3H" firstAttribute="trailing" secondItem="eMD-AX-da2" secondAttribute="trailing" id="Zbi-Cd-lkj"/>
+                                            <constraint firstAttribute="bottom" secondItem="8bW-rW-CIE" secondAttribute="bottom" constant="30" id="lou-Af-EDJ"/>
+                                            <constraint firstItem="BAf-6n-dJW" firstAttribute="top" secondItem="bUt-6J-K3H" secondAttribute="bottom" constant="20" id="mib-xO-8G3"/>
+                                            <constraint firstItem="8bW-rW-CIE" firstAttribute="leading" secondItem="BAf-6n-dJW" secondAttribute="leading" id="tdI-6p-hXx"/>
+                                            <constraint firstItem="bUt-6J-K3H" firstAttribute="leading" secondItem="eMD-AX-da2" secondAttribute="leading" id="vW2-EN-3YF"/>
+                                            <constraint firstItem="bUt-6J-K3H" firstAttribute="top" secondItem="eMD-AX-da2" secondAttribute="bottom" constant="20" id="wko-Ny-hl2"/>
+                                            <constraint firstAttribute="trailing" secondItem="eMD-AX-da2" secondAttribute="trailing" constant="20" id="zNi-Wx-g01"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
-                                        <inset key="titleEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                        <state key="normal" title="Goto" image="goto_icon">
-                                            <color key="titleColor" name="Accent"/>
-                                        </state>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="RECENT ISSUES" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BkS-qD-qZZ">
+                                        <rect key="frame" x="16" y="356" width="125.5" height="19.5"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                        <color key="textColor" name="Accent"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" contentViewInsetsToSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q5i-HM-nXn">
+                                        <rect key="frame" x="0.0" y="391.5" width="414" height="422.5"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <connections>
-                                            <action selector="btnAction:" destination="alJ-YV-a5m" eventType="touchUpInside" id="p3d-Oa-D0j"/>
+                                            <outlet property="dataSource" destination="alJ-YV-a5m" id="Nbd-ml-hkS"/>
+                                            <outlet property="delegate" destination="alJ-YV-a5m" id="xvg-fs-3tw"/>
                                         </connections>
-                                    </button>
-                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bUt-6J-K3H">
-                                        <rect key="frame" x="20" y="120" width="374" height="50"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="50" id="QM5-f8-jNp"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
-                                        <inset key="titleEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                        <state key="normal" title="Project Management" image="project_management">
-                                            <color key="titleColor" name="Accent"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="btnAction:" destination="alJ-YV-a5m" eventType="touchUpInside" id="n2s-TK-Ggc"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BAf-6n-dJW">
-                                        <rect key="frame" x="20" y="190" width="374" height="50"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="50" id="OVv-yu-Vcg"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
-                                        <inset key="titleEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                        <state key="normal" title="Recruitment" image="Recruitment">
-                                            <color key="titleColor" name="Accent"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="btnAction:" destination="alJ-YV-a5m" eventType="touchUpInside" id="ajU-bD-Yp7"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8bW-rW-CIE">
-                                        <rect key="frame" x="20" y="260" width="374" height="50"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="50" id="yER-yw-iTs"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
-                                        <inset key="titleEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                        <state key="normal" title="Sales Pipeline" image="sales_pipeline">
-                                            <color key="titleColor" name="Accent"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="btnAction:" destination="alJ-YV-a5m" eventType="touchUpInside" id="Ore-RU-DfY"/>
-                                        </connections>
-                                    </button>
+                                    </tableView>
                                 </subviews>
-                                <color key="backgroundColor" name="MediumPrimary"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstItem="BAf-6n-dJW" firstAttribute="leading" secondItem="bUt-6J-K3H" secondAttribute="leading" id="1NE-XA-cjH"/>
-                                    <constraint firstItem="8bW-rW-CIE" firstAttribute="trailing" secondItem="BAf-6n-dJW" secondAttribute="trailing" id="Doe-2t-MU2"/>
-                                    <constraint firstItem="eMD-AX-da2" firstAttribute="top" secondItem="ZGg-Vz-yaX" secondAttribute="top" constant="50" id="ERS-WF-UMX"/>
-                                    <constraint firstItem="8bW-rW-CIE" firstAttribute="top" secondItem="BAf-6n-dJW" secondAttribute="bottom" constant="20" id="PNv-Yh-P9l"/>
-                                    <constraint firstItem="BAf-6n-dJW" firstAttribute="trailing" secondItem="bUt-6J-K3H" secondAttribute="trailing" id="QEZ-a6-F4F"/>
-                                    <constraint firstItem="eMD-AX-da2" firstAttribute="leading" secondItem="ZGg-Vz-yaX" secondAttribute="leading" constant="20" id="ZQS-Om-55p"/>
-                                    <constraint firstItem="bUt-6J-K3H" firstAttribute="trailing" secondItem="eMD-AX-da2" secondAttribute="trailing" id="Zbi-Cd-lkj"/>
-                                    <constraint firstAttribute="bottom" secondItem="8bW-rW-CIE" secondAttribute="bottom" constant="30" id="lou-Af-EDJ"/>
-                                    <constraint firstItem="BAf-6n-dJW" firstAttribute="top" secondItem="bUt-6J-K3H" secondAttribute="bottom" constant="20" id="mib-xO-8G3"/>
-                                    <constraint firstItem="8bW-rW-CIE" firstAttribute="leading" secondItem="BAf-6n-dJW" secondAttribute="leading" id="tdI-6p-hXx"/>
-                                    <constraint firstItem="bUt-6J-K3H" firstAttribute="leading" secondItem="eMD-AX-da2" secondAttribute="leading" id="vW2-EN-3YF"/>
-                                    <constraint firstItem="bUt-6J-K3H" firstAttribute="top" secondItem="eMD-AX-da2" secondAttribute="bottom" constant="20" id="wko-Ny-hl2"/>
-                                    <constraint firstAttribute="trailing" secondItem="eMD-AX-da2" secondAttribute="trailing" constant="20" id="zNi-Wx-g01"/>
+                                    <constraint firstAttribute="bottom" secondItem="q5i-HM-nXn" secondAttribute="bottom" id="4cJ-op-8MA"/>
+                                    <constraint firstItem="ZGg-Vz-yaX" firstAttribute="leading" secondItem="S4J-5y-Hbp" secondAttribute="leading" id="5nN-hK-62d"/>
+                                    <constraint firstItem="ZGg-Vz-yaX" firstAttribute="top" secondItem="S4J-5y-Hbp" secondAttribute="top" id="Aui-QS-z9L"/>
+                                    <constraint firstItem="BkS-qD-qZZ" firstAttribute="top" secondItem="ZGg-Vz-yaX" secondAttribute="bottom" constant="16" id="EHK-3z-Mh3"/>
+                                    <constraint firstItem="q5i-HM-nXn" firstAttribute="leading" secondItem="S4J-5y-Hbp" secondAttribute="leading" id="GOk-yO-X4Z"/>
+                                    <constraint firstItem="q5i-HM-nXn" firstAttribute="top" secondItem="BkS-qD-qZZ" secondAttribute="bottom" constant="16" id="HUA-di-258"/>
+                                    <constraint firstItem="BkS-qD-qZZ" firstAttribute="leading" secondItem="ZGg-Vz-yaX" secondAttribute="leading" constant="16" id="Jax-Ij-QVv"/>
+                                    <constraint firstAttribute="trailing" secondItem="ZGg-Vz-yaX" secondAttribute="trailing" id="ZIJ-ar-a84"/>
+                                    <constraint firstAttribute="trailing" secondItem="q5i-HM-nXn" secondAttribute="trailing" id="ZWs-d2-h6L"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="RECENT ISSUES" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BkS-qD-qZZ">
-                                <rect key="frame" x="20" y="418" width="125.5" height="19.5"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
-                                <color key="textColor" name="Accent"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="q5i-HM-nXn">
-                                <rect key="frame" x="0.0" y="437.5" width="414" height="424.5"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <connections>
-                                    <outlet property="dataSource" destination="alJ-YV-a5m" id="Nbd-ml-hkS"/>
-                                    <outlet property="delegate" destination="alJ-YV-a5m" id="xvg-fs-3tw"/>
-                                </connections>
-                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="84x-dY-pnb"/>
                         <color key="backgroundColor" name="LightPrimary"/>
                         <constraints>
-                            <constraint firstItem="ZGg-Vz-yaX" firstAttribute="top" secondItem="84x-dY-pnb" secondAttribute="top" id="32L-j5-wBw"/>
-                            <constraint firstItem="84x-dY-pnb" firstAttribute="bottom" secondItem="q5i-HM-nXn" secondAttribute="bottom" id="6jH-Ti-1zO"/>
-                            <constraint firstItem="BkS-qD-qZZ" firstAttribute="leading" secondItem="84x-dY-pnb" secondAttribute="leading" constant="20" id="8V9-UU-faz"/>
-                            <constraint firstItem="q5i-HM-nXn" firstAttribute="top" secondItem="BkS-qD-qZZ" secondAttribute="bottom" id="FHs-Ia-I03"/>
-                            <constraint firstItem="84x-dY-pnb" firstAttribute="trailing" secondItem="ZGg-Vz-yaX" secondAttribute="trailing" id="aZa-22-COh"/>
-                            <constraint firstItem="84x-dY-pnb" firstAttribute="trailing" secondItem="q5i-HM-nXn" secondAttribute="trailing" id="dZy-l0-lgz"/>
-                            <constraint firstItem="q5i-HM-nXn" firstAttribute="leading" secondItem="84x-dY-pnb" secondAttribute="leading" id="dzg-dN-mVW"/>
-                            <constraint firstItem="BkS-qD-qZZ" firstAttribute="top" secondItem="ZGg-Vz-yaX" secondAttribute="bottom" constant="30" id="g5W-ZB-uPg"/>
-                            <constraint firstItem="ZGg-Vz-yaX" firstAttribute="leading" secondItem="84x-dY-pnb" secondAttribute="leading" id="tzP-Pb-t5r"/>
+                            <constraint firstItem="84x-dY-pnb" firstAttribute="trailing" secondItem="S4J-5y-Hbp" secondAttribute="trailing" id="GfK-ws-M5m"/>
+                            <constraint firstItem="S4J-5y-Hbp" firstAttribute="leading" secondItem="84x-dY-pnb" secondAttribute="leading" id="IG7-RU-fpH"/>
+                            <constraint firstItem="84x-dY-pnb" firstAttribute="bottom" secondItem="S4J-5y-Hbp" secondAttribute="bottom" id="mFm-zy-FBU"/>
+                            <constraint firstItem="S4J-5y-Hbp" firstAttribute="top" secondItem="84x-dY-pnb" secondAttribute="top" id="oF3-Lh-aUJ"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="13y-cu-DUC"/>
@@ -648,7 +660,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eCn-Xx-9q0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1441" y="692"/>
+            <point key="canvasLocation" x="1440.5797101449277" y="691.74107142857144"/>
         </scene>
     </scenes>
     <resources>
