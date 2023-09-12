@@ -1,17 +1,14 @@
 //
-//  SideMenuTVC.swift
-//  Cleardry
+//  LinkCell.swift
+//  1Tech PMS
 //
-//  Created by tejas chaudhari on 02/08/23.
+//  Created by Bhavesh Gupta on 12/09/23.
 //
 
 import UIKit
 
-class SideMenuTVC: UITableViewCell {
-    
-    @IBOutlet var iconImageView: UIImageView!
-    @IBOutlet var titleLabel: UILabel!
-    
+class LinkCell: UITableViewCell {
+
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

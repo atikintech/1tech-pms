@@ -1,0 +1,20 @@
+//
+//  HistoryCell.swift
+//  1Tech PMS
+//
+//  Created by Bhavesh Gupta on 12/09/23.
+//
+
+import UIKit
+
+class HistoryCell: UITableViewCell {
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+    }
+
+    override func setSelected(_ selected: Bool, animated: Bool) {
+        super.setSelected(selected, animated: animated)
+    }
+    
+}

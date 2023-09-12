@@ -55,5 +55,13 @@ enum taskList: String {
     case taskAssignee = "Assignee"
     case taskReporter = "Reporter"
     case taskPriority = "Priority"
+    case taskStartDate = "Start Date"
+    case taskEndDate = "End Date"
+    case taskSeverity = "Severity"
     case taskActivity = "Activity"
+    case taskComment = "Comments"
+    case taskHistory 
+    case taskLinks = "Links"
+    case headerHistory = "History"
+    case headerPlanning = "Planning"
 }

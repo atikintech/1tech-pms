@@ -8,6 +8,7 @@
 import UIKit
 
 extension UIViewController {
+    ///Default role is admin
     class func loadVC(role: Role = .admin) -> Self {
         let storyBoard: UIStoryboard = UIStoryboard(name: role.rawValue, bundle: nil)
         return storyBoard.instantiateViewController(withIdentifier: String(describing: self)) as! Self

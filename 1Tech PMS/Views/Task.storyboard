@@ -429,7 +429,7 @@ Click Select File</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="NHz-5H-VjA">
-                                <rect key="frame" x="20" y="79" width="353" height="719"/>
+                                <rect key="frame" x="20" y="79" width="353" height="670"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -441,23 +441,108 @@ Click Select File</string>
                                     <outlet property="delegate" destination="GaX-Z6-Ddh" id="Cua-p6-UtW"/>
                                 </connections>
                             </tableView>
+                            <view hidden="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pee-qd-bfy">
+                                <rect key="frame" x="136" y="379" width="120" height="94"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Y12-ke-dYa">
+                                        <rect key="frame" x="4" y="8" width="112" height="78"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8w8-Xa-FCW">
+                                                <rect key="frame" x="0.0" y="0.0" width="112" height="26"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="History">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="historyClicked" destination="GaX-Z6-Ddh" eventType="touchUpInside" id="7dU-Of-FYW"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pQt-53-Lt4">
+                                                <rect key="frame" x="0.0" y="26" width="112" height="26"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="Links">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="linksClicked" destination="GaX-Z6-Ddh" eventType="touchUpInside" id="mDp-JX-g7p"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yKo-8c-P0S">
+                                                <rect key="frame" x="0.0" y="52" width="112" height="26"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="Comment">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="commentClicked" destination="GaX-Z6-Ddh" eventType="touchUpInside" id="Czo-vD-2ML"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" name="Primary"/>
+                                <constraints>
+                                    <constraint firstItem="Y12-ke-dYa" firstAttribute="leading" secondItem="pee-qd-bfy" secondAttribute="leading" constant="4" id="9sq-Na-JsV"/>
+                                    <constraint firstItem="Y12-ke-dYa" firstAttribute="top" secondItem="pee-qd-bfy" secondAttribute="top" constant="8" id="AUF-KB-PIt"/>
+                                    <constraint firstAttribute="width" constant="120" id="AXg-EI-bKk"/>
+                                    <constraint firstAttribute="bottom" secondItem="Y12-ke-dYa" secondAttribute="bottom" constant="8" id="cc7-oa-ddV"/>
+                                    <constraint firstAttribute="trailing" secondItem="Y12-ke-dYa" secondAttribute="trailing" constant="4" id="oIV-sN-eIm"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <datePicker hidden="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="wheels" translatesAutoresizingMaskIntoConstraints="NO" id="FHq-bO-gH5">
+                                <rect key="frame" x="0.0" y="553" width="393" height="196"/>
+                                <color key="backgroundColor" name="Primary"/>
+                            </datePicker>
+                            <toolbar hidden="YES" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="4iZ-TV-P1l">
+                                <rect key="frame" x="0.0" y="509" width="393" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <items>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="MW0-S2-NsV"/>
+                                    <barButtonItem title="Done" style="done" id="1W2-gU-ko4">
+                                        <connections>
+                                            <action selector="doneClicked" destination="GaX-Z6-Ddh" id="SXc-we-oUL"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="jSw-he-VpV"/>
                         <color key="backgroundColor" name="LightPrimary"/>
                         <constraints>
+                            <constraint firstItem="4iZ-TV-P1l" firstAttribute="leading" secondItem="FHq-bO-gH5" secondAttribute="leading" id="64A-Hn-u9j"/>
+                            <constraint firstItem="jSw-he-VpV" firstAttribute="bottom" secondItem="FHq-bO-gH5" secondAttribute="bottom" constant="20" id="8ma-ab-Cdu"/>
+                            <constraint firstItem="FHq-bO-gH5" firstAttribute="top" secondItem="4iZ-TV-P1l" secondAttribute="bottom" id="CNY-7c-GbA"/>
                             <constraint firstItem="NHz-5H-VjA" firstAttribute="leading" secondItem="jSw-he-VpV" secondAttribute="leading" constant="20" id="Hv1-zK-bDF"/>
+                            <constraint firstItem="FHq-bO-gH5" firstAttribute="trailing" secondItem="jSw-he-VpV" secondAttribute="trailing" id="Rec-2y-Ekd"/>
+                            <constraint firstItem="FHq-bO-gH5" firstAttribute="leading" secondItem="jSw-he-VpV" secondAttribute="leading" id="U6V-av-j3I"/>
                             <constraint firstItem="NHz-5H-VjA" firstAttribute="top" secondItem="jSw-he-VpV" secondAttribute="top" constant="20" id="VT3-DL-29y"/>
                             <constraint firstItem="jSw-he-VpV" firstAttribute="bottom" secondItem="NHz-5H-VjA" secondAttribute="bottom" constant="20" id="hvR-nW-0Zl"/>
                             <constraint firstItem="jSw-he-VpV" firstAttribute="trailing" secondItem="NHz-5H-VjA" secondAttribute="trailing" constant="20" id="odg-c8-Kfl"/>
+                            <constraint firstItem="4iZ-TV-P1l" firstAttribute="trailing" secondItem="FHq-bO-gH5" secondAttribute="trailing" id="psR-cn-88I"/>
                         </constraints>
                     </view>
+                    <toolbarItems>
+                        <barButtonItem title="Done" style="done" id="6h4-AL-WaS"/>
+                    </toolbarItems>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="datePickerView" destination="FHq-bO-gH5" id="cQJ-OA-14T"/>
                         <outlet property="manageTableview" destination="NHz-5H-VjA" id="Ccc-DM-VOH"/>
+                        <outlet property="pickerToolbar" destination="4iZ-TV-P1l" id="8FQ-t8-anb"/>
+                        <outlet property="popUpView" destination="pee-qd-bfy" id="6Uy-De-eLc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5ts-7H-WWm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1037" y="-28"/>
+            <point key="canvasLocation" x="1035.8778625954199" y="-28.169014084507044"/>
         </scene>
         <!--Manage BoardsVC-->
         <scene sceneID="9b5-P3-92G">

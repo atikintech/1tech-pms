@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -69,14 +71,30 @@
                             <constraint firstAttribute="height" constant="1" id="ndo-4x-uSf"/>
                         </constraints>
                     </view>
+                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dNg-9h-f2a">
+                        <rect key="frame" x="277" y="4" width="39" height="34.333333333333336"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="39" id="5He-1E-1JL"/>
+                        </constraints>
+                        <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <state key="normal" title="Button"/>
+                        <buttonConfiguration key="configuration" style="plain">
+                            <imageReference key="image" image="chevron.up" catalog="system" symbolScale="medium"/>
+                        </buttonConfiguration>
+                        <connections>
+                            <action selector="expandClicked" destination="KGk-i7-Jjw" eventType="touchUpInside" id="kIY-N1-ZVQ"/>
+                        </connections>
+                    </button>
                 </subviews>
                 <constraints>
                     <constraint firstItem="Zer-iO-xlg" firstAttribute="top" secondItem="t9M-vk-XwV" secondAttribute="bottom" id="2hd-3l-QUk"/>
                     <constraint firstItem="oC8-H9-2y2" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="3bD-g5-1fC"/>
+                    <constraint firstAttribute="trailing" secondItem="dNg-9h-f2a" secondAttribute="trailing" constant="4" id="HYd-yr-Qyo"/>
                     <constraint firstItem="Zer-iO-xlg" firstAttribute="trailing" secondItem="t9M-vk-XwV" secondAttribute="trailing" id="Kl6-Dh-Vy9"/>
                     <constraint firstItem="t9M-vk-XwV" firstAttribute="leading" secondItem="oC8-H9-2y2" secondAttribute="leading" id="Tpf-W2-ere"/>
                     <constraint firstAttribute="trailing" secondItem="t9M-vk-XwV" secondAttribute="trailing" constant="20" id="bn8-op-e4L"/>
                     <constraint firstItem="t9M-vk-XwV" firstAttribute="top" secondItem="oC8-H9-2y2" secondAttribute="bottom" constant="10" id="drI-gY-d8B"/>
+                    <constraint firstItem="dNg-9h-f2a" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="4" id="gpK-k1-9nH"/>
                     <constraint firstItem="Zer-iO-xlg" firstAttribute="leading" secondItem="t9M-vk-XwV" secondAttribute="leading" id="lMD-V9-Xpu"/>
                     <constraint firstItem="oC8-H9-2y2" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="ooi-rm-HdA"/>
                 </constraints>
@@ -84,6 +102,7 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="ImgType" destination="8A3-Sm-YNU" id="Oth-Nl-p4y"/>
+                <outlet property="expandBtn" destination="dNg-9h-f2a" id="GzO-Hb-tjr"/>
                 <outlet property="lblTitle" destination="oC8-H9-2y2" id="gLc-Su-8O9"/>
                 <outlet property="txtField" destination="xeG-tN-6wF" id="W79-85-iL5"/>
             </connections>
@@ -91,6 +110,7 @@
         </tableViewCell>
     </objects>
     <resources>
+        <image name="chevron.up" catalog="system" width="128" height="70"/>
         <image name="done" width="48" height="48"/>
         <namedColor name="Accent">
             <color red="0.082000002264976501" green="0.097999997437000275" blue="0.32499998807907104" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

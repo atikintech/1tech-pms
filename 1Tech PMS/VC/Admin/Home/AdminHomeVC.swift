@@ -38,7 +38,7 @@ class AdminHomeVC: BaseVC {
             case .alerts:
                 return UIViewController()
             case .team:
-                return TeamMemberVC.loadVC(role: .member)
+                return TeamsVC.loadVC()
             }
         }
     }

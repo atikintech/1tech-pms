@@ -11,6 +11,8 @@ protocol SideMenuVCDelegate {
     func showVC(vc: UIViewController)
 }
 
+class SideMenuCell: UITableViewCell {}
+
 class SideMenuVC: UIViewController {
     
     enum MenuCase: String, CaseIterable {
@@ -39,6 +41,10 @@ class SideMenuVC: UIViewController {
                 return MembersHomeVC.loadVC(role: .notLoggedIn)
             case .profile:
                 return ProfileVC.loadVC(role: .notLoggedIn)
+            case .teams:
+                return TeamsVC.loadVC()
+            case .templates:
+                return TemplateVC.loadVC()
             default:
                 return nil
             }
@@ -109,6 +115,3 @@ extension SideMenuVC: UITableViewDelegate, UITableViewDataSource {
     }
 }
 
-class SideMenuCell: UITableViewCell {
-    
-}
