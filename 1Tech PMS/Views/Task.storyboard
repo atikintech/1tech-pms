@@ -429,7 +429,7 @@ Click Select File</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="NHz-5H-VjA">
-                                <rect key="frame" x="20" y="79" width="353" height="719"/>
+                                <rect key="frame" x="20" y="79" width="353" height="670"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -441,23 +441,51 @@ Click Select File</string>
                                     <outlet property="delegate" destination="GaX-Z6-Ddh" id="Cua-p6-UtW"/>
                                 </connections>
                             </tableView>
+                            <datePicker hidden="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="wheels" translatesAutoresizingMaskIntoConstraints="NO" id="FHq-bO-gH5">
+                                <rect key="frame" x="0.0" y="553" width="393" height="196"/>
+                                <color key="backgroundColor" name="Primary"/>
+                            </datePicker>
+                            <toolbar hidden="YES" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="4iZ-TV-P1l">
+                                <rect key="frame" x="0.0" y="509" width="393" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <items>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="MW0-S2-NsV"/>
+                                    <barButtonItem title="Done" style="done" id="1W2-gU-ko4">
+                                        <connections>
+                                            <action selector="doneClicked" destination="GaX-Z6-Ddh" id="SXc-we-oUL"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="jSw-he-VpV"/>
                         <color key="backgroundColor" name="LightPrimary"/>
                         <constraints>
+                            <constraint firstItem="4iZ-TV-P1l" firstAttribute="leading" secondItem="FHq-bO-gH5" secondAttribute="leading" id="64A-Hn-u9j"/>
+                            <constraint firstItem="jSw-he-VpV" firstAttribute="bottom" secondItem="FHq-bO-gH5" secondAttribute="bottom" constant="20" id="8ma-ab-Cdu"/>
+                            <constraint firstItem="FHq-bO-gH5" firstAttribute="top" secondItem="4iZ-TV-P1l" secondAttribute="bottom" id="CNY-7c-GbA"/>
                             <constraint firstItem="NHz-5H-VjA" firstAttribute="leading" secondItem="jSw-he-VpV" secondAttribute="leading" constant="20" id="Hv1-zK-bDF"/>
+                            <constraint firstItem="FHq-bO-gH5" firstAttribute="trailing" secondItem="jSw-he-VpV" secondAttribute="trailing" id="Rec-2y-Ekd"/>
+                            <constraint firstItem="FHq-bO-gH5" firstAttribute="leading" secondItem="jSw-he-VpV" secondAttribute="leading" id="U6V-av-j3I"/>
                             <constraint firstItem="NHz-5H-VjA" firstAttribute="top" secondItem="jSw-he-VpV" secondAttribute="top" constant="20" id="VT3-DL-29y"/>
                             <constraint firstItem="jSw-he-VpV" firstAttribute="bottom" secondItem="NHz-5H-VjA" secondAttribute="bottom" constant="20" id="hvR-nW-0Zl"/>
                             <constraint firstItem="jSw-he-VpV" firstAttribute="trailing" secondItem="NHz-5H-VjA" secondAttribute="trailing" constant="20" id="odg-c8-Kfl"/>
+                            <constraint firstItem="4iZ-TV-P1l" firstAttribute="trailing" secondItem="FHq-bO-gH5" secondAttribute="trailing" id="psR-cn-88I"/>
                         </constraints>
                     </view>
+                    <toolbarItems>
+                        <barButtonItem title="Done" style="done" id="6h4-AL-WaS"/>
+                    </toolbarItems>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="datePickerView" destination="FHq-bO-gH5" id="cQJ-OA-14T"/>
                         <outlet property="manageTableview" destination="NHz-5H-VjA" id="Ccc-DM-VOH"/>
+                        <outlet property="pickerToolbar" destination="4iZ-TV-P1l" id="8FQ-t8-anb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5ts-7H-WWm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1037" y="-28"/>
+            <point key="canvasLocation" x="1035.8778625954199" y="-28.169014084507044"/>
         </scene>
         <!--Manage BoardsVC-->
         <scene sceneID="9b5-P3-92G">

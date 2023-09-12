@@ -3,4 +3,54 @@
    uuid = "3CFD8151-62FF-4DBC-9D25-F7DC1A0EB2A6"
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F42939F6-B378-4952-ABAC-92F430B74BF9"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "1Tech PMS/VC/Task/ManageTaskVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "55"
+            endingLineNumber = "55"
+            landmarkName = "doneClicked()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "F42939F6-B378-4952-ABAC-92F430B74BF9 - 97751b0485d5451e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "_Tech_PMS.ManageTaskVC.doneClicked() -&gt; ()"
+                  moduleName = "1Tech PMS"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/atikintech/Documents/Projects/iOS/1Tech%20PMS/1Tech%20PMS/VC/Task/ManageTaskVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "55"
+                  endingLineNumber = "55"
+                  offsetFromSymbolStart = "260">
+               </Location>
+               <Location
+                  uuid = "F42939F6-B378-4952-ABAC-92F430B74BF9 - 97751b0485d5451e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "_Tech_PMS.ManageTaskVC.doneClicked() -&gt; ()"
+                  moduleName = "1Tech PMS"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/atikintech/Documents/Projects/iOS/1Tech%20PMS/1Tech%20PMS/VC/Task/ManageTaskVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "55"
+                  endingLineNumber = "55"
+                  offsetFromSymbolStart = "164">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

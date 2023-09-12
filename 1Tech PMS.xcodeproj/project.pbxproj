@@ -80,6 +80,10 @@
 		DBBE31252AAF018700F79E45 /* TeamsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBBE31242AAF018700F79E45 /* TeamsVC.swift */; };
 		DBBE31282AAF030700F79E45 /* TeamsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBBE31262AAF030700F79E45 /* TeamsCell.swift */; };
 		DBBE31292AAF030800F79E45 /* TeamsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DBBE31272AAF030700F79E45 /* TeamsCell.xib */; };
+		DBBE31302AAF474B00F79E45 /* PlanningHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBBE312E2AAF474B00F79E45 /* PlanningHeaderCell.swift */; };
+		DBBE31312AAF474B00F79E45 /* PlanningHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DBBE312F2AAF474B00F79E45 /* PlanningHeaderCell.xib */; };
+		DBBE31342AAF52C400F79E45 /* DateCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBBE31322AAF52C400F79E45 /* DateCell.swift */; };
+		DBBE31352AAF52C400F79E45 /* DateCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DBBE31332AAF52C400F79E45 /* DateCell.xib */; };
 		DBEC145D2AA0483A00F2F28F /* Role.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBEC145C2AA0483A00F2F28F /* Role.swift */; };
 		DBEC14602AA06C3100F2F28F /* ProjectsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBEC145F2AA06C3000F2F28F /* ProjectsVC.swift */; };
 		DBEC14622AA079BC00F2F28F /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBEC14612AA079BC00F2F28F /* ProfileVC.swift */; };
@@ -159,6 +163,10 @@
 		DBBE31242AAF018700F79E45 /* TeamsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsVC.swift; sourceTree = "<group>"; };
 		DBBE31262AAF030700F79E45 /* TeamsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsCell.swift; sourceTree = "<group>"; };
 		DBBE31272AAF030700F79E45 /* TeamsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TeamsCell.xib; sourceTree = "<group>"; };
+		DBBE312E2AAF474B00F79E45 /* PlanningHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanningHeaderCell.swift; sourceTree = "<group>"; };
+		DBBE312F2AAF474B00F79E45 /* PlanningHeaderCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlanningHeaderCell.xib; sourceTree = "<group>"; };
+		DBBE31322AAF52C400F79E45 /* DateCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateCell.swift; sourceTree = "<group>"; };
+		DBBE31332AAF52C400F79E45 /* DateCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DateCell.xib; sourceTree = "<group>"; };
 		DBEC145C2AA0483A00F2F28F /* Role.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Role.swift; sourceTree = "<group>"; };
 		DBEC145F2AA06C3000F2F28F /* ProjectsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsVC.swift; sourceTree = "<group>"; };
 		DBEC14612AA079BC00F2F28F /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
@@ -230,6 +238,10 @@
 				3A2BE5FA2A975D4C00303014 /* TaskAttachmentsCell.xib */,
 				3A2BE5FF2A9774ED00303014 /* TasksCell.swift */,
 				3A2BE6002A9774ED00303014 /* TasksCell.xib */,
+				DBBE31322AAF52C400F79E45 /* DateCell.swift */,
+				DBBE31332AAF52C400F79E45 /* DateCell.xib */,
+				DBBE312E2AAF474B00F79E45 /* PlanningHeaderCell.swift */,
+				DBBE312F2AAF474B00F79E45 /* PlanningHeaderCell.xib */,
 			);
 			path = TaskCell;
 			sourceTree = "<group>";
@@ -581,10 +593,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DBBE31312AAF474B00F79E45 /* PlanningHeaderCell.xib in Resources */,
 				DBBE31292AAF030800F79E45 /* TeamsCell.xib in Resources */,
 				3A7ED3D32A8BB96E00D3E472 /* MemberCell.xib in Resources */,
 				DB00810D2A74B43800212FD4 /* LaunchScreen.storyboard in Resources */,
 				3A2BE5F42A97561800303014 /* TaskTitleCell.xib in Resources */,
+				DBBE31352AAF52C400F79E45 /* DateCell.xib in Resources */,
 				3A2BE6172A99F27300303014 /* BoardsCell.xib in Resources */,
 				DB00813C2A74B85400212FD4 /* Colors.xcassets in Resources */,
 				3A2BE5E72A92E6E700303014 /* Task.storyboard in Resources */,
@@ -634,9 +648,11 @@
 				DB0081402A74D9C900212FD4 /* AdminHomeVC.swift in Sources */,
 				3A7ED3D52A8BF9BE00D3E472 /* TeamMemberVC.swift in Sources */,
 				DB0081342A74B77600212FD4 /* BaseVC.swift in Sources */,
+				DBBE31342AAF52C400F79E45 /* DateCell.swift in Sources */,
 				3A2BE5EA2A92F22C00303014 /* CreateNotesVC.swift in Sources */,
 				3A2BE5DF2A92845400303014 /* ContactDataVC.swift in Sources */,
 				3A2BE6162A99F27300303014 /* BoardsCell.swift in Sources */,
+				DBBE31302AAF474B00F79E45 /* PlanningHeaderCell.swift in Sources */,
 				DB2823FB2A80E7770016324D /* ClientInfoVC.swift in Sources */,
 				3A2BE5FB2A975D4C00303014 /* TaskAttachmentsCell.swift in Sources */,
 				3A4564142A8F7E140048F2CF /* CreateTeamVC.swift in Sources */,
