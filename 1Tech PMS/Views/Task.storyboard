@@ -441,6 +441,62 @@ Click Select File</string>
                                     <outlet property="delegate" destination="GaX-Z6-Ddh" id="Cua-p6-UtW"/>
                                 </connections>
                             </tableView>
+                            <view hidden="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pee-qd-bfy">
+                                <rect key="frame" x="136" y="379" width="120" height="94"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Y12-ke-dYa">
+                                        <rect key="frame" x="4" y="8" width="112" height="78"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8w8-Xa-FCW">
+                                                <rect key="frame" x="0.0" y="0.0" width="112" height="26"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="History">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="historyClicked" destination="GaX-Z6-Ddh" eventType="touchUpInside" id="7dU-Of-FYW"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pQt-53-Lt4">
+                                                <rect key="frame" x="0.0" y="26" width="112" height="26"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="Links">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="linksClicked" destination="GaX-Z6-Ddh" eventType="touchUpInside" id="mDp-JX-g7p"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yKo-8c-P0S">
+                                                <rect key="frame" x="0.0" y="52" width="112" height="26"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="Comment">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="commentClicked" destination="GaX-Z6-Ddh" eventType="touchUpInside" id="Czo-vD-2ML"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" name="Primary"/>
+                                <constraints>
+                                    <constraint firstItem="Y12-ke-dYa" firstAttribute="leading" secondItem="pee-qd-bfy" secondAttribute="leading" constant="4" id="9sq-Na-JsV"/>
+                                    <constraint firstItem="Y12-ke-dYa" firstAttribute="top" secondItem="pee-qd-bfy" secondAttribute="top" constant="8" id="AUF-KB-PIt"/>
+                                    <constraint firstAttribute="width" constant="120" id="AXg-EI-bKk"/>
+                                    <constraint firstAttribute="bottom" secondItem="Y12-ke-dYa" secondAttribute="bottom" constant="8" id="cc7-oa-ddV"/>
+                                    <constraint firstAttribute="trailing" secondItem="Y12-ke-dYa" secondAttribute="trailing" constant="4" id="oIV-sN-eIm"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                             <datePicker hidden="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="wheels" translatesAutoresizingMaskIntoConstraints="NO" id="FHq-bO-gH5">
                                 <rect key="frame" x="0.0" y="553" width="393" height="196"/>
                                 <color key="backgroundColor" name="Primary"/>
@@ -481,6 +537,7 @@ Click Select File</string>
                         <outlet property="datePickerView" destination="FHq-bO-gH5" id="cQJ-OA-14T"/>
                         <outlet property="manageTableview" destination="NHz-5H-VjA" id="Ccc-DM-VOH"/>
                         <outlet property="pickerToolbar" destination="4iZ-TV-P1l" id="8FQ-t8-anb"/>
+                        <outlet property="popUpView" destination="pee-qd-bfy" id="6Uy-De-eLc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5ts-7H-WWm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

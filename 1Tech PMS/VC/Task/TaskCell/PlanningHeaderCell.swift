@@ -10,6 +10,9 @@ import UIKit
 class PlanningHeaderCell: UITableViewCell {
 
     @IBOutlet weak var expandedBtn: UIButton!
+    @IBOutlet weak var headerTitle: UILabel!
+    
+    var expandAction: (()->Void)?
     var isExpanded: Bool = false {
         didSet {
             expandedBtn.setImage(isExpanded ? UIImage(systemName: "chevron.down")! : UIImage(systemName: "chevron.up")!, for: .normal)
@@ -27,6 +30,9 @@ class PlanningHeaderCell: UITableViewCell {
     }
     
     @IBAction func expandClicked() {
+        if let action = expandAction {
+            action()
+        }
     }
     
 }

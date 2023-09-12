@@ -12,6 +12,7 @@ class ManageTaskVC: UIViewController {
     @IBOutlet weak var manageTableview: UITableView!
     @IBOutlet weak var datePickerView: UIDatePicker!
     @IBOutlet weak var pickerToolbar: UIToolbar!
+    @IBOutlet weak var popUpView: UIView!
     
     let reuseIdentifierTaskTitle = "TaskTitleCell"
     let reuseIdentifierTaskTodo = "TaskTodoCell"
@@ -19,7 +20,9 @@ class ManageTaskVC: UIViewController {
     let reuseIdentifierTasks = "TasksCell"
     let reuseIdentifierPlanning = "PlanningHeaderCell"
     let reuseDateCell = "DateCell"
+    let reuseHistoryCell = "HistoryCell"
     
+    var isScrolledToBottom = false
     var titleMsg = [
         taskList.taskTitle,
         taskList.taskTodo,
@@ -28,7 +31,8 @@ class ManageTaskVC: UIViewController {
         taskList.taskAssignee,
         //        taskList.taskReporter,
         taskList.headerPlanning,
-        taskList.taskActivity
+        taskList.taskActivity,
+        taskList.taskComment,
     ]
     
     var titleMsgCopy: [taskList] = []
@@ -46,15 +50,61 @@ class ManageTaskVC: UIViewController {
         titleMsgCopy = titleMsg
         manageTableview.rounded(radius: 10.0)
         registerCell(cells: [reuseIdentifierTaskTitle, reuseIdentifierTaskTodo, reuseIdentifierTaskAttachments, reuseIdentifierPlanning,
-                             reuseDateCell, reuseIdentifierTasks], tableView: manageTableview)
+            reuseDateCell, reuseIdentifierTasks, reuseHistoryCell], tableView: manageTableview)
         datePickerView.backgroundColor = .primary()
     }
     
+    func togglePopupView() {
+        
+        datePickerView.isHidden = true
+        pickerToolbar.isHidden = true
+        popUpView.center = CGPoint(x: self.view.bounds.width - popUpView.bounds.width/2 - 60, y: isScrolledToBottom ? self.view.bounds.height - 370 : self.view.bounds.height - 170)
+        popUpView.isHidden = !popUpView.isHidden
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        popUpView.isHidden = true
+        datePickerView.isHidden = true
+        pickerToolbar.isHidden = true
+    }
+    
     @IBAction func doneClicked() {
-//        self.view.endEditing(true)
         datePickerView.isHidden = true
         pickerToolbar.isHidden = true
         selectedTf?.text = datePickerView.date.description
+    }
+    
+    @IBAction func historyClicked() {
+        if titleMsg.last == .taskComment {
+            titleMsg.removeLast()
+        }
+        let header = taskList.headerHistory
+        let task = taskList.taskHistory
+        titleMsg.append(header)
+        titleMsg.append(task)
+        titleMsg.append(task)
+        titleMsg.append(task)
+        titleMsgCopy = titleMsg
+        self.manageTableview.reloadData()
+        togglePopupView()
+    }
+    
+    @IBAction func commentClicked() {
+        if titleMsg.last == .taskHistory {
+            titleMsg.removeLast()
+            titleMsg.removeLast()
+            titleMsg.removeLast()
+            titleMsg.removeLast()
+        }
+        let task = taskList.taskComment
+        titleMsg.append(task)
+        titleMsgCopy = titleMsg
+        self.manageTableview.reloadData()
+        togglePopupView()
+    }
+    
+    @IBAction func linksClicked() {
+        togglePopupView()
     }
 }
 
@@ -85,6 +135,7 @@ extension ManageTaskVC: UITableViewDelegate, UITableViewDataSource {
             cell?.ImgType.isHidden = false
             cell?.txtField.placeholder = "Task"
             cell?.txtField.delegate = self
+            cell?.expandBtn.isHidden = true
             return cell ?? UITableViewCell()
         }
         else if titleMsg[indexPath.row] == taskList.taskAssignee {
@@ -93,6 +144,7 @@ extension ManageTaskVC: UITableViewDelegate, UITableViewDataSource {
             cell?.ImgType.isHidden = true
             cell?.txtField.placeholder = "Unassigned"
             cell?.txtField.delegate = self
+            cell?.expandBtn.isHidden = true
             return cell ?? UITableViewCell()
         }
         else if titleMsg[indexPath.row] == taskList.taskReporter {
@@ -101,10 +153,12 @@ extension ManageTaskVC: UITableViewDelegate, UITableViewDataSource {
             cell?.ImgType.isHidden = false
             cell?.txtField.placeholder = "Aditya Gogomo"
             cell?.txtField.delegate = self
+            cell?.expandBtn.isHidden = true
             return cell ?? UITableViewCell()
         }
         else if titleMsg[indexPath.row] == taskList.headerPlanning {
             let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifierPlanning, for: indexPath) as? PlanningHeaderCell
+            cell?.headerTitle.text = "Planning"
             return cell ?? UITableViewCell()
         }
         else if titleMsg[indexPath.row] == taskList.taskPriority {
@@ -112,7 +166,9 @@ extension ManageTaskVC: UITableViewDelegate, UITableViewDataSource {
             cell?.lblTitle.text = taskList.taskPriority.rawValue
             cell?.ImgType.isHidden = false
             cell?.txtField.placeholder = "Medium"
+            cell?.txtField.isHidden = false
             cell?.txtField.delegate = self
+            cell?.expandBtn.isHidden = true
             return cell ?? UITableViewCell()
         }
         else if titleMsg[indexPath.row] == taskList.taskSeverity {
@@ -120,7 +176,9 @@ extension ManageTaskVC: UITableViewDelegate, UITableViewDataSource {
             cell?.lblTitle.text = taskList.taskSeverity.rawValue
             cell?.ImgType.isHidden = false
             cell?.txtField.placeholder = "2"
+            cell?.txtField.isHidden = false
             cell?.txtField.delegate = self
+            cell?.expandBtn.isHidden = true
             return cell ?? UITableViewCell()
         }
         else if titleMsg[indexPath.row] == taskList.taskStartDate {
@@ -145,8 +203,35 @@ extension ManageTaskVC: UITableViewDelegate, UITableViewDataSource {
             let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifierTasks, for: indexPath) as? TasksCell
             cell?.lblTitle.text = taskList.taskActivity.rawValue
             cell?.ImgType.isHidden = true
+            cell?.expandBtn.isHidden = true
+            cell?.txtField.isHidden = true
+            cell?.selectionStyle = .none
+            return cell ?? UITableViewCell()
+        }
+        else if titleMsg[indexPath.row] == taskList.taskComment {
+            let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifierTasks, for: indexPath) as? TasksCell
+            cell?.lblTitle.text = taskList.taskComment.rawValue
+            cell?.ImgType.isHidden = true
+            cell?.expandBtn.isHidden = false
+            cell?.txtField.isHidden = false
             cell?.txtField.placeholder = "Add a comment"
             cell?.txtField.delegate = self
+            cell?.expandAction = {
+                self.togglePopupView()
+            }
+            return cell ?? UITableViewCell()
+        }
+        else if titleMsg[indexPath.row] == taskList.headerHistory {
+            let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifierPlanning, for: indexPath) as? PlanningHeaderCell
+            cell?.headerTitle.text = "History"
+            cell?.isExpanded = true
+            cell?.expandAction = {
+                self.togglePopupView()
+            }
+            return cell ?? UITableViewCell()
+        }
+        else if titleMsg[indexPath.row] == taskList.taskHistory {
+            let cell = tableView.dequeueReusableCell(withIdentifier: reuseHistoryCell, for: indexPath) as? HistoryCell
             return cell ?? UITableViewCell()
         }
         else {
@@ -166,12 +251,18 @@ extension ManageTaskVC: UITableViewDelegate, UITableViewDataSource {
         else if titleMsg[indexPath.row] == taskList.taskAttachments {
             return 100
         }
-        else if titleMsg[indexPath.row] == taskList.headerPlanning  {
-            return 60
+        else if titleMsg[indexPath.row] == taskList.headerPlanning || titleMsg[indexPath.row] == taskList.headerHistory {
+            return 50
+        }
+        else if titleMsg[indexPath.row] == taskList.taskActivity {
+            return 40
         }
         else if titleMsg[indexPath.row] == taskList.taskIssueType || titleMsg[indexPath.row] == taskList.taskAssignee || titleMsg[indexPath.row] == taskList.taskReporter ||
                     titleMsg[indexPath.row] == taskList.taskPriority ||
-                    titleMsg[indexPath.row] == taskList.taskSeverity || titleMsg[indexPath.row] == taskList.taskActivity {
+                    titleMsg[indexPath.row] == taskList.taskSeverity || titleMsg[indexPath.row] == taskList.taskComment {
+            return 90
+        }
+        else if titleMsg[indexPath.row] == taskList.taskHistory {
             return 90
         }
         else {
@@ -182,18 +273,29 @@ extension ManageTaskVC: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if let cell = tableView.cellForRow(at: indexPath) as? PlanningHeaderCell {
-            if titleMsg.count == titleMsgCopy.count {
-                cell.isExpanded = true
-                titleMsg.insert(contentsOf: planningCells, at: 6)
-                tableView.reloadData()
-                tableView.scrollToRow(at: IndexPath(row: 10, section: 0), at: .middle, animated: true)
+            if titleMsg[indexPath.row] == .headerPlanning {
+                if titleMsg.count == titleMsgCopy.count {
+                    cell.isExpanded = true
+                    titleMsg.insert(contentsOf: planningCells, at: 6)
+                    tableView.reloadData()
+                    tableView.scrollToRow(at: IndexPath(row: 10, section: 0), at: .middle, animated: true)
+                }
+                else {
+                    cell.isExpanded = false
+                    titleMsg.removeAll()
+                    titleMsg = titleMsgCopy
+                    tableView.reloadData()
+                }
             }
-            else {
-                cell.isExpanded = false
-                titleMsg.removeAll()
-                titleMsg = titleMsgCopy
-                tableView.reloadData()
-            }
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        if titleMsg[indexPath.row] == .taskHistory {
+            isScrolledToBottom = indexPath.row + 1 == titleMsg.count
+        }
+        else {
+            isScrolledToBottom = false
         }
     }
 }

@@ -12,7 +12,9 @@ class TasksCell: UITableViewCell {
     @IBOutlet weak var lblTitle: UILabel!
     @IBOutlet weak var ImgType: UIImageView!
     @IBOutlet weak var txtField: UITextField!
+    @IBOutlet weak var expandBtn: UIButton!
     
+    var expandAction: (()->Void)?
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -24,4 +26,9 @@ class TasksCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+    @IBAction func expandClicked() {
+        if let action = expandAction {
+            action()
+        }
+    }
 }
